@@ -1,0 +1,10 @@
+# ~/.tmuxinator/blog.yml
+
+name: blog
+root: ~/
+
+windows:
+  - journal: vim ~/Dropbox/journal/
+  - blog: vim ~/smcabrera/smcabrera.github.io/
+  - time-tracking: t sheet writing
+

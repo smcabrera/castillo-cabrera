@@ -1,7 +1,7 @@
-# ~/.tmuxinator/development.yml
+# ~/.tmuxinator/rails.yml
 
-name: development
-root: ~/
+name: rails
+root: ~/smcabrera/first-bloc/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,10 +19,13 @@ root: ~/
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: main-vertical
-      panes:
-        - vim
-        - guard
+  - editor: vim
   - server: bundle exec rails s
   - logs: tail -f log/development.log
+  - git: git-sh
+  - time-tracking: t sheet study
+  - notes: vim ~/Dropbox/journal/bloc-notes
+
+
+
+
