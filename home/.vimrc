@@ -39,6 +39,11 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-rails'
   " Colors available by bundle to by cycled through later
   Bundle 'tomasr/molokai'
+  " ctags
+  "Bundle 'fishman/ctags'
+  " Show tags in a sidebar
+  "Bundle 'majutsushi/tagbar'
+
 "============================================================
 "==  Colors
 "============================================================
@@ -59,10 +64,13 @@ colorscheme desert
 "============================================================
 
 set relativenumber
+" Make spaces when you press tab
+	set expandtab
+" For Ruby, could make this language dependent if I start writing more python
 set shiftwidth=2
 set tabstop=2
 set encoding=utf-8
-"set cursorline
+"I turned out not to like this very much...set cursorline
 set noswapfile
 set smartcase
 
@@ -83,7 +91,7 @@ set smartcase
 " Work with long lines properly
 set textwidth=79
 set formatoptions=qrn1
-"Would use this except it's too ugly...set colorcolumn=85
+"Nice feature but too ugly...set colorcolumn=85
 
 " Auto change the directory to the current file I'm working on
 autocmd BufEnter * lcd %:p:h
@@ -127,5 +135,19 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 " When NERDTree is the only buffer left, close it
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"============================================================
+"==  Scratch
+"============================================================
+"
+" Plugin that lets you create a temporary scratchpad
+" open with
+nnoremap <leader>s :Scratch<CR>
+
+"============================================================
+"==  Tagbar
+"============================================================
+
+nmap <F8> :TagbarToggle<CR>
 
 
