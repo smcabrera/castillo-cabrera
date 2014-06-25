@@ -37,7 +37,8 @@ Bundle 'gmarik/vundle'
   Bundle 'bronson/vim-trailing-whitespace'
   " Rails.vim enough said
   Bundle 'tpope/vim-rails'
-
+  " Colors available by bundle to by cycled through later
+  Bundle 'tomasr/molokai'
 "============================================================
 "==  Colors
 "============================================================
@@ -46,14 +47,24 @@ Bundle 'gmarik/vundle'
 "colorscheme jellybeans
 "colorscheme Tomorrow-Night-Bright
 "colorscheme Tomorrow-Night-Eighties
-colorscheme desert
 
+" The popular Molokai theme
+"let g:molokai_original = 1
+"let g:rehash256 = 1
+
+" Good old desert
+colorscheme desert
 "============================================================
 "==  Settings
 "============================================================
 
 set relativenumber
 set shiftwidth=2
+set tabstop=2
+set encoding=utf-8
+"set cursorline
+set noswapfile
+set smartcase
 
 " Making things easier for writing
   " not to break on words
@@ -79,7 +90,7 @@ autocmd BufEnter * lcd %:p:h
 
 
 "When you lose focus on the screen it saves automatically
-au FocusLost * :waP
+au FocusLost * :wa
 "============================================================
 "==  Mappings
 "============================================================
