@@ -35,19 +35,18 @@ Bundle 'gmarik/vundle'
   Bundle 'honza/vim-snippets'
   "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
   Bundle 'bronson/vim-trailing-whitespace'
+  " Rails.vim enough said
+  Bundle 'tpope/vim-rails'
 
 "============================================================
 "==  Colors
 "============================================================
+" I plan to make a bunch of different colors available here and uncomment the ones I want
 
 "colorscheme jellybeans
 "colorscheme Tomorrow-Night-Bright
 "colorscheme Tomorrow-Night-Eighties
 colorscheme desert
-
-
-" I plan to make a bunch of different colors available here and uncomment the ones I want
-
 
 "============================================================
 "==  Settings
@@ -55,19 +54,26 @@ colorscheme desert
 
 set relativenumber
 set shiftwidth=2
+
 " Making things easier for writing
+  " not to break on words
+  :set wrap
+  :set formatoptions=l
+  :set linebreak
+  :set nolist
+  :set breakat=\ |@-+;:,./?^I
 
-" not to break on words
-:set wrap
-:set formatoptions=l
-:set linebreak
-:set nolist
-:set breakat=\ |@-+;:,./?^I
+  " move through lines on the screen instead of line numbers
+  nnoremap j gj
+  nnoremap k gk
+  vnoremap j gj
+  vnoremap k gk
 
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
+" Work with long lines properly
+set textwidth=79
+set formatoptions=qrn1
+"Would use this except it's too ugly...set colorcolumn=85
+
 " Auto change the directory to the current file I'm working on
 autocmd BufEnter * lcd %:p:h
 
@@ -100,7 +106,6 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Insert new lines without moving into insert mode
 nnoremap gO O <ESC> :FixWhitespace <CR>
 nnoremap <leader>go o <ESC> 2k :FixWhitespace <CR>
-" k :FixWhitespace <CR>
 
 "============================================================
 "==  NERDTree
