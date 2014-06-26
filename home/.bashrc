@@ -15,7 +15,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # Automatically start in tmux
-# Can't use this now because it screws me up with tilde. Maybe if I started using zsh...
+# Can't use this now because it screws me up with tilde.
+# Maybe if I started using zsh...
+# I could probably also figure out if I'm in tilda and say 'don't do this if I'm in tilda'
 # if [[ "$TERM" != "screen-256color" ]]
 # then
   # tmux attach-session -t "$USER" || tmux new-session -s "$USER"
