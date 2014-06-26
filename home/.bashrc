@@ -9,3 +9,13 @@ export EDITOR=vim
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+# Automatically start in tmux
+if [[ "$TERM" != "screen-256color" ]]
+then
+  tmux attach-session -t "$USER" || tmux new-session -s "$USER"
+  exit
+fi
+
