@@ -1,7 +1,9 @@
 source ~/.rvm/scripts/rvm
-# making ls more interesting
+# making ls faster and adding color
 alias l="ls --color"
-alias ll="ls -a --color"
+alias la="ls -a --color"
+alias ll="ls -l --color"
+alias lla="ls -la --color"
 
 # Defining the $EDITOR shell environment for tmuxinator
 export EDITOR=vim
