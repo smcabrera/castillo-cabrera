@@ -103,7 +103,7 @@ au FocusLost * :wa
 "==  Mappings
 "============================================================
 
-let mapleader=","
+let mapleader= " "
 
 " Automatically install or update vim plugins with vundle
 nnoremap <leader>bi :BundleInstall<CR>
