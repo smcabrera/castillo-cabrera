@@ -7,6 +7,7 @@ alias lla="ls -la --color"
 
 # Defining the $EDITOR shell environment for tmuxinator
 export EDITOR=vim
+export HIST_FILE_SIZE=9999
 
 
 ### Added by the Heroku Toolbelt
