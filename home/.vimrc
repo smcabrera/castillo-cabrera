@@ -106,6 +106,10 @@ autocmd BufEnter * lcd %:p:h
 
 "When you lose focus on the screen it saves automatically
 au FocusLost * :wa
+
+" Allowing .md files to be treated as markdown
+au BufRead,BufNewFile *.md set filetype=markdown
+
 "============================================================
 "==  Mappings
 "============================================================
