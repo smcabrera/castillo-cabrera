@@ -116,9 +116,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 let mapleader= " "
 
-" Automatically install or update vim plugins with vundle
-nnoremap <leader>bi :BundleInstall<CR>
-nnoremap <leader>bu :BundleUpdate<CR>
 
 " Make escape easier:
 imap jk <ESC>
@@ -139,6 +136,14 @@ nnoremap <leader>go o <ESC> 2k :FixWhitespace <CR>
 " Indent with tab in normal mode
 nmap <Tab> > <C>
 nmap <S-Tab> < <C>
+
+"============================================================
+"==  Leader Mappings
+"============================================================
+
+" Automatically install or update vim plugins with vundle
+nnoremap <leader>bi :BundleInstall<CR>
+nnoremap <leader>bu :BundleUpdate<CR>
 
 " Run the current file in the ruby console
 nmap <leader>rs :!ruby %<CR>
