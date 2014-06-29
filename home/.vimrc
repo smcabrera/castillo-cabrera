@@ -147,6 +147,8 @@ nnoremap <leader>bu :BundleUpdate<CR>
 
 " Run the current file in the ruby console
 nmap <leader>rs :!ruby %<CR>
+nmap <leader>q :q<CR>
+nmap <leader>x :q<CR>
 
 "============================================================
 "==  NERDTree
