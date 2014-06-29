@@ -14,6 +14,8 @@ Bundle 'gmarik/vundle'
 " My Personal list of plugins
   " Lets you surround text with tags or quotes
   Bundle 'tpope/vim-surround'
+  " Ends certain structures automatically--like end after if in ruby
+  Bundle 'tpope/vim-endwise'
   " Lets you repeat plugins like surround
   Bundle 'tpope/vim-repeat'
   " File tree
@@ -125,6 +127,8 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Insert new lines without moving into insert mode
 nnoremap gO O <ESC> :FixWhitespace <CR>
 nnoremap <leader>go o <ESC> 2k :FixWhitespace <CR>
+nmap <Tab> >
+nmap <S-Tab> <
 
 "============================================================
 "==  NERDTree
