@@ -127,8 +127,8 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Insert new lines without moving into insert mode
 nnoremap gO O <ESC> :FixWhitespace <CR>
 nnoremap <leader>go o <ESC> 2k :FixWhitespace <CR>
-nmap <Tab> >
-nmap <S-Tab> <
+nmap <Tab> > <C>
+nmap <S-Tab> < <C>
 
 "============================================================
 "==  NERDTree
