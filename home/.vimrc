@@ -136,8 +136,12 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Insert new lines without moving into insert mode
 nnoremap gO O <ESC> :FixWhitespace <CR>
 nnoremap <leader>go o <ESC> 2k :FixWhitespace <CR>
+" Indent with tab in normal mode
 nmap <Tab> > <C>
 nmap <S-Tab> < <C>
+
+" Run the current file in the ruby console
+nmap <leader>rs :!ruby %<CR>
 
 "============================================================
 "==  NERDTree
