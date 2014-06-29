@@ -48,6 +48,8 @@ Bundle 'gmarik/vundle'
   "Bundle 'fishman/ctags'
   " Show tags in a sidebar
   "Bundle 'majutsushi/tagbar'
+  "Markdown highlighting
+  Bundle 'hallison/vim-markdown'
 
 "============================================================
 "==  Colors
