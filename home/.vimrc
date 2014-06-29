@@ -18,6 +18,9 @@ Bundle 'gmarik/vundle'
   Bundle 'tpope/vim-endwise'
   " Lets you repeat plugins like surround
   Bundle 'tpope/vim-repeat'
+  " use git without leaving vim, see link below:
+  " http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+  Bundle 'tpope/vim-fugitive'
   " File tree
   Bundle 'scrooloose/nerdtree'
   " Shows you syntax errors when you save
@@ -39,7 +42,7 @@ Bundle 'gmarik/vundle'
   Bundle 'bronson/vim-trailing-whitespace'
   " Rails.vim enough said
   Bundle 'tpope/vim-rails'
-  " Colors available by bundle to by cycled through later
+  " Colors available by bundle to be cycled through later
   Bundle 'tomasr/molokai'
   " ctags
   "Bundle 'fishman/ctags'
@@ -154,4 +157,13 @@ nnoremap <leader>s :Scratch<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+"============================================================
+"==  Fugitive
+"============================================================
+" Use git within vim--I've remapped common commands using leader key
+nnoremap <leader>gs :Gstatus <CR>
+" git add current_file
+nnoremap <leader>ga :Gwrite <CR>
+nnoremap <leader>gc :Gcommit <CR>
+nnoremap <leader>gr :Gcommit <CR>
 
