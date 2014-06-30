@@ -50,6 +50,8 @@ Bundle 'gmarik/vundle'
   "Bundle 'majutsushi/tagbar'
   "Markdown highlighting
   Bundle 'hallison/vim-markdown'
+  " Make gvim-only colorschemes work transparently in terminal vim
+  Bundle 'godlygeek/csapprox'
 
 "============================================================
 "==  Colors
