@@ -28,7 +28,7 @@ Bundle 'gmarik/vundle'
   " Makes parentheses, brackets, etc. prettier
   Bundle 'kien/rainbow_parentheses.vim'
   " Fuzzy search (command t is another option)
-  Bundle 'kien/ctrlp.vim'
+  "Bundle 'kien/ctrlp.vim'
   " Gives you a temporary scratch pad
   Bundle 'mtth/scratch.vim'
   " Autocompletes stuff in insert mode with tab
@@ -51,7 +51,15 @@ Bundle 'gmarik/vundle'
   "Markdown highlighting
   Bundle 'hallison/vim-markdown'
   " Make gvim-only colorschemes work transparently in terminal vim
-  Bundle 'godlygeek/csapprox'
+  "Bundle 'godlygeek/csapprox'
+  " Allows you to toggle seeing the color of hex values when in graphical vim
+  Bundle 'vim-scripts/hexHighlight.vim'
+
+"============================================================
+"==  Color Bundles
+"============================================================
+Bundle 'altercation/vim-colors-solarized'
+
 
 "============================================================
 "==  Colors
@@ -59,15 +67,18 @@ Bundle 'gmarik/vundle'
 " I plan to make a bunch of different colors available here and uncomment the ones I want
 
 "colorscheme jellybeans
-"colorscheme Tomorrow-Night-Bright
-"colorscheme Tomorrow-Night-Eighties
+"colorscheme vividchalk
 
 " The popular Molokai theme
+" colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
+"let g:solarized_termcolors=256
+"colorscheme solarized
 " Good old desert
-colorscheme desert
+"colorscheme desert
+
 "============================================================
 "==  Settings
 "============================================================
@@ -117,7 +128,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "============================================================
 
 let mapleader= " "
-
 
 " Make escape easier:
 imap jk <ESC>
@@ -185,4 +195,13 @@ nnoremap <leader>gs :Gstatus <CR>
 nnoremap <leader>ga :Gwrite <CR>
 nnoremap <leader>gc :Gcommit <CR>
 nnoremap <leader>gr :Gcommit <CR>
+
+" Show highlighting groups for current word
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
