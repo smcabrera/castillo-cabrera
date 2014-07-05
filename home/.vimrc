@@ -55,11 +55,23 @@ Bundle 'gmarik/vundle'
   " Allows you to toggle seeing the color of hex values when in graphical vim
   Bundle 'vim-scripts/hexHighlight.vim'
 
+  " Use rspec within vim
+  Bundle 'thoughtbot/vim-rspec'
+
+  " Now you have two options for using Rspec in vim, both of which I've
+  " included mappings to in the Rspec section
+  " Try these both out and see what works best for you
+
+  " Send commands to a new tmux window
+  Bundle 'jgdavey/tslime.vim'
+  " Show tests within vim
+  Bundle 'tpope/vim-dispatch'
+
+
 "============================================================
 "==  Color Bundles
 "============================================================
-Bundle 'altercation/vim-colors-solarized'
-
+"Bundle 'altercation/vim-colors-solarized'
 
 "============================================================
 "==  Colors
@@ -77,7 +89,7 @@ Bundle 'altercation/vim-colors-solarized'
 "let g:solarized_termcolors=256
 "colorscheme solarized
 " Good old desert
-"colorscheme desert
+colorscheme desert
 
 "============================================================
 "==  Settings
@@ -205,3 +217,21 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+"============================================================
+"==  Rspec
+"============================================================
+
+"let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = "Dispatch rspec {spec}"
+
+" vim-rspec mappings
+map <leader>ts :call RunCurrentSpecFile() <CR>
+map <leader>ss :call RunNearestSpec() <CR>
+map <leader>ls :call RunLastSpec() <CR>
+map <leader>as :call RunAllSpec() <CR>
+
+"============================================================
+"==  Typos
+"============================================================
+nmap :W :w
+nmap :Q :q
