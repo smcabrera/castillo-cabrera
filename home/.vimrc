@@ -54,6 +54,8 @@ Bundle 'gmarik/vundle'
   "Bundle 'godlygeek/csapprox'
   " Allows you to toggle seeing the color of hex values when in graphical vim
   Bundle 'vim-scripts/hexHighlight.vim'
+  " Making vim look prettier
+  Bundle 'bling/vim-airline'
 
 "============================================================
 "==  Color Bundles
@@ -77,7 +79,7 @@ Bundle 'altercation/vim-colors-solarized'
 "let g:solarized_termcolors=256
 "colorscheme solarized
 " Good old desert
-"colorscheme desert
+colorscheme desert
 
 "============================================================
 "==  Settings
@@ -161,6 +163,7 @@ nnoremap <leader>bu :BundleUpdate<CR>
 nmap <leader>rs :!ruby %<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :q<CR>
+nmap <leader>ged :!gedit %<CR>
 
 "============================================================
 "==  NERDTree
@@ -194,7 +197,7 @@ nnoremap <leader>gs :Gstatus <CR>
 " git add current_file
 nnoremap <leader>ga :Gwrite <CR>
 nnoremap <leader>gc :Gcommit <CR>
-nnoremap <leader>gr :Gcommit <CR>
+nnoremap <leader>gx :Gread <CR>
 
 " Show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
