@@ -22,7 +22,7 @@ windows:
   - editor: vim
   - server: bundle exec rails s
   - logs: tail -f log/development.log
-  - time-tracking: t sheet bloc
+  - time: t sheet bloc
   - notes: vim ~/Dropbox/journal/bloc-notes
   - shell:
 
