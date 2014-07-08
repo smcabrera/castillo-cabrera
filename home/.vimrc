@@ -57,11 +57,23 @@ Bundle 'gmarik/vundle'
   " Making vim look prettier
   Bundle 'bling/vim-airline'
 
+  " Use rspec within vim
+  Bundle 'thoughtbot/vim-rspec'
+
+  " Now you have two options for using Rspec in vim, both of which I've
+  " included mappings to in the Rspec section
+  " Try these both out and see what works best for you
+
+  " Send commands to a new tmux window
+  Bundle 'jgdavey/tslime.vim'
+  " Show tests within vim
+  Bundle 'tpope/vim-dispatch'
+
+
 "============================================================
 "==  Color Bundles
 "============================================================
-Bundle 'altercation/vim-colors-solarized'
-
+"Bundle 'altercation/vim-colors-solarized'
 
 "============================================================
 "==  Colors
@@ -160,7 +172,7 @@ nnoremap <leader>bi :BundleInstall<CR>
 nnoremap <leader>bu :BundleUpdate<CR>
 
 " Run the current file in the ruby console
-nmap <leader>rs :!ruby %<CR>
+nmap <leader>rs :w <CR> :!ruby %<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :q<CR>
 nmap <leader>ged :!gedit %<CR>
@@ -208,3 +220,21 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+"============================================================
+"==  Rspec
+"============================================================
+
+"let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = "Dispatch rspec {spec}"
+
+" vim-rspec mappings
+map <leader>ts :call RunCurrentSpecFile() <CR>
+map <leader>ss :call RunNearestSpec() <CR>
+map <leader>ls :call RunLastSpec() <CR>
+map <leader>as :call RunAllSpec() <CR>
+
+"============================================================
+"==  Typos
+"============================================================
+nmap :W :w
+nmap :Q :q
