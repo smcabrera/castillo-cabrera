@@ -67,8 +67,13 @@ Bundle 'gmarik/vundle'
   " Send commands to a new tmux window
   Bundle 'jgdavey/tslime.vim'
   " Show tests within vim
-  Bundle 'tpope/vim-dispatch'
-
+  " Bundle 'tpope/vim-dispatch' " This install failed for some reason--perhaps
+  " try to troubleshoot it later if we'd like to get it working.
+  " Among other things, these bundles add files to the load path so that you can use gf for jumping
+  " between files
+  Bundle "vim-ruby/vim-ruby"
+  Bundle 'tpope/vim-bundler'
+  Bundle "tpope/vim-rake"
 
 "============================================================
 "==  Color Bundles
@@ -238,3 +243,45 @@ map <leader>as :call RunAllSpec() <CR>
 "============================================================
 nmap :W :w
 nmap :Q :q
+
+"============================================================
+"==  Make jumping around ruby files easier
+"============================================================
+
+" So that gf will set file paths correctly
+augroup rubypath
+  autocmd!
+
+  autocmd FileType ruby setlocal suffixesadd+=.rb
+  autocmd FileType ruby setlocal path+=~/appraisal/lib
+augroup END
+
+" Adds to the load path
+"   Current project
+"   bundled gems
+"   ruby standard library
+
+" Lets you jump from the start of the line with a require statement
+" Vim ruby automatically adds all the current files to the load path
+"
+"============================================================
+"==  Enable filetype detection and syntax highlighting
+"============================================================
+" I installed this so I could get highlighting when I use vim in IRB
+
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
+
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
+
+

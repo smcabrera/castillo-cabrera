@@ -1,0 +1,100 @@
+example()
+l = lambda { puts "example with lambda"}
+l.call
+p = Proc.new { puts "example with proc"}
+p.call
+double = lambda {|n|n*2}
+a.map double
+a.map &double
+double.to_proc
+method(:example)
+def divisible_by_5?
+def divisible_by_5? n
+n % 5 == 0
+c = [1,2,3,4,5,6,7,8,9,10]
+c.select &method(:divisible_by_5)
+c.select &method(:divisible_by_5?)
+c.select do |num|
+divisible_by_5? num
+#  
+hello 
+# x, f1, f2  →  f2(f1(x))
+def double(num)
+num * 2
+double(2)
+def square(num)
+num ** 2
+square(3)
+fun1(fun2(val))
+compose(4, square, double)
+method
+fun1 = method(:square)
+fun2 = method(:double)
+fun1
+fun1()
+fun1.call
+fun1.call 2
+def compose(val, fun1, fun2)
+fun1.call(fun2.call(val))
+compose (4, fun1, fun2)
+compose(4, fun1, fun2)
+compose(3, fun1, fun2)
+# ...
+raise "!" unless block_given?
+# ..
+compose(1,fun1)
+compose(1,fun1) {|n|n+6}
+def compose val, fun1, fun2
+def compose val, fun1
+fun1.call(val)
+raise "requires block" unless block_given?
+fun1.call(yield val)
+end
+compose(2, fun1) { |val| fun2 val }
+@fun2 = method(:double)
+compose(2, fun1) { |val| @fun2 val }
+compose(2, fun1) { |val| square val }
+fun2 val
+[1,2,3].each { |val| double }
+compose(2, fun1, &method(:square))
+$LOAD_PATH
+ruby -I bowling_spec.rb
+quit()
+csv
+csv help
+Post.connection
+Post[0]
+Post.new title: "Hey there!" body: "I'm the first post guys! Yippee!"
+Post.new (:title "Hey there!" :body "I'm the first post guys! Yippee!")
+Ppost
+Post(title: "title" body: "body")
+Post.create(title: "First post", body: "This is the first post!")
+post.comments.create(body: "first comment!")
+post = Post.first
+post
+post.comments.create(body: "First comment!")
+post.comments.create(body: "Hey guys I'm here to troll the internet")
+comment1 = Comment.first
+comment2 = Comment.last
+clear
+comment2
+comment.post
+comment2.post
+post.comments
+post.comments.each { |comment| p comment.body }
+post1
+post1 = Post.first
+puts post1
+puts post1.title
+post1.tag
+quit
+posts = Posts.all
+Post.first
+SELECT "posts".* FROM "posts"
+Post.create(title: "Another post", body: "This is the second post.")
+Post
+Posts
+Post.all
+p = Post.find(3)
+p.comments.count
+exit
