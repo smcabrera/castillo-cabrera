@@ -76,7 +76,8 @@ Bundle 'gmarik/vundle'
 "============================================================
 "==  Color Bundles
 "============================================================
-"Bundle 'altercation/vim-colors-solarized'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-distinguished'
 
 "============================================================
 "==  Colors
@@ -89,6 +90,7 @@ Bundle 'gmarik/vundle'
 "let g:solarized_termcolors=256
 colorscheme desert
 "colorscheme molokai
+"colorscheme distinguished
 
 "============================================================
 "==  Settings
@@ -144,7 +146,7 @@ let mapleader= " "
 imap jk <ESC>
 
 " Make fixing whitespace faster
-nmap :fw :FixWhitespace
+nmap :fw :FixWhitespace <CR>
 
 " I would use this but I'm concerned about overwriting what ; does by default
 "nmap ; :
