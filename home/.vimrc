@@ -78,18 +78,12 @@ Bundle 'gmarik/vundle'
 "============================================================
 " I plan to make a bunch of different colors available here and uncomment the ones I want
 
-"colorscheme jellybeans
-"colorscheme vividchalk
-
-" The popular Molokai theme
-" colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
 "let g:solarized_termcolors=256
-"colorscheme solarized
-" Good old desert
 colorscheme desert
+"colorscheme molokai
 
 "============================================================
 "==  Settings
@@ -121,7 +115,7 @@ set smartcase
   vnoremap k gk
 
 " Work with long lines properly
-set textwidth=79
+"set textwidth=79
 set formatoptions=qrn1
 "Nice feature but too ugly...set colorcolumn=85
 
@@ -235,3 +229,16 @@ map <leader>as :call RunAllSpec() <CR>
 "============================================================
 nmap :W :w
 nmap :Q :q
+
+"============================================================
+"==  Editing vimrc on the fly
+"============================================================
+" ht: episode 24 of vimcasts
+
+"Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+" And always let me open vimrc in a new tab whenever I want to
+nmap <leader>v :tabedit $MYVIMRC<CR>
