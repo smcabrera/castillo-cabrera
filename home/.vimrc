@@ -239,7 +239,7 @@ if has("autocmd")
 endif
 
 " And always let me open vimrc in a new tab whenever I want to
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
 
 "============================================================
 "==  Make jumping around ruby files easier
