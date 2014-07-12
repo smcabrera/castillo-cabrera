@@ -29,8 +29,6 @@ Bundle 'gmarik/vundle'
   Bundle 'kien/rainbow_parentheses.vim'
   " Fuzzy search (command t is another option)
   "Bundle 'kien/ctrlp.vim'
-  " Gives you a temporary scratch pad
-  Bundle 'mtth/scratch.vim'
   " Autocompletes stuff in insert mode with tab
   Bundle 'ervandew/supertab'
   " Gives you useful code snippets from tab
@@ -177,14 +175,6 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 " When NERDTree is the only buffer left, close it
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"============================================================
-"==  Scratch
-"============================================================
-"
-" Plugin that lets you create a temporary scratchpad
-" open with
-nnoremap <leader>s :Scratch<CR>
 
 "============================================================
 "==  Tagbar
