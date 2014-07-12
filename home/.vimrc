@@ -52,6 +52,8 @@ Bundle 'gmarik/vundle'
   "Bundle 'godlygeek/csapprox'
   " Allows you to toggle seeing the color of hex values when in graphical vim
   Bundle 'vim-scripts/hexHighlight.vim'
+  " Making vim look prettier
+  Bundle 'bling/vim-airline'
 
   " Use rspec within vim
   Bundle 'thoughtbot/vim-rspec'
@@ -63,8 +65,13 @@ Bundle 'gmarik/vundle'
   " Send commands to a new tmux window
   Bundle 'jgdavey/tslime.vim'
   " Show tests within vim
-  Bundle 'tpope/vim-dispatch'
-
+  " Bundle 'tpope/vim-dispatch' " This install failed for some reason--perhaps
+  " try to troubleshoot it later if we'd like to get it working.
+  " Among other things, these bundles add files to the load path so that you can use gf for jumping
+  " between files
+  Bundle "vim-ruby/vim-ruby"
+  Bundle 'tpope/vim-bundler'
+  Bundle "tpope/vim-rake"
 
 "============================================================
 "==  Color Bundles
@@ -165,6 +172,7 @@ nnoremap <leader>bu :BundleUpdate<CR>
 nmap <leader>rs :w <CR> :!ruby %<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :q<CR>
+nmap <leader>ged :!gedit %<CR>
 
 "============================================================
 "==  NERDTree
@@ -190,7 +198,7 @@ nnoremap <leader>gs :Gstatus <CR>
 " git add current_file
 nnoremap <leader>ga :Gwrite <CR>
 nnoremap <leader>gc :Gcommit <CR>
-nnoremap <leader>gr :Gcommit <CR>
+nnoremap <leader>gx :Gread <CR>
 
 " Show highlighting groups for current word
 nmap <C-S-P> :call <SID>SynStack()<CR>
@@ -232,3 +240,43 @@ endif
 
 " And always let me open vimrc in a new tab whenever I want to
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+"============================================================
+"==  Make jumping around ruby files easier
+"============================================================
+
+" So that gf will set file paths correctly
+augroup rubypath
+  autocmd!
+
+  autocmd FileType ruby setlocal suffixesadd+=.rb
+augroup END
+
+" Adds to the load path
+"   Current project
+"   bundled gems
+"   ruby standard library
+
+" Lets you jump from the start of the line with a require statement
+" Vim ruby automatically adds all the current files to the load path
+"
+"============================================================
+"==  Enable filetype detection and syntax highlighting
+"============================================================
+" I installed this so I could get highlighting when I use vim in IRB
+
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
+
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
+
