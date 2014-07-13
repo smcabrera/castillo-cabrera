@@ -72,6 +72,8 @@ Bundle 'gmarik/vundle'
   Bundle "vim-ruby/vim-ruby"
   Bundle 'tpope/vim-bundler'
   Bundle "tpope/vim-rake"
+  " To make commenting faster
+  Bundle 'scrooloose/nerdcommenter'
 
 "============================================================
 "==  Color Bundles
