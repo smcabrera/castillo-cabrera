@@ -1,0 +1,7 @@
+[user]
+	email = stephen.m.cabrera@gmail.com
+	name = Stephen Mariano Cabrera
+[color]
+	ui = true
+[init]
+	templatedir = ~/.git_template

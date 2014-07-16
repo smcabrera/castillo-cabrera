@@ -1,18 +1,3 @@
-example()
-l = lambda { puts "example with lambda"}
-l.call
-p = Proc.new { puts "example with proc"}
-p.call
-double = lambda {|n|n*2}
-a.map double
-a.map &double
-double.to_proc
-method(:example)
-def divisible_by_5?
-def divisible_by_5? n
-n % 5 == 0
-c = [1,2,3,4,5,6,7,8,9,10]
-c.select &method(:divisible_by_5)
 c.select &method(:divisible_by_5?)
 c.select do |num|
 divisible_by_5? num
@@ -76,7 +61,6 @@ post.comments.create(body: "First comment!")
 post.comments.create(body: "Hey guys I'm here to troll the internet")
 comment1 = Comment.first
 comment2 = Comment.last
-clear
 comment2
 comment.post
 comment2.post
@@ -87,7 +71,6 @@ post1 = Post.first
 puts post1
 puts post1.title
 post1.tag
-quit
 posts = Posts.all
 Post.first
 SELECT "posts".* FROM "posts"
@@ -98,3 +81,20 @@ Post.all
 p = Post.find(3)
 p.comments.count
 exit
+_
+)
+vim
+require mechanize
+require 'mechanize'
+clear
+q
+form
+my_page
+vi
+@posts = Post.all
+posts.each {|post| puts post.title}
+@posts.each {|post| puts post.title}
+@posts[0].title
+@posts[3].title
+@posts[6].title
+quit
