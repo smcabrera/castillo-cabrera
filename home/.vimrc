@@ -74,6 +74,8 @@ Bundle 'gmarik/vundle'
   Bundle "tpope/vim-rake"
   " To make commenting faster
   Bundle 'scrooloose/nerdcommenter'
+  " Matchit to identify matching keyword pairs, comes with vim but has to be enabled
+runtime macros/matchit.vim
 
 "============================================================
 "==  Color Bundles
@@ -115,7 +117,7 @@ set smartcase
   :set formatoptions=l
   :set linebreak
   :set nolist
-  :set breakat=\ |@-+;:,./?^I
+  ":set breakat=\ |@-+;:,./?^I
 
   " move through lines on the screen instead of line numbers
   nnoremap j gj

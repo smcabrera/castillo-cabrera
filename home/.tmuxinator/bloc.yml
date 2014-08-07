@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rails.yml
 
 name: bloc
-root: ~/smcabrera/bloccit/
+root: ~/code/bloccit/
 
 # Optional tmux socket
 # socket_name: foo

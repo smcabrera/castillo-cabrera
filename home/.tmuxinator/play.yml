@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rails.yml
 
 name: play
-root: ~/smcabrera/
+root: ~/code/
 
 # Optional tmux socket
 # socket_name: foo

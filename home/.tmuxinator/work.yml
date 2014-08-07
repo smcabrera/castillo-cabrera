@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rails.yml
 
 name: work
-root: ~/smcabrera/
+root: ~/code/itinerapp
 
 # Optional tmux socket
 # socket_name: foo
