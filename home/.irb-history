@@ -1,5 +1,3 @@
-def compose val, fun1, fun2
-def compose val, fun1
 fun1.call(val)
 raise "requires block" unless block_given?
 fun1.call(yield val)
@@ -97,4 +95,6 @@ client.auth_code.authorize_url({
   :access_type => 'offline'
 })
 export LEGATO_OAUTH_AUTH_CODE=4/XTOnLeIm3sGtg9d2J9bMXxYNSRkz.Qi6DzMcNE0QU3oEBd8DOtNDdjRiYjgI
+puts current_user
+current_user?
 quit

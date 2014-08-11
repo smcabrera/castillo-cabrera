@@ -92,8 +92,8 @@ Bundle 'Lokaltog/vim-distinguished'
 "let g:rehash256 = 1
 
 "let g:solarized_termcolors=256
-colorscheme desert
-"colorscheme molokai
+"colorscheme desert
+colorscheme molokai
 "colorscheme distinguished
 
 "============================================================
@@ -144,7 +144,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "==  Mappings
 "============================================================
 
-let mapleader= " "
 
 " Make escape easier:
 imap jk <ESC>
@@ -170,7 +169,9 @@ nmap <S-Tab> < <C>
 "==  Leader Mappings
 "============================================================
 
-" Automatically install or update vim plugins with vundle
+let mapleader= " "
+
+" automatically install or update vim plugins with vundle
 nnoremap <leader>bi :BundleInstall<CR>
 nnoremap <leader>bu :BundleUpdate<CR>
 
