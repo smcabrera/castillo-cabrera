@@ -1,32 +1,3 @@
-fun1.call(val)
-raise "requires block" unless block_given?
-fun1.call(yield val)
-end
-compose(2, fun1) { |val| fun2 val }
-@fun2 = method(:double)
-compose(2, fun1) { |val| @fun2 val }
-compose(2, fun1) { |val| square val }
-fun2 val
-[1,2,3].each { |val| double }
-compose(2, fun1, &method(:square))
-$LOAD_PATH
-ruby -I bowling_spec.rb
-quit()
-csv
-csv help
-Post.connection
-Post[0]
-Post.new title: "Hey there!" body: "I'm the first post guys! Yippee!"
-Post.new (:title "Hey there!" :body "I'm the first post guys! Yippee!")
-Ppost
-Post(title: "title" body: "body")
-Post.create(title: "First post", body: "This is the first post!")
-post.comments.create(body: "first comment!")
-post = Post.first
-post
-post.comments.create(body: "First comment!")
-post.comments.create(body: "Hey guys I'm here to troll the internet")
-comment1 = Comment.first
 comment2 = Comment.last
 comment2
 comment.post
@@ -45,7 +16,7 @@ Post.create(title: "Another post", body: "This is the second post.")
 Post
 Posts
 Post.all
-p = Post.find(3)
+p = Post.find(3)ww
 p.comments.count
 _
 )
@@ -53,7 +24,6 @@ vim
 require mechanize
 require 'mechanize'
 clear
-q
 form
 my_page
 @posts = Post.all
@@ -73,7 +43,6 @@ a.name = "new itinerary"
 a.description = "This is the new itinerary for stuff"
 a 
 Itinerary.new
-exit
 i = Itinerary.new
 i.name = "Heart of the Inca"
 i.description = "This is our shortest tour. Enjoy"
@@ -97,4 +66,35 @@ client.auth_code.authorize_url({
 export LEGATO_OAUTH_AUTH_CODE=4/XTOnLeIm3sGtg9d2J9bMXxYNSRkz.Qi6DzMcNE0QU3oEBd8DOtNDdjRiYjgI
 puts current_user
 current_user?
+u2 = User.new(email: "fake@email.com", password: "password", password_confirmation = "password")
+u2 = User.new(email: "fake@email.com", password: "password", password_confirmation: "password")
+u2.id = 2
+u2
+u2.skip_confirmation!
+u2.save
+u.posts
+u.posts.create(title: "New Post", body: "This is a new post")
+u.posts.create(title: "Another Post!", body: "This is yet another new post")
+u.posts.all
+user.posts.count
+q
+u.posts.count
+u = Users.first
+User.first
+User.find.email('stephen.m.cabrera@gmail.com')
+User.email('stephen.m.cabrera@gmail.com')
 quit
+User.find_by :email 'stephen.m.cabrera@gmail.com'
+User.find_by email: 'stephen.m.cabrera@gmail.com'
+user.first
+u = User.first
+u.update_attributes (email: 'stephen.m.cabrera@gmail.com', password: 'password')
+u.update_attribute('email', 'stephen.m.cabrera')
+attr_hash = {email: 'stephen.m.cabrera', password: 'password'}
+attr_hash = {email: 'stephen.m.cabrera@gmail.com', password: 'password'}
+u.update_attributes(attr_hash)
+u.skip_confirmation!
+u.save
+u
+u.update_attribute('email', 'stephen.m.cabrera@gmail.com')
+exit
