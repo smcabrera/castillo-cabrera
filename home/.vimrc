@@ -64,6 +64,10 @@ Bundle 'gmarik/vundle'
 
   " Send commands to a new tmux window
   Bundle 'jgdavey/tslime.vim'
+
+  " Send commands to a new tmux window
+  Bundle 'benmills/vimux'
+
   " Show tests within vim
   " Bundle 'tpope/vim-dispatch' " This install failed for some reason--perhaps
   " try to troubleshoot it later if we'd like to get it working.

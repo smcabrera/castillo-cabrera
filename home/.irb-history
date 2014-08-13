@@ -1,5 +1,3 @@
-comment2 = Comment.last
-comment2
 comment.post
 comment2.post
 post.comments
@@ -85,7 +83,6 @@ User.find.email('stephen.m.cabrera@gmail.com')
 User.email('stephen.m.cabrera@gmail.com')
 quit
 User.find_by :email 'stephen.m.cabrera@gmail.com'
-User.find_by email: 'stephen.m.cabrera@gmail.com'
 user.first
 u = User.first
 u.update_attributes (email: 'stephen.m.cabrera@gmail.com', password: 'password')
@@ -98,3 +95,6 @@ u.save
 u
 u.update_attribute('email', 'stephen.m.cabrera@gmail.com')
 exit
+Users.find_by email: 'stephen.m.cabrera@gmail.com'
+User.find_by email: 'stephen.m.cabrera@gmail.com'
+User.find(6)
