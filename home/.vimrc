@@ -53,7 +53,7 @@ Bundle 'gmarik/vundle'
   " Allows you to toggle seeing the color of hex values when in graphical vim
   Bundle 'vim-scripts/hexHighlight.vim'
   " Making vim look prettier
-  Bundle 'bling/vim-airline'
+  " Bundle 'bling/vim-airline'
 
   " Use rspec within vim
   Bundle 'thoughtbot/vim-rspec'
@@ -67,6 +67,9 @@ Bundle 'gmarik/vundle'
 
   " Send commands to a new tmux window
   Bundle 'benmills/vimux'
+
+  " Same idea as above, different plugin
+  Bundle 'epeli/slimux'
 
   " Show tests within vim
   " Bundle 'tpope/vim-dispatch' " This install failed for some reason--perhaps
@@ -84,8 +87,9 @@ runtime macros/matchit.vim
 "============================================================
 "==  Color Bundles
 "============================================================
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-distinguished'
+
+"Bundle 'altercation/vim-colors-solarized'
+"Bundle 'Lokaltog/vim-distinguished'
 
 "============================================================
 "==  Colors
@@ -147,7 +151,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 "============================================================
 "==  Mappings
 "============================================================
-
 
 " Make escape easier:
 imap jk <ESC>
@@ -300,9 +303,46 @@ endif
 "============================================================
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+" The line below should hopefully allow this to work via homesick without having to worry about the python installation...I'm probably wrong about this...
+set rtp+=$HOME/.homesick/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+
+"============================================================
+"==  Vimux
+"============================================================
+" See help vimux
+
+ " Prompt for a command to run map
+ map <Leader>vp :VimuxPromptCommand<CR>
+
+ " Run last command executed by VimuxRunCommand
+ map <Leader>vl :VimuxRunLastCommand<CR>
+
+"============================================================
+"==  Slimux -- Commands for the REPL
+"============================================================
+" See https://github.com/epeli/slimux for documentation
+" There really should just be a "help Slimux with exactly what's in the above documentation
+" If I end up really liking this plugin I may offer to do that, just copying and pasting it
+
+" Send current line to configured pane
+map <Leader>s :SlimuxREPLSendLine<CR>
+
+" Send last visually selected text to configured pane
+vmap <Leader>s :SlimuxREPLSendSelection<CR>
+
+" Prompt pane configuration for current buffer
+vmap <Leader>sc :SlimuxREPLConfigure<CR>
+
+"============================================================
+"==  Slimux -- Commands for the Shell
+"============================================================
+
+map <Leader>a :SlimuxShellLast<CR>
+map <Leader>k :SlimuxSendKeysLast<CR>
+
