@@ -1,95 +1,100 @@
 "Make vim not compatible with vi--because you didn't really need that did you?
 set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 "============================================================
-"==  My Plugins/Bundles
+"==  My Plugins
 "============================================================
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Personal list of plugins
-  " Lets you surround text with tags or quotes
-  Bundle 'tpope/vim-surround'
-  " Ends certain structures automatically--like end after if in ruby
-  Bundle 'tpope/vim-endwise'
-  " Lets you repeat plugins like surround
-  Bundle 'tpope/vim-repeat'
+  
+  Plugin 'tpope/vim-surround' " Lets you surround text with tags or quotes
+  " " Ends certain structures automatically--like 'end' in ruby
+  Plugin 'tpope/vim-endwise'
+  " " Lets you repeat plugins like surround
+  Plugin 'tpope/vim-repeat'
   " use git without leaving vim, see link below:
   " http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
-  Bundle 'tpope/vim-fugitive'
+  Plugin 'tpope/vim-fugitive'
   " File tree
-  Bundle 'scrooloose/nerdtree'
+  Plugin 'scrooloose/nerdtree'
   " Shows you syntax errors when you save
-  Bundle 'scrooloose/syntastic'
+  Plugin 'scrooloose/syntastic'
   " Makes parentheses, brackets, etc. prettier
-  Bundle 'kien/rainbow_parentheses.vim'
+  Plugin 'kien/rainbow_parentheses.vim'
   " Fuzzy search (command t is another option)
-  "Bundle 'kien/ctrlp.vim'
+  Plugin 'kien/ctrlp.vim'
   " Autocompletes stuff in insert mode with tab
-  Bundle 'ervandew/supertab'
+  Plugin 'ervandew/supertab'
   " Gives you useful code snippets from tab
-  Bundle 'MarcWeber/vim-addon-mw-utils'
-  Bundle 'tomtom/tlib_vim'
-  Bundle 'garbas/vim-snipmate'
-  Bundle 'honza/vim-snippets'
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'honza/vim-snippets'
   "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-  Bundle 'bronson/vim-trailing-whitespace'
+  Plugin 'bronson/vim-trailing-whitespace'
   " Rails.vim enough said
-  Bundle 'tpope/vim-rails'
+  Plugin 'tpope/vim-rails'
   " Colors available by bundle to be cycled through later
-  Bundle 'tomasr/molokai'
+  Plugin 'tomasr/molokai'
   " ctags
-  "Bundle 'fishman/ctags'
+  "Plugin 'fishman/ctags'
   " Show tags in a sidebar
-  "Bundle 'majutsushi/tagbar'
+  Plugin 'majutsushi/tagbar'
   "Markdown highlighting
-  Bundle 'hallison/vim-markdown'
+  Plugin 'hallison/vim-markdown'
   " Make gvim-only colorschemes work transparently in terminal vim
-  "Bundle 'godlygeek/csapprox'
-  " Allows you to toggle seeing the color of hex values when in graphical vim
-  Bundle 'vim-scripts/hexHighlight.vim'
-  " Making vim look prettier
-  " Bundle 'bling/vim-airline'
-
+  Plugin 'godlygeek/csapprox'
+  " " Allows you to toggle seeing the color of hex values when in graphical vim
+  Plugin 'vim-scripts/hexHighlight.vim'
+  " " Making vim look prettier
+  Plugin 'bling/vim-airline'
+  " " 
   " Use rspec within vim
-  Bundle 'thoughtbot/vim-rspec'
-
-  " Now you have two options for using Rspec in vim, both of which I've
-  " included mappings to in the Rspec section
-  " Try these both out and see what works best for you
-
-  " Send commands to a new tmux window
-  Bundle 'jgdavey/tslime.vim'
-
-  " Send commands to a new tmux window
-  Bundle 'benmills/vimux'
-
+  Plugin 'thoughtbot/vim-rspec'
+  " 
+  " " Now you have two options for using Rspec in vim, both of which I've
+  " " included mappings to in the Rspec section
+  " " Try these both out and see what works best for you
+  " " 
+  " " Send commands to a new tmux window
+  Plugin 'jgdavey/tslime.vim'
+  " 
+  " " Send commands to a new tmux window
+  Plugin 'benmills/vimux'
+  " " 
   " Same idea as above, different plugin
-  Bundle 'epeli/slimux'
+  Plugin 'epeli/slimux'
+  " 
+  " " Show tests within vim
+  Plugin 'tpope/vim-dispatch' " This install failed for some reason--perhaps
+  " " try to troubleshoot it later if we'd like to get it working.
+  " " Among other things, these bundles add files to the load path so that you can use gf for jumping
+  " " between files
+  Plugin 'vim-ruby/vim-ruby'
+  Plugin 'tpope/vim-bundler'
+  Plugin 'tpope/vim-rake'
+  " " To make commenting faster
+  Plugin 'scrooloose/nerdcommenter'
 
-  " Show tests within vim
-  " Bundle 'tpope/vim-dispatch' " This install failed for some reason--perhaps
-  " try to troubleshoot it later if we'd like to get it working.
-  " Among other things, these bundles add files to the load path so that you can use gf for jumping
-  " between files
-  Bundle "vim-ruby/vim-ruby"
-  Bundle 'tpope/vim-bundler'
-  Bundle "tpope/vim-rake"
-  " To make commenting faster
-  Bundle 'scrooloose/nerdcommenter'
-  " Matchit to identify matching keyword pairs, comes with vim but has to be enabled
+call vundle#end()
+filetype plugin indent on
+  
+" Matchit to identify matching keyword pairs, comes with vim but has to be enabled
 runtime macros/matchit.vim
-
+  
 "============================================================
 "==  Color Bundles
 "============================================================
 
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'Lokaltog/vim-distinguished'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-distinguished'
 
 "============================================================
 "==  Colors
@@ -179,8 +184,8 @@ nmap <S-Tab> < <C>
 let mapleader= " "
 
 " automatically install or update vim plugins with vundle
-nnoremap <leader>bi :BundleInstall<CR>
-nnoremap <leader>bu :BundleUpdate<CR>
+nnoremap <leader>pi :PluginInstall<CR>
+nnoremap <leader>pu :PluginUpdate<CR>
 
 " Run the current file in the ruby console
 nmap <leader>rs :w <CR> :!ruby %<CR>
@@ -304,7 +309,7 @@ endif
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " The line below should hopefully allow this to work via homesick without having to worry about the python installation...I'm probably wrong about this...
-set rtp+=$HOME/.homesick/powerline/bindings/vim/
+"set rtp+=$HOME/.homesick/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2

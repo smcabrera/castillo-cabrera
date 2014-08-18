@@ -1,17 +1,3 @@
-comment.post
-comment2.post
-post.comments
-post.comments.each { |comment| p comment.body }
-post1
-post1 = Post.first
-puts post1
-puts post1.title
-post1.tag
-posts = Posts.all
-Post.first
-SELECT "posts".* FROM "posts"
-Post.create(title: "Another post", body: "This is the second post.")
-Post
 Posts
 Post.all
 p = Post.find(3)ww
@@ -78,23 +64,37 @@ user.posts.count
 q
 u.posts.count
 u = Users.first
-User.first
 User.find.email('stephen.m.cabrera@gmail.com')
 User.email('stephen.m.cabrera@gmail.com')
-quit
 User.find_by :email 'stephen.m.cabrera@gmail.com'
 user.first
-u = User.first
 u.update_attributes (email: 'stephen.m.cabrera@gmail.com', password: 'password')
 u.update_attribute('email', 'stephen.m.cabrera')
 attr_hash = {email: 'stephen.m.cabrera', password: 'password'}
 attr_hash = {email: 'stephen.m.cabrera@gmail.com', password: 'password'}
 u.update_attributes(attr_hash)
-u.skip_confirmation!
 u.save
-u
-u.update_attribute('email', 'stephen.m.cabrera@gmail.com')
+u.update_attribute('email', 'stephen.m.cabrera@gmail.com').
 exit
 Users.find_by email: 'stephen.m.cabrera@gmail.com'
 User.find_by email: 'stephen.m.cabrera@gmail.com'
 User.find(6)
+User.first
+User.
+u.update_attributes(email: 'stephen.m.cabrera@gmail.com', name: 'stephen')
+puts u
+u.email = 'blah blah'
+u.save(false)
+u.savvalidate:flase)
+p u
+u.email = 'djskal blah'
+u.save(validate:false)
+u.email
+u.skip_confirmation!
+u.skip_reconfirmation!
+u.email = 'stephen@gmail.com'
+u.save!
+u
+reload!
+u = User.first
+quit
