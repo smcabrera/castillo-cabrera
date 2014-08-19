@@ -12,83 +12,45 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
-" My Personal list of plugins
-  
-  Plugin 'tpope/vim-surround' " Lets you surround text with tags or quotes
-  " " Ends certain structures automatically--like 'end' in ruby
-  Plugin 'tpope/vim-endwise'
-  " " Lets you repeat plugins like surround
-  Plugin 'tpope/vim-repeat'
-  " use git without leaving vim, see link below:
-  " http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
-  Plugin 'tpope/vim-fugitive'
-  " File tree
-  Plugin 'scrooloose/nerdtree'
-  " Shows you syntax errors when you save
-  Plugin 'scrooloose/syntastic'
-  " Makes parentheses, brackets, etc. prettier
-  Plugin 'kien/rainbow_parentheses.vim'
-  " Fuzzy search (command t is another option)
-  Plugin 'kien/ctrlp.vim'
-  " Autocompletes stuff in insert mode with tab
-  Plugin 'ervandew/supertab'
-  " Gives you useful code snippets from tab
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'garbas/vim-snipmate'
-  Plugin 'honza/vim-snippets'
-  "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-  Plugin 'bronson/vim-trailing-whitespace'
-  " Rails.vim enough said
-  Plugin 'tpope/vim-rails'
-  " Colors available by bundle to be cycled through later
-  Plugin 'tomasr/molokai'
-  " ctags
-  "Plugin 'fishman/ctags'
-  " Show tags in a sidebar
-  Plugin 'majutsushi/tagbar'
-  "Markdown highlighting
-  Plugin 'hallison/vim-markdown'
-  " Make gvim-only colorschemes work transparently in terminal vim
-  Plugin 'godlygeek/csapprox'
-  " " Allows you to toggle seeing the color of hex values when in graphical vim
-  Plugin 'vim-scripts/hexHighlight.vim'
-  " " Making vim look prettier
-  Plugin 'bling/vim-airline'
-  " " 
-  " Use rspec within vim
-  Plugin 'thoughtbot/vim-rspec'
-  " 
-  " " Now you have two options for using Rspec in vim, both of which I've
-  " " included mappings to in the Rspec section
-  " " Try these both out and see what works best for you
-  " " 
-  " " Send commands to a new tmux window
-  Plugin 'jgdavey/tslime.vim'
-  " 
-  " " Send commands to a new tmux window
-  Plugin 'benmills/vimux'
-  " " 
-  " Same idea as above, different plugin
-  Plugin 'epeli/slimux'
-  " 
-  " " Show tests within vim
-  Plugin 'tpope/vim-dispatch' " This install failed for some reason--perhaps
-  " " try to troubleshoot it later if we'd like to get it working.
-  " " Among other things, these bundles add files to the load path so that you can use gf for jumping
-  " " between files
-  Plugin 'vim-ruby/vim-ruby'
-  Plugin 'tpope/vim-bundler'
-  Plugin 'tpope/vim-rake'
-  " " To make commenting faster
-  Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
+Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
+Plugin 'tpope/vim-repeat' "Repeat plugins like surround
+Plugin 'tpope/vim-fugitive' "Use git without leaving vim, see link: http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+Plugin 'scrooloose/nerdtree' "File tree
+Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
+Plugin 'kien/rainbow_parentheses.vim' "Makes parentheses, brackets, etc. prettier
+Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
+Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
+Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'bronson/vim-trailing-whitespace' "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+Plugin 'tpope/vim-rails' "Rails.vim enough said
+Plugin 'tomasr/molokai' "Colors available by bundle to be cycled through later
+Plugin 'fishman/ctags' "ctags
+Plugin 'majutsushi/tagbar' "Show tags in a sidebar
+Plugin 'hallison/vim-markdown' "Markdown highlighting
+Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
+Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
+Plugin 'bling/vim-airline' "Making vim look prettier
+Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
+  " Two different options for using Rspec in vim
+Plugin 'jgdavey/tslime.vim' "Send commands to a new tmux window
+Plugin 'benmills/vimux' "Send commands to a new tmux window
+Plugin 'epeli/slimux' " Same idea as above, different plugin
+Plugin 'tpope/vim-dispatch' " This install failed for some reason--perhaps show tests within vim try to troubleshoot it later if we'd like to get it working.
+Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+Plugin 'scrooloose/nerdcommenter' "To make commenting faster
 
 call vundle#end()
 filetype plugin indent on
-  
+
 " Matchit to identify matching keyword pairs, comes with vim but has to be enabled
 runtime macros/matchit.vim
-  
+
 "============================================================
 "==  Color Bundles
 "============================================================
