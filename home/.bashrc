@@ -28,7 +28,14 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Allowing me to use the todotxt shell script
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
 
-if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-fi
+#if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#fi
+
+# Powerline according to github.com/milkbikis/powerline-shell
+function _update_ps1() {
+    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+  }
+
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
