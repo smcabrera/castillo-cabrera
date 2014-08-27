@@ -8,7 +8,7 @@ root: ~/code/bloccit/
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
-pre: zsh
+pre: bash
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -24,7 +24,7 @@ windows:
   - server: bundle exec rails s
   - logs: tail -f log/development.log
   - time: t sheet bloc
-  - notes: vim ~/Dropbox/journal/bloc-notes
+  - notes:
   - shell:
 
 
