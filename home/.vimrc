@@ -56,20 +56,17 @@ runtime macros/matchit.vim
 "============================================================
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/vim-distinguished'
 
 "============================================================
 "==  Colors
 "============================================================
-" I plan to make a bunch of different colors available here and uncomment the ones I want
+" If I feel like it later, I can add more colors and uncomment the ones I want
 
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
 "let g:solarized_termcolors=256
-"colorscheme desert
 colorscheme molokai
-"colorscheme distinguished
 
 "============================================================
 "==  Settings
