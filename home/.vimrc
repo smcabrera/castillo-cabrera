@@ -11,11 +11,10 @@ call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
 Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
 Plugin 'tpope/vim-repeat' "Repeat plugins like surround
-Plugin 'tpope/vim-fugitive' "Use git without leaving vim, see link: http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/
+Plugin 'tpope/vim-fugitive' "Use git without leaving vim, see link
 Plugin 'scrooloose/nerdtree' "File tree
 Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
 Plugin 'kien/rainbow_parentheses.vim' "Makes parentheses, brackets, etc. prettier
@@ -35,15 +34,17 @@ Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in t
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
 Plugin 'bling/vim-airline' "Making vim look prettier
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
-  " Two different options for using Rspec in vim
-Plugin 'jgdavey/tslime.vim' "Send commands to a new tmux window
-Plugin 'benmills/vimux' "Send commands to a new tmux window
+" Two different options for using Rspec in vim
+Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
+Plugin 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
 Plugin 'epeli/slimux' " Same idea as above, different plugin
-Plugin 'tpope/vim-dispatch' " This install failed for some reason--perhaps show tests within vim try to troubleshoot it later if we'd like to get it working.
+Plugin 'tpope/vim-dispatch' " This install failed for some reason
 Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'scrooloose/nerdcommenter' "To make commenting faster
+Plugin 'Floobits'
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
