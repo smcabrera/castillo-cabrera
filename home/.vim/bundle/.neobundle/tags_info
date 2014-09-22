@@ -1,0 +1,11 @@
+hardmode
+neobundle.vim
+neocomplete.vim
+neosnippet-snippets
+neosnippet.vim
+tabular
+vim-colorschemes
+vim-exchange
+vim-trailing-whitespace
+vimproc.vim
+vimshell

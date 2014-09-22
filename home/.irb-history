@@ -1,100 +1,11 @@
-Posts
-Post.all
-p = Post.find(3)ww
-p.comments.count
-_
-)
-vim
-require mechanize
-require 'mechanize'
-clear
-form
-my_page
-@posts = Post.all
-posts.each {|post| puts post.title}
-@posts.each {|post| puts post.title}
-@posts[0].title
-@posts[3].title
-@posts[6].title
-itinerary
-itineraries
-a = itinerary.first
-Itinerary.new (name: new itinerary)
-Itinerary.new (name: "new itinerary")
-Itinerary.new (:name : "new itinerary")
-a = Itinerary.new
-a.name = "new itinerary"
-a.description = "This is the new itinerary for stuff"
-a 
-Itinerary.new
-i = Itinerary.new
-i.name = "Heart of the Inca"
-i.description = "This is our shortest tour. Enjoy"
-i.id = 1
-i
-day1 = Day.create(title: "Lima")
-day1.photo = "nice-photo.jpg"
-day1.description = "The PAX first arrive into Lima on this day and mostly just sleep"
-day1.save
-day1
-vi
-require 'oauth2'
-client = OAuth2::Client.new(ENV['LEGATO_OAUTH_CLIENT_ID'], ENV['LEGATO_OAUTH_SECRET_KEY'], {
-  :authorize_url => 'https://accounts.google.com/o/oauth2/auth',
-  :token_url => 'https://accounts.google.com/o/oauth2/token'
-client.auth_code.authorize_url({
-  :scope => 'https://www.googleapis.com/auth/analytics.readonly',
-  :redirect_uri => 'http://localhost',
-  :access_type => 'offline'
-})
-export LEGATO_OAUTH_AUTH_CODE=4/XTOnLeIm3sGtg9d2J9bMXxYNSRkz.Qi6DzMcNE0QU3oEBd8DOtNDdjRiYjgI
-puts current_user
-current_user?
-u2 = User.new(email: "fake@email.com", password: "password", password_confirmation = "password")
-u2 = User.new(email: "fake@email.com", password: "password", password_confirmation: "password")
-u2.id = 2
-u2
-u2.skip_confirmation!
-u2.save
-u.posts
-u.posts.create(title: "New Post", body: "This is a new post")
-u.posts.create(title: "Another Post!", body: "This is yet another new post")
-u.posts.all
-user.posts.count
-q
-u.posts.count
-u = Users.first
-User.find.email('stephen.m.cabrera@gmail.com')
-User.email('stephen.m.cabrera@gmail.com')
-User.find_by :email 'stephen.m.cabrera@gmail.com'
-user.first
-u.update_attributes (email: 'stephen.m.cabrera@gmail.com', password: 'password')
-u.update_attribute('email', 'stephen.m.cabrera')
-attr_hash = {email: 'stephen.m.cabrera', password: 'password'}
-attr_hash = {email: 'stephen.m.cabrera@gmail.com', password: 'password'}
-u.update_attributes(attr_hash)
+todos = Todo.find.all
+todos = Todo.find(:all)
+User.all
+u.name = 'Stephen'
 u.save
-u.update_attribute('email', 'stephen.m.cabrera@gmail.com').
-exit
-Users.find_by email: 'stephen.m.cabrera@gmail.com'
-User.find_by email: 'stephen.m.cabrera@gmail.com'
-User.find(6)
-User.first
-User.
-u.update_attributes(email: 'stephen.m.cabrera@gmail.com', name: 'stephen')
-puts u
-u.email = 'blah blah'
-u.save(false)
-u.savvalidate:flase)
-p u
-u.email = 'djskal blah'
-u.save(validate:false)
-u.email
-u.skip_confirmation!
-u.skip_reconfirmation!
-u.email = 'stephen@gmail.com'
 u.save!
-u
-reload!
+current_user?
+User.first
 u = User.first
-quit
+u.todos
+exit

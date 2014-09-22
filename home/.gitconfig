@@ -5,3 +5,7 @@
 	ui = true
 [init]
 	templatedir = ~/.git_template
+[push]
+	default = matching
+[alias]
+	undo-commit = reset --soft HEAD\n
