@@ -10,10 +10,10 @@ filetype off
 " I'm experimenting with.
 
 if has('vim_starting')
-  set runtimepath+=/home/stephen/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('/home/stephen/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
