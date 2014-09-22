@@ -44,12 +44,7 @@ NeoBundle 'wikitopian/hardmode'
 NeoBundle 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'pangloss/vim-javascript' " adds sensible highlighting for javascript
-NeoBundle 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
-NeoBundle 'tpope/vim-git' "Vim Git runtime files 
-NeoBundle 'ap/vim-css-color' "Highlight colors in css files
-
-
+''
 " Required:
 filetype plugin indent on
 
@@ -104,7 +99,7 @@ Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
 Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
 Plugin 'vim-scripts/simple-pairs' " Automatically complete things like quotes, parentheses, etc.
 Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
-"Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
+Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
 
 call vundle#end()
 filetype plugin indent on
@@ -198,6 +193,40 @@ set relativenumber
   au BufRead,BufNewFile *.md set filetype=markdown
 
   "============================================================
+  "==  File Types
+  "============================================================
+
+filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
+
+if has("autocmd")
+  " In Makefiles, use real tabs, not tabs expanded to spaces
+  au FileType make setlocal noexpandtab
+
+  " This actually might be confusing, but the plugin +ruby+ already does
+  " this, so we want to do it only if the plugin +ruby+ is disabled for
+  " some reason
+
+  " Make sure all mardown files have the correct filetype set and setup wrapping
+  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
+  if !exists("g:disable_markdown_autostyle")
+    au FileType markdown setlocal wrap linebreak textwidth=72 nolist
+  endif
+
+  " Treat JSON files like JavaScript
+  au BufNewFile,BufRead *.json set ft=javascript
+
+  " make Python follow PEP8 for whitespace ( http://www.python.org/dev/peps/pep-0008/ )
+  au FileType python setlocal tabstop=4 shiftwidth=4
+
+  " Remember last location in file, but not for commit messages.
+  " see :help last-position-jump
+  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g`\"" | endif
+endif
+
+
+
+  "============================================================
   "==  Mappings
   "============================================================
 
@@ -244,10 +273,22 @@ set relativenumber
   " Random
 
   " Run the current file in the ruby console
+  nmap <leader>rs :w <CR> :!ruby %<CR>
+  " Run the current line in the ruby console and print it at the end of the
+  " line as a comment"
+
+  map <leader>rl call PrintResultRubyLine()
+  function! PrintResultRubyLine()
+    let l=line(".")
+    let command="read !ruby " . l
+    :execute "command!" . command
+  endfunction
+
   map !s :! spec % <C-r>=line('.')<CR><CR>
   nmap <leader>q :q<CR>
   nmap <leader>x :q<CR>
   nmap <leader>ged :!gedit %<CR>
+  nnoremap <leader>f :<C-u>Unite file<CR>
   nnoremap <leader>n :NERDTreeToggle<CR>
   nmap <F8> :TagbarToggle<CR>
   " Use git within vim--I've remapped common commands using leader key

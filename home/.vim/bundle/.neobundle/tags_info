@@ -1,3 +1,5 @@
+NrrwRgn
+ctrlp.vim
 hardmode
 neobundle.vim
 neocomplete.vim
@@ -5,7 +7,12 @@ neosnippet-snippets
 neosnippet.vim
 tabular
 vim-colorschemes
+vim-css-color
+vim-easymotion
 vim-exchange
+vim-git
+vim-javascript
+vim-node.js
 vim-trailing-whitespace
 vimproc.vim
 vimshell
