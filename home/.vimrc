@@ -48,7 +48,48 @@ NeoBundle 'pangloss/vim-javascript' " adds sensible highlighting for javascript
 NeoBundle 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
 NeoBundle 'tpope/vim-git' "Vim Git runtime files 
 NeoBundle 'ap/vim-css-color' "Highlight colors in css files
+" Let Vundle manage Vundle
+NeoBundle 'gmarik/Vundle.vim'
+NeoBundle 'tpope/vim-surround' "Surround texts with tags or quotes
+NeoBundle 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
+NeoBundle 'tpope/vim-repeat' "Repeat plugins like surround
+NeoBundle 'tpope/vim-fugitive' "Use git without leaving vim, see link
+NeoBundle 'scrooloose/nerdtree' "File tree
+NeoBundle 'scrooloose/syntastic' "Shows you syntax errors when you save
+NeoBundle 'kien/rainbow_parentheses.vim' "Makes parentheses, brackets, etc. prettier
+NeoBundle 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
+NeoBundle 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'bronson/vim-trailing-whitespace' "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+NeoBundle 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
+NeoBundle 'tomasr/molokai' "Colors available by bundle to be cycled through later
+NeoBundle 'fishman/ctags' "ctags
+NeoBundle 'majutsushi/tagbar' "Show tags in a sidebar
+NeoBundle 'hallison/vim-markdown' "Markdown highlighting
+NeoBundle 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
+NeoBundle 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
+NeoBundle 'bling/vim-airline' "Making vim look prettier
+NeoBundle 'thoughtbot/vim-rspec' "Use rspec within vim
+" Two different options for using Rspec in vim
+NeoBundle 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
+NeoBundle 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
+NeoBundle 'epeli/slimux' " Same idea as above, different plugin
+NeoBundle 'tpope/vim-dispatch' " This install failed for some reason
+NeoBundle 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'scrooloose/nerdcommenter' "To make commenting faster
+" NeoBundle 'Floobits'
+" NeoBundle 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
+"NeoBundle 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
+NeoBundle 'tpope/vim-abolish' " Stuff for dealing with parts of text
 
+NeoBundle 'wookiehangover/jshint.vim' " Check for errors in your javascript code
+NeoBundle 'vim-scripts/simple-pairs' " Automatically complete things like quotes, parentheses, etc.
+NeoBundle 'Shougo/vimshell.vim' " Powerful shell implemented by vim
+"NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
 
 " Required:
 filetype plugin indent on
@@ -56,60 +97,6 @@ filetype plugin indent on
 call neobundle#end()
 NeoBundleCheck " Automatically checks for new packages on save
 
-"============================================================
-"==  Plugins: Vundle
-"============================================================
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
-Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
-Plugin 'tpope/vim-repeat' "Repeat plugins like surround
-Plugin 'tpope/vim-fugitive' "Use git without leaving vim, see link
-Plugin 'scrooloose/nerdtree' "File tree
-Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
-Plugin 'kien/rainbow_parentheses.vim' "Makes parentheses, brackets, etc. prettier
-Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
-Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'bronson/vim-trailing-whitespace' "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
-Plugin 'tomasr/molokai' "Colors available by bundle to be cycled through later
-Plugin 'fishman/ctags' "ctags
-Plugin 'majutsushi/tagbar' "Show tags in a sidebar
-Plugin 'hallison/vim-markdown' "Markdown highlighting
-Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
-Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-Plugin 'bling/vim-airline' "Making vim look prettier
-Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
-" Two different options for using Rspec in vim
-Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
-Plugin 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
-Plugin 'epeli/slimux' " Same idea as above, different plugin
-Plugin 'tpope/vim-dispatch' " This install failed for some reason
-Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'scrooloose/nerdcommenter' "To make commenting faster
-" Plugin 'Floobits'
-" Plugin 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
-"Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
-Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
-
-Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
-Plugin 'vim-scripts/simple-pairs' " Automatically complete things like quotes, parentheses, etc.
-Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
-"Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
-
-call vundle#end()
-filetype plugin indent on
-
-" Matchit to identify matching keyword pairs, comes with vim but has to be enabled
 runtime macros/matchit.vim
 
 "============================================================
