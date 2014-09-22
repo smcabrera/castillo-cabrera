@@ -271,10 +271,6 @@ set relativenumber
   map <Leader>a :SlimuxShellLast<CR>
   map <Leader>k :SlimuxSendKeysLast<CR>
 
-  " Vim Hard mode
-  nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
   map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
   map <Leader>vl :VimuxRunLastCommand<CR>
