@@ -18,16 +18,32 @@ alias la="ls -a --color"
 alias ll="ls -l --color"
 alias lla="ls -la --color"
 
+# Some common filepaths
+alias bloc='cd ~/code/bloccit/'
+alias lafl='cd ~/code/pflAdmin/'
+alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
+alias blog='cd ~/code/smcabrera.github.io'
+alias blogs='cd ~/Dropbox/journal/blog-seeds/'
+alias blogd='cd ~/code/smcabrera.github.io/_drafts'
+
 alias st='git status'
-alias bloc='cd /home/stephen/code/bloccit/'
-alias lafl='cd /var/www/pflAdmin/'
-alias st='git status'
-alias gac='git add . ; git commit -a' # gac--git add all and commit
+alias gac='git add . ; git commit -a' # git add all and commit
+
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
-alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
-alias ebash='vim /home/stephen/.homesick/repos/castillo-cabrera/.bashrc'
+alias phps='php artisan serve'
+alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
+alias ebash='vim ~/.bashrc' # Edit this file...
+alias bashe='vim ~/.bashrc' # sometimes I forget what I called this alias...
+alias bs='source ~/.bashrc' # ...and source it
+
+# Some aliases for the super handy timetrap gem
+alias td='timetrap display'
+alias tw='timetrap week'
+alias tl='timetrap list'
+alias tr='timetrap resume'
+
 
 # Powerline
 
