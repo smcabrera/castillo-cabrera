@@ -46,7 +46,7 @@ NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'pangloss/vim-javascript' " adds sensible highlighting for javascript
 NeoBundle 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
-NeoBundle 'tpope/vim-git' "Vim Git runtime files 
+NeoBundle 'tpope/vim-git' "Vim Git runtime files
 NeoBundle 'ap/vim-css-color' "Highlight colors in css files
 " Let Vundle manage Vundle
 NeoBundle 'gmarik/Vundle.vim'
@@ -87,7 +87,6 @@ NeoBundle 'scrooloose/nerdcommenter' "To make commenting faster
 NeoBundle 'tpope/vim-abolish' " Stuff for dealing with parts of text
 
 NeoBundle 'wookiehangover/jshint.vim' " Check for errors in your javascript code
-NeoBundle 'vim-scripts/simple-pairs' " Automatically complete things like quotes, parentheses, etc.
 NeoBundle 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 "NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
 
@@ -149,10 +148,10 @@ set relativenumber
   set cursorline
   set noswapfile
   " Some useful search defaults
-  set hlsearch    " highlight matches
+  set hlsearch    " highlight matches--Actually don't--not until I can figure out how to turn them off quickly
   set incsearch   " incremental searching
   set ignorecase  " searches are case insensitive...
-  set smartcase   " ... unless they contain at least one capital letter""""
+  set smartcase   " ... unless they contain at least one capital letter
 
   " Making things easier for writing
   " not to break on words
@@ -198,7 +197,9 @@ set relativenumber
   "nmap ; :
 
   "removes any search highlighting.
-  nnoremap <leader>l :nohl<CR>
+  nnoremap <F3> :set hlsearch!<CR>
+  "Alternatively this mapping unsets the last search pattern register when you hit return
+  nnoremap <CR> :noh<CR><CR>
 
   "Also fix whitespace every time you do this
 
@@ -217,6 +218,8 @@ set relativenumber
   " Insert a hash rocket with <c-l>
   imap <c-l> <space>=><space>
   imap <c-v> <c-o>"+p
+  " Search for the next occurence of selected text
+  vnorem // y/<c-r>"<cr>
 
   "============================================================
   "==  Leader Mappings
