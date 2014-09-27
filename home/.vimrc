@@ -5,97 +5,71 @@ filetype off
 "============================================================
 "==  Plugins: NeoBundle
 "============================================================
-" Another package manager. I know.
-" It looks like it works better with some of Shougo's plugins which
-" I'm experimenting with.
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-  "========================
-  "==  Installing vimproc
-  "========================
-
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-" Bundles here
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'tommcdo/vim-exchange' " Easy swapping two areas of text with cx + motion
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'wikitopian/hardmode'
-NeoBundle 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
-NeoBundle 'chrisbra/NrrwRgn'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'pangloss/vim-javascript' " adds sensible highlighting for javascript
-NeoBundle 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
-NeoBundle 'tpope/vim-git' "Vim Git runtime files
-NeoBundle 'ap/vim-css-color' "Highlight colors in css files
+" Plugins here
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Shougo/vimshell'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'tommcdo/vim-exchange' " Easy swapping two areas of text with cx + motion
+Plugin 'wikitopian/hardmode'
+Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'pangloss/vim-javascript' " adds sensible highlighting for javascript
+Plugin 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
+Plugin 'tpope/vim-git' "Vim Git runtime files
+Plugin 'ap/vim-css-color' "Highlight colors in css files
 " Let Vundle manage Vundle
-NeoBundle 'gmarik/Vundle.vim'
-NeoBundle 'tpope/vim-surround' "Surround texts with tags or quotes
-NeoBundle 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
-NeoBundle 'tpope/vim-repeat' "Repeat plugins like surround
-NeoBundle 'tpope/vim-fugitive' "Use git without leaving vim, see link
-NeoBundle 'scrooloose/nerdtree' "File tree
-NeoBundle 'scrooloose/syntastic' "Shows you syntax errors when you save
-NeoBundle 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
-NeoBundle 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'bronson/vim-trailing-whitespace' "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-NeoBundle 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
-NeoBundle 'tomasr/molokai' "Colors available by bundle to be cycled through later
-NeoBundle 'fishman/ctags' "ctags
-NeoBundle 'majutsushi/tagbar' "Show tags in a sidebar
-NeoBundle 'hallison/vim-markdown' "Markdown highlighting
-NeoBundle 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
-NeoBundle 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-NeoBundle 'bling/vim-airline' "Making vim look prettier
-NeoBundle 'thoughtbot/vim-rspec' "Use rspec within vim
+Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
+Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
+Plugin 'tpope/vim-repeat' "Repeat plugins like surround
+Plugin 'tpope/vim-fugitive' "Use git without leaving vim, see link
+Plugin 'scrooloose/nerdtree' "File tree
+Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
+Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
+Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'bronson/vim-trailing-whitespace' "Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
+Plugin 'tomasr/molokai' "Colors available by bundle to be cycled through later
+Plugin 'fishman/ctags' "ctags
+Plugin 'majutsushi/tagbar' "Show tags in a sidebar
+Plugin 'hallison/vim-markdown' "Markdown highlighting
+Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
+Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
+Plugin 'bling/vim-airline' "Making vim look prettier
+Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
-NeoBundle 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
-NeoBundle 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
-NeoBundle 'epeli/slimux' " Same idea as above, different plugin
-NeoBundle 'tpope/vim-dispatch' " This install failed for some reason
-NeoBundle 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
-NeoBundle 'tpope/vim-bundler'
-NeoBundle 'tpope/vim-rake'
-NeoBundle 'scrooloose/nerdcommenter' "To make commenting faster
-" NeoBundle 'Floobits'
-" NeoBundle 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
-"NeoBundle 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
-NeoBundle 'tpope/vim-abolish' " Stuff for dealing with parts of text
+Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
+Plugin 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
+Plugin 'epeli/slimux' " Same idea as above, different plugin
+Plugin 'tpope/vim-dispatch' " This install failed for some reason
+Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+Plugin 'scrooloose/nerdcommenter' "To make commenting faster
+" Plugin 'Floobits'
+" Plugin 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
+"Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
+Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
 
-NeoBundle 'wookiehangover/jshint.vim' " Check for errors in your javascript code
-NeoBundle 'Shougo/vimshell.vim' " Powerful shell implemented by vim
-"NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'nelstrom/vim-visual-star-search'
+Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
+Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
+"Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
+Plugin 'tpope/vim-unimpaired'
+Plugin 'nelstrom/vim-visual-star-search'
 
-" Required:
-filetype plugin indent on
-
-call neobundle#end()
-NeoBundleCheck " Automatically checks for new packages on save
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 runtime macros/matchit.vim
 
