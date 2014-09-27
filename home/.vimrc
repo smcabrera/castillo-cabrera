@@ -56,7 +56,6 @@ NeoBundle 'tpope/vim-repeat' "Repeat plugins like surround
 NeoBundle 'tpope/vim-fugitive' "Use git without leaving vim, see link
 NeoBundle 'scrooloose/nerdtree' "File tree
 NeoBundle 'scrooloose/syntastic' "Shows you syntax errors when you save
-NeoBundle 'kien/rainbow_parentheses.vim' "Makes parentheses, brackets, etc. prettier
 NeoBundle 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
 NeoBundle 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
 NeoBundle 'tomtom/tlib_vim'
@@ -89,6 +88,8 @@ NeoBundle 'tpope/vim-abolish' " Stuff for dealing with parts of text
 NeoBundle 'wookiehangover/jshint.vim' " Check for errors in your javascript code
 NeoBundle 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 "NeoBundle 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'nelstrom/vim-visual-star-search'
 
 " Required:
 filetype plugin indent on
@@ -189,26 +190,17 @@ set relativenumber
 
   " Make escape easier:
   imap jk <ESC>
-
   " Make fixing whitespace faster
   nmap :fw :FixWhitespace <CR>
-
-  " I would use this but I'm concerned about overwriting what ; does by default
-  "nmap ; :
-
   "removes any search highlighting.
   nnoremap <F3> :set hlsearch!<CR>
   "Alternatively this mapping unsets the last search pattern register when you hit return
   nnoremap <CR> :noh<CR><CR>
-
-  "Also fix whitespace every time you do this
-
   " Indent with tab in normal mode
   nmap <Tab> > <C>
   nmap <S-Tab> < <C>
   " Pretty sweet mapping that I learned about from Destroy all Software
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
-
   map <leader>y "*y
   " Move around splits with <c-hjkl>
   nnoremap <c-j> <c-w>j
@@ -220,6 +212,7 @@ set relativenumber
   imap <c-v> <c-o>"+p
   " Search for the next occurence of selected text
   vnorem // y/<c-r>"<cr>
+  map yu <leader><leader>
 
   "============================================================
   "==  Leader Mappings
@@ -231,12 +224,8 @@ set relativenumber
   nnoremap <leader>pi :PluginInstall<CR>
   nnoremap <leader>pu :PluginUpdate<CR>
 
-  " Random
-
   " Run the current file in the ruby console
   map !s :! spec % <C-r>=line('.')<CR><CR>
-  nmap <leader>q :q<CR>
-  nmap <leader>x :q<CR>
   nmap <leader>ged :!gedit %<CR>
   nnoremap <leader>n :NERDTreeToggle<CR>
   nmap <F8> :TagbarToggle<CR>

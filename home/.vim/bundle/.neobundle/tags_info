@@ -13,7 +13,6 @@ neosnippet-snippets
 neosnippet.vim
 nerdcommenter
 nerdtree
-rainbow_parentheses.vim
 slimux
 supertab
 syntastic
@@ -45,6 +44,8 @@ vim-snipmate
 vim-snippets
 vim-surround
 vim-trailing-whitespace
+vim-unimpaired
+vim-visual-star-search
 vimproc.vim
 vimshell
 vimshell.vim
