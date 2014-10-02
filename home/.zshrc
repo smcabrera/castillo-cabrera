@@ -1,5 +1,18 @@
+#Because I like my shell to be polite...
+h=`date +%H`
+
+if [ $h -lt 12 ]; then
+  g='Good morning'
+elif [ $h -lt 18 ]; then
+  g='Good afternoon'
+else
+  g='Good evening'
+fi
+
+echo "$g $USER!"
+#
 # Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -47,28 +60,33 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/home/mariano/.rvm/gems/ruby-2.1.2/bin:/home/mariano/.rvm/gems/ruby-2.1.2@global/bin:/home/mariano/.rvm/rubies/ruby-2.1.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/mariano/.rvm/bin"
+export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/stephen/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export EDITOR=vim
+[ -z "$TMUX" ] && export TERM=xterm-256color
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ #if [[ -n $SSH_CONNECTION ]]; then
+   #export EDITOR='vim'
+ #else
+   #export EDITOR='mvim'
+ #fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -79,7 +97,42 @@ export PATH="/usr/local/heroku/bin:/home/mariano/.rvm/gems/ruby-2.1.2/bin:/home/
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Powerline
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-fi
+alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
+
+alias aliase='vim ~/.bash_aliases' # Edit this file...
+
+# making ls faster and adding color
+alias l="ls --color"
+alias la="ls -a --color"
+alias ll="ls -l --color"
+alias lla="ls -la --color"
+
+# Some common filepaths
+alias bloc0='cd ~/code/bloccit/'
+alias bloc='cd ~/code/blocitoff/'
+alias lafl='cd ~/code/pflAdmin/'
+alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
+alias blog='cd ~/code/smcabrera.github.io'
+alias blogs='cd ~/Dropbox/journal/blog-seeds/'
+alias blogd='cd ~/code/smcabrera.github.io/_drafts'
+
+alias st='git status'
+alias gac='git add . ; git commit -a' # git add all and commit
+
+alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
+alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
+alias phps='php artisan serve'
+alias phpt='php artisan tinker'
+alias vagaws='vagrant up --provider=aws'
+alias zshe='vim ~/.zshrc' # Edit this file
+alias zs='source ~/.zshrc' # ...and source it
+
+# Some aliases for the super handy timetrap gem
+alias td='timetrap display'
+alias tw='timetrap week'
+alias tl='timetrap list'
+alias tr='timetrap resume'
+alias to='timetrap out ; timetrap week'
+
+alias nest='unset TMUX'
+

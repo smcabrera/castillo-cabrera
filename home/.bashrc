@@ -72,6 +72,7 @@ alias nest='unset TMUX'
 #   source ~/.bash_aliases
 #fi
 
+#export PS1="\[\033[01;36m\]\w\\[\033[00m\]\$ "
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ "
 
    # gitprompt configuration
@@ -81,6 +82,7 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ "
 
    # GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 
+   #GIT_PROMPT_START="\[\033[01;36m\]\w\\[\033[00m\]\$"    # uncomment for custom prompt start sequence
    GIT_PROMPT_START="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]"    # uncomment for custom prompt start sequence
    GIT_PROMPT_END="\$ "      # uncomment for custom prompt end sequence
 
