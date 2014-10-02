@@ -62,11 +62,12 @@ Plugin 'scrooloose/nerdcommenter' "To make commenting faster
 "Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
 Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
 
-Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
+"Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
 Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 "Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
 Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'markwu/vim-laravel4-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -100,7 +101,6 @@ colorscheme molokai
 "============================================================
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
-
 
 set nu
 set relativenumber
@@ -157,7 +157,8 @@ set relativenumber
 
   " Allowing .md files to be treated as markdown
   au BufRead,BufNewFile *.md set filetype=markdown
-
+  
+  autocmd FileType php set ft=php.laravel " Snippets for laravel
   "============================================================
   "==  Mappings
   "============================================================
