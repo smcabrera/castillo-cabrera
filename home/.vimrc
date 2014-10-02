@@ -68,6 +68,7 @@ Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'markwu/vim-laravel4-snippets'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
