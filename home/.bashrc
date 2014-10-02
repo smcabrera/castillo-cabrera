@@ -1,4 +1,16 @@
-echo "It's good to see you, $USER!"
+#Because I like my shell to be polite...
+
+h=`date +%H`
+
+if [ $h -lt 12 ]; then
+  g='Good morning'
+elif [ $h -lt 18 ]; then
+  g='Good afternoon'
+else
+  g='Good evening'
+fi
+
+echo "$g $USER!"
 
 # Defining the $EDITOR shell environment for tmuxinator
 export EDITOR=vim
