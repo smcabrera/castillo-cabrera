@@ -47,6 +47,7 @@ Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
 Plugin 'bling/vim-airline' "Making vim look prettier
+"requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
 Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
@@ -69,6 +70,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'markwu/vim-laravel4-snippets'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -79,23 +82,60 @@ runtime macros/matchit.vim
 "==  Color Bundles
 "============================================================
 
-" Plugin 'altercation/vim-colors-solarized'
 
 "============================================================
 "==  Colors
 "============================================================
-" If I feel like it later, I can add more colors and uncomment the ones I want
+" To be commented and uncommented at my whim
+
+"Airline settings
+let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+
+" For tmux. What? Yes.
+"let g:tmuxline_preset = 'full'
+"let g:tmuxline_preset = 'tmux'
+"let g:tmuxline_preset = 'solarized'
+
+"AirlineTheme simple
+"AirlineTheme dark
+"AirlineTheme powerlineish
+
+function! SolarizedDark()
+  AirlineTheme solarized
+endfunction
 
 :set t_Co=256 " 256 colors
-:set background=dark
+set background=dark
+colorscheme solarized
+"call SolarizedDark()
+"colorscheme molokai
+"colorscheme desert
 :color grb256"
 
 "let g:molokai_original = 1
 "let g:rehash256 = 1
+"let g:solarized_termcolors=256
 
-" let g:solarized_termcolors=256
-" colorscheme solarized
-colorscheme molokai
+
+function! Powerline()
+  colorscheme molokai
+  AirlineTheme powerlineish
+endfunction
+
+
+"function! SolarizedLight()
+"  let solarized=1
+"  let light=1
+"  let dark=0
+"  AirlineTheme solarized
+"endfunction
+
+
+map <F4> :call Powerline()<cr>
+map <F5> :call SolarizedDark()<cr>
+map <F6> :call SolarizedLight()<cr>
 
 "============================================================
 "==  Settings
@@ -158,7 +198,7 @@ set relativenumber
 
   " Allowing .md files to be treated as markdown
   au BufRead,BufNewFile *.md set filetype=markdown
-  
+
   autocmd FileType php set ft=php.laravel " Snippets for laravel
   "============================================================
   "==  Mappings
