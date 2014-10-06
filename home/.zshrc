@@ -113,7 +113,7 @@ alias lla="ls -la --color"
 # Some common filepaths
 alias bloc0='cd ~/code/bloccit/'
 alias bloc='cd ~/code/blocitoff/'
-alias lafl='cd ~/code/pflAdmin/'
+alias lafl='cd /var/www/pflAdmin/'
 alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/code/smcabrera.github.io'
 alias blogs='cd ~/Dropbox/journal/blog-seeds/'
