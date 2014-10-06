@@ -19,8 +19,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-#ZSH_THEME="robbyrussell" # Default theme
-ZSH_THEME="powerline"
+ZSH_THEME="robbyrussell" # Default theme
+#ZSH_THEME="powerline"
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -122,6 +123,7 @@ alias st='git status'
 alias gac='git add . ; git commit -a' # git add all and commit
 
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
+alias ocean='ssh root@104.131.72.62' # Access my digital ocean vps
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 alias phps='php artisan serve'
 alias phpt='php artisan tinker'

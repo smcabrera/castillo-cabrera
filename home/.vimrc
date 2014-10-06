@@ -108,19 +108,27 @@ endfunction
 
 :set t_Co=256 " 256 colors
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "call SolarizedDark()
-"colorscheme molokai
 "colorscheme desert
 :color grb256"
 
-"let g:molokai_original = 1
+colorscheme molokai
+"let g:molokai_original = 1 " Bring the terminal version to the default
 "let g:rehash256 = 1
 "let g:solarized_termcolors=256
 
-
-function! Powerline()
+function! Molokai()
   colorscheme molokai
+  let g:molokai_original = 1
+  let g:rehash256 = 1
+  AirlineTheme molokai
+endfunction
+
+function! MolokaiWithPowerline()
+  colorscheme molokai
+  let g:molokai_original = 1
+  let g:rehash256 = 1
   AirlineTheme powerlineish
 endfunction
 
@@ -133,8 +141,8 @@ endfunction
 "endfunction
 
 
-map <F4> :call Powerline()<cr>
-map <F5> :call SolarizedDark()<cr>
+map <F4> :call MolokaiWithPowerline()<cr>
+map <F5> :call Molokai()<cr>
 map <F6> :call SolarizedLight()<cr>
 
 "============================================================
