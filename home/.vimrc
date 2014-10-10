@@ -240,6 +240,7 @@ set relativenumber
   " Search for the next occurence of selected text
   vnorem // y/<c-r>"<cr>
   map yu <leader><leader>
+  imap sh! #!/bin/sh
 
   "============================================================
   "==  Leader Mappings
