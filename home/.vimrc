@@ -148,6 +148,9 @@ map <F6> :call SolarizedLight()<cr>
 "============================================================
 "==  Settings
 "============================================================
+" Just temporary. It's annoying to get variables marked as errors when I don't use them immediately if I'm trying to develop iteratively.
+let g:syntastic_mode_map = {"mode": "passive"}
+
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
 
@@ -266,7 +269,7 @@ set relativenumber
   map <leader>as :call RunAllSpec() <CR>
   " Always let me open vimrc in a new tab whenever I want to
   nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
-  nmap <leader>nn :tabedit ~/temp/notes.md<CR>
+  nmap <leader>nn :tabedit ~/temp/notes/<CR>
 
   map <Leader>rc :Rails console<cr>
   map <Leader>rs :Rails server<cr>

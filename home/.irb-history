@@ -8,4 +8,10 @@ current_user?
 User.first
 u = User.first
 u.todos
+arr = [1,2,3]
+arr.each do |elem|
+puts elem
+end
+arr.include?('things')
+puts 'hello world'
 exit

@@ -67,7 +67,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/stephen/.rvm/bin"
+export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/stephen/.rvm/bin:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -113,6 +113,7 @@ alias lla="ls -la --color"
 # Some common filepaths
 alias bloc0='cd ~/code/bloccit/'
 alias bloc='cd ~/code/blocitoff/'
+alias sandbox='cd ~/code/sandbox/'
 alias lafl='cd /var/www/pflAdmin/'
 alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/code/smcabrera.github.io'
