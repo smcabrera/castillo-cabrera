@@ -241,6 +241,7 @@ set relativenumber
   vnorem // y/<c-r>"<cr>
   map yu <leader><leader>
   imap sh! #!/bin/sh
+  map <F12> :w<cr>
 
   "============================================================
   "==  Leader Mappings
