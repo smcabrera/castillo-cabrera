@@ -68,6 +68,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/stephen/.rvm/bin:$HOME/bin"
+# Add phpunit
+export PATH="$PATH:$USER/.composer/vendor/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
