@@ -67,9 +67,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/stephen/.rvm/bin:$HOME/bin"
+export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games::$HOME/bin"
 # Add phpunit
 export PATH="$PATH:$USER/.composer/vendor/bin"
+# Add rbenv for managing ruby versions
+export PATH="$PATH:$HOME/.rbenv/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -144,3 +146,6 @@ alias to='timetrap out ; timetrap week'
 
 alias nest='unset TMUX'
 
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.bin:$PATH"

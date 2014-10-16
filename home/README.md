@@ -7,6 +7,8 @@ There's a script you can find on github called thoughtbot/laptop--this has all t
 - laptop.local
 
 Besides these defaults, I've defined some gems and programs that I like in laptop.local, which should all be installed right afterward
+Eventually I'd like to separate this out into a script and just run that upon getting a new laptop
+
 
 - Fish
 
@@ -20,4 +22,20 @@ http://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin
 
 Go ahead and install this one for use with fish, which isn't supported by the above (as far as I know)
 https://github.com/milkbikis/powerline-shell
+
+First get all the software you need with thoughtbot's "laptop" script, their recipe for the perfect rails development laptop
+bash <(curl -s https://raw.githubusercontent.com/thoughtbot/laptop/master/mac) 2>&1 | tee ~/laptop.log
+- Set up zsh with ohmyzsh
+
+Follow
+
+curl -L http://install.ohmyz.sh | sh
+Make sure rbenv is installed. If it isn't install it following these instructions
+https://github.com/sstephenson/rbenv
+and also be sure to install ruby-build so that you can use rbenv to install rubies
+https://github.com/sstephenson/ruby-build#readme
+
+- Make sure to add the path for rbenv to the path if it's not already there
+
+- Go to the github page for vundle and set up vundle for vim
 
