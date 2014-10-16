@@ -46,7 +46,7 @@ Plugin 'majutsushi/tagbar' "Show tags in a sidebar
 Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-Plugin 'bling/vim-airline' "Making vim look prettier
+" Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
