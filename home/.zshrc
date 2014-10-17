@@ -68,10 +68,22 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games::$HOME/bin"
-# Add phpunit
-export PATH="$PATH:$USER/.composer/vendor/bin"
-# Add rbenv for managing ruby versions
-export PATH="$PATH:$HOME/.rbenv/bin"
+
+# If using composer to manage php dependencies, add it to the path
+if [ -d "$HOME/.composer" ]; then
+  export PATH="$PATH:$USER/.composer/vendor/bin"
+fi
+
+# If using rbenv for managing ruby versions, add it to the path
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$PATH:$HOME/.rbenv/bin"
+fi
+
+# If working on a nitrous box and using autoparts as a package manager, add 'parts' to the path
+if [ -d "$HOME/.parts" ]; then
+  export PATH="$PATH:$HOME/.parts/bin"
+fi
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -120,7 +132,7 @@ alias bloc0='cd ~/code/bloccit/'
 alias bloc='cd ~/code/blocitoff/'
 alias sandbox='cd ~/code/sandbox/'
 alias lafl='cd /var/www/pflAdmin/'
-alias castle='cd /home/stephen/.homesick/repos/castillo-cabrera/'
+alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/code/smcabrera.github.io'
 alias blogs='cd ~/Dropbox/journal/blog-seeds/'
 alias blogd='cd ~/code/smcabrera.github.io/_drafts'
@@ -146,6 +158,8 @@ alias to='timetrap out ; timetrap week'
 
 alias nest='unset TMUX'
 
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv" ]; then
+  eval "$(rbenv init -)"
+fi
 
 export PATH="$HOME/.bin:$PATH"

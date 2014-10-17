@@ -15,7 +15,7 @@ Plugin 'Shougo/neosnippet.vim'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Shougo/vimshell'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tommcdo/vim-exchange' " Easy swapping two areas of text with cx + motion
 Plugin 'wikitopian/hardmode'
