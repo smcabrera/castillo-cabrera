@@ -82,8 +82,15 @@ fi
 # If working on a nitrous box and using autoparts as a package manager, add 'parts' to the path
 if [ -d "$HOME/.parts" ]; then
   export PATH="$PATH:$HOME/.parts/bin"
+  export PATH="$PATH:$HOME/.parts/sbin"
+  export PATH="$PATH:$HOME/.parts/autoparts/bin"
 fi
 
+# If ruby gems installed in a .gem folder add them to the path
+# Version 1.9.1 in this case
+if [ -d "$HOME/.gem/ruby" ]; then
+  export PATH="$PATH:$HOME/.gem/ruby/1.9.1/bin"
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

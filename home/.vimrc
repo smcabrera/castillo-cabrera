@@ -271,7 +271,7 @@ set relativenumber
   map <leader>as :call RunAllSpec() <CR>
   " Always let me open vimrc in a new tab whenever I want to
   nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
-  nmap <leader>nn :tabedit ~/temp/notes/<CR>
+  nmap <leader>nn :tabedit ~/Dropbox/notes/<CR>
 
   map <Leader>rc :Rails console<cr>
   map <Leader>rs :Rails server<cr>
