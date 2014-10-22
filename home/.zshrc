@@ -71,7 +71,7 @@ export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr
 
 # If using composer to manage php dependencies, add it to the path
 if [ -d "$HOME/.composer" ]; then
-  export PATH="$PATH:$USER/.composer/vendor/bin"
+  export PATH="$PATH:$HOME/.composer/vendor/bin"
 fi
 
 # If using rbenv for managing ruby versions, add it to the path
