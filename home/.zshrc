@@ -77,6 +77,9 @@ fi
 # If using rbenv for managing ruby versions, add it to the path
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$PATH:$HOME/.rbenv/bin"
+  export PATH="$PATH:$HOME/.rbenv/plugins/ruby-build/bin"
+  export PATH="$PATH:$HOME/.rbenv/shims"
+  export PATH="$PATH:$HOME/.rbenv/bin"
 fi
 
 # If working on a nitrous box and using autoparts as a package manager, add 'parts' to the path
