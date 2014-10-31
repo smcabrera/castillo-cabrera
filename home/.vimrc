@@ -132,6 +132,9 @@ function! MolokaiWithPowerline()
   AirlineTheme powerlineish
 endfunction
 
+"syntax enable
+"set background=light
+"colorscheme solarized
 
 "function! SolarizedLight()
 "  let solarized=1
@@ -139,6 +142,10 @@ endfunction
 "  let dark=0
 "  AirlineTheme solarized
 "endfunction
+
+map <leader>[ :colorscheme molokai<cr>
+map <leader>] :colorscheme simpleandfriendly<cr>
+
 
 
 map <F4> :call MolokaiWithPowerline()<cr>
@@ -149,7 +156,7 @@ map <F6> :call SolarizedLight()<cr>
 "==  Settings
 "============================================================
 " Just temporary. It's annoying to get variables marked as errors when I don't use them immediately if I'm trying to develop iteratively.
-let g:syntastic_mode_map = {"mode": "passive"}
+"let g:syntastic_mode_map = {"mode": "passive"}
 
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread

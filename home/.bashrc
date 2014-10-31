@@ -12,6 +12,11 @@ fi
 
 echo "$g $USER!"
 
+# Actually just use zsh if we have it! We'll keep this file around in case anything gets accidentally added here instead of to my zshrc
+   if [ "$PS1" ]; then
+       if [ -x /bin/tcsh ] ; then exec /bin/tcsh ; fi
+   fi
+
 # Defining the $EDITOR shell environment for tmuxinator
 export EDITOR=vim
 export HIST_FILE_SIZE=9999
@@ -87,6 +92,6 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ "
    GIT_PROMPT_END="\$ "      # uncomment for custom prompt end sequence
 
    # as last entry source the gitprompt script
-   source ~/.bash-git-prompt/gitprompt.sh
+   #source ~/.bash-git-prompt/gitprompt.sh
 
 
