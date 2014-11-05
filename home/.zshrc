@@ -141,9 +141,9 @@ alias lla="ls -la --color"
 alias bloc0='cd ~/code/bloccit/'
 alias bloc='cd ~/code/blocitoff/'
 alias sandbox='cd ~/code/sandbox/'
-alias lafl='cd /var/www/pflAdmin/'
+alias lafl='cd /var/www/html/pfladmin/'
 alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
-alias blog='cd ~/code/smcabrera.github.io'
+alias blog='cd ~/blog/smcabrera.github.io'
 alias blogs='cd ~/Dropbox/journal/blog-seeds/'
 alias blogd='cd ~/code/smcabrera.github.io/_drafts'
 
@@ -153,7 +153,8 @@ alias gac='git add . ; git commit -a' # git add all and commit
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
 alias ocean='ssh root@104.131.72.62' # Access my digital ocean vps
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
-alias phps='php artisan serve'
+#alias phps='php artisan serve'
+alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address instead of
 alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
 alias zshe='vim ~/.zshrc' # Edit this file
@@ -165,6 +166,14 @@ alias tw='timetrap week'
 alias tl='timetrap list'
 alias tr='timetrap resume'
 alias to='timetrap out ; timetrap week'
+alias restart='sudo shutdown -r now'
+
+# Open up your task list for editing
+alias todoe="vim ~/Dropbox/GTD/todo.txt"
+
+# Aliases for running tests
+alias cr='codecept run'
+
 
 alias nest='unset TMUX'
 

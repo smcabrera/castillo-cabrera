@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 "============================================================
-"==  Plugins: NeoBundle
+"==  Plugins: Vundle
 "============================================================
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -46,7 +46,7 @@ Plugin 'majutsushi/tagbar' "Show tags in a sidebar
 Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-" Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
+"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
@@ -289,7 +289,7 @@ set relativenumber
 
   map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
-  map <Leader>vl :VimuxRunLastCommand<CR>
+  "map <Leader>vl :VimuxRunLastCommand<CR>
   map <Leader>t :VimuxRunLastCommand<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
