@@ -20,7 +20,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'tommcdo/vim-exchange' " Easy swapping two areas of text with cx + motion
 Plugin 'wikitopian/hardmode'
 Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
-Plugin 'chrisbra/NrrwRgn'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'pangloss/vim-javascript' " adds sensible highlighting for javascript
 Plugin 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
