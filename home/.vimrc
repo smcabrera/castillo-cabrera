@@ -63,7 +63,7 @@ Plugin 'scrooloose/nerdcommenter' "To make commenting faster
 Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
 
 "Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
-Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
+"Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 "Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
 Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -71,6 +71,7 @@ Plugin 'markwu/vim-laravel4-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-eunuch'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -254,6 +255,11 @@ set relativenumber
   "============================================================
 
   let mapleader= " "
+
+  " This is obvious and yet I never thought of it for till this post:
+  " http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+  nnoremap <leader>w :w<CR>
+  nnoremap <leader>x :w<CR>
 
   " automatically install or update vim plugins with vundle
   nnoremap <leader>pi :PluginInstall<CR>
