@@ -95,6 +95,8 @@ if [ -d "$HOME/.gem/ruby" ]; then
   export PATH="$PATH:$HOME/.gem/ruby/1.9.1/bin"
 fi
 
+export PATH="$PATH:$HOME/.tim/"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -182,3 +184,4 @@ if [ -d "$HOME/.rbenv" ]; then
 fi
 
 export PATH="$HOME/.bin:$PATH"
+
