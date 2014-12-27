@@ -45,8 +45,6 @@ Plugin 'majutsushi/tagbar' "Show tags in a sidebar
 Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
-"requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
 Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
@@ -69,9 +67,13 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'markwu/vim-laravel4-snippets'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-eunuch'
+
+" Bling Bundles
+"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
+"requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
+Plugin 'edkolev/tmuxline.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -79,14 +81,9 @@ filetype plugin indent on    " required
 runtime macros/matchit.vim
 
 "============================================================
-"==  Color Bundles
+"==  Bling
 "============================================================
 
-
-"============================================================
-"==  Colors
-"============================================================
-" To be commented and uncommented at my whim
 
 "Airline settings
 let g:airline_powerline_fonts = 1
