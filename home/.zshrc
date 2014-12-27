@@ -10,6 +10,7 @@ else
 fi
 
 echo "$g $USER!"
+
 #
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -148,6 +149,7 @@ alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/blog/smcabrera.github.io'
 alias blogs='cd ~/Dropbox/journal/blog-seeds/'
 alias blogd='cd ~/code/smcabrera.github.io/_drafts'
+alias katas='cd ~/workspace/katas/exercism/ruby/hamming/'
 
 alias st='git status'
 alias gac='git add . ; git commit -a' # git add all and commit
@@ -168,7 +170,18 @@ alias tw='timetrap week'
 alias tl='timetrap list'
 alias tr='timetrap resume'
 alias to='timetrap out ; timetrap week'
+
+# Stop timetrap and put on a screensaver
+alias pause='timetrap out ; timetrap week; cmatrix'
+
+
+# Restart the do box
 alias restart='sudo shutdown -r now'
+
+# tmux stuff
+alias enterlafl='tmux attach -t lafl'
+alias enterbloc='tmux attach -t bloc'
+alias enterblog='tmux attach -t blog'
 
 # Open up your task list for editing
 alias todoe="vim ~/Dropbox/GTD/todo.txt"
@@ -176,6 +189,9 @@ alias todoe="vim ~/Dropbox/GTD/todo.txt"
 # Aliases for running tests
 alias cr='codecept run'
 
+# Aliases for some of my shell scripts
+alias cc='clear_cache'
+alias dr='delete_removed'
 
 alias nest='unset TMUX'
 
@@ -184,4 +200,9 @@ if [ -d "$HOME/.rbenv" ]; then
 fi
 
 export PATH="$HOME/.bin:$PATH"
+export NODE_PATH="/lib"
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+legendary
