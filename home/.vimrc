@@ -257,6 +257,10 @@ set relativenumber
   "&#39;
   imap sh! #!/bin/sh
   map <F12> :w<cr>
+  " save when you've forgotten to sudo before opening a file
+  " :sudow
+  " http://www.catonmat.net/blog/sudo-vim/
+  cnoremap sudow w !sudo tee % >/dev/null
 
   "============================================================
   "==  Leader Mappings
