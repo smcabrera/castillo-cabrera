@@ -20,7 +20,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'tommcdo/vim-exchange' " Easy swapping two areas of text with cx + motion
 Plugin 'wikitopian/hardmode'
 Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
-Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'Lokaltog/vim-easymotion'
 Plugin 'pangloss/vim-javascript' " adds sensible highlighting for javascript
 Plugin 'mmalecki/vim-node.js' "File type detect plugin for vim which detects node.js shebang
 Plugin 'tpope/vim-git' "Vim Git runtime files
@@ -69,6 +69,9 @@ Plugin 'markwu/vim-laravel4-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-eunuch'
+""Plugin 'vim-scripts/Vim-R-plugin' "Looks awesome. Don't use R now but when I do, I'll use this
+Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
+"Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 
 " Bling Bundles
 "Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
@@ -205,7 +208,7 @@ set relativenumber
   "Nice feature but too ugly...set colorcolumn=85
 
   " Auto change the directory to the current file I'm working on
-  autocmd BufEnter * lcd %:p:h
+  "autocmd BufEnter * lcd %:p:h
 
 
   "When you lose focus on the screen it saves automatically
@@ -213,6 +216,9 @@ set relativenumber
 
   " Allowing .md files to be treated as markdown
   au BufRead,BufNewFile *.md set filetype=markdown
+
+  " When the filetype is FILETYPE then make AutoPairs only match for parenthesis
+  au Filetype markdown let b:AutoPairs = {"(": ")"}
 
   autocmd FileType php set ft=php.laravel " Snippets for laravel
   "============================================================
@@ -244,6 +250,8 @@ set relativenumber
   " Search for the next occurence of selected text
   vnorem // y/<c-r>"<cr>
   map yu <leader><leader>
+  " I'd like to figure out a good way to insert these escape characters automatically so I don't have to remember the damn things
+  "&#39;
   imap sh! #!/bin/sh
   map <F12> :w<cr>
 
@@ -255,8 +263,13 @@ set relativenumber
 
   " This is obvious and yet I never thought of it for till this post:
   " http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+  " Some leader mappings for things you do all the time
   nnoremap <leader>w :w<CR>
-  nnoremap <leader>x :w<CR>
+  nnoremap <leader>x :x<CR>
+  nnoremap <leader>at :tabe <cr>
+  nnoremap <leader>q :q <cr>
+  nnoremap <leader>l gt
+  nnoremap <leader>h gT
 
   " automatically install or update vim plugins with vundle
   nnoremap <leader>pi :PluginInstall<CR>
@@ -264,6 +277,7 @@ set relativenumber
 
   " Run the current file in the ruby console
   map !s :! spec % <C-r>=line('.')<CR><CR>
+
   nmap <leader>ged :!gedit %<CR>
   nnoremap <leader>n :NERDTreeToggle<CR>
   nmap <F8> :TagbarToggle<CR>
@@ -273,18 +287,17 @@ set relativenumber
   nnoremap <leader>ga :Gwrite <CR>
   nnoremap <leader>gc :Gcommit <CR>
   nnoremap <leader>gx :Gread <CR>
+
   " vim-rspec mappings
-  map <leader>ts :call RunCurrentSpecFile() <CR>
-  map <leader>ss :call RunNearestSpec() <CR>
-  map <leader>ls :call RunLastSpec() <CR>
-  map <leader>as :call RunAllSpec() <CR>
+  "map <leader>ts :call RunCurrentSpecFile() <CR>
+  "map <leader>ss :call RunNearestSpec() <CR>
+  "map <leader>ls :call RunLastSpec() <CR>
+  "map <leader>as :call RunAllSpec() <CR>
+
   " Always let me open vimrc in a new tab whenever I want to
   nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
   nmap <leader>nn :tabedit ~/Dropbox/notes/<CR>
 
-  map <Leader>rc :Rails console<cr>
-  map <Leader>rs :Rails server<cr>
-  map <Leader>rm :Rake db:migrate<cr>
   " Slimux for sending commands to a tmux window
   map <Leader>a :SlimuxShellLast<CR>
   map <Leader>k :SlimuxSendKeysLast<CR>
@@ -301,6 +314,18 @@ set relativenumber
   vmap <Leader>sc :SlimuxREPLConfigure<CR>
   " ctrl p
   nmap <leader>p :CtrlP <cr>
+
+  "
+  " Rails.vim leader mappings
+  "
+
+  map <Leader>rc :Rails console<cr>
+  map <Leader>rs :Rails server<cr>
+  map <Leader>rm :Rake db:migrate<cr>
+  " 'Edit' the corresponding model, controller, view
+  map <Leader>em :Emodel
+  map <Leader>ec :Econtroller
+  map <Leader>ev :Eview
 
   "============================================================
   "==  NERDTree
