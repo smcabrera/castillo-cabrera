@@ -149,7 +149,7 @@ alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/blog/smcabrera.github.io'
 alias blogs='cd ~/Dropbox/journal/blog-seeds/'
 alias blogd='cd ~/code/smcabrera.github.io/_drafts'
-alias katas='cd ~/workspace/katas/exercism/ruby/hamming/'
+alias katas='cd ~/workspace/katas/'
 
 alias st='git status'
 alias gac='git add . ; git commit -a' # git add all and commit

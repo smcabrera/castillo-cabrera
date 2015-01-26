@@ -221,6 +221,13 @@ set relativenumber
   au Filetype markdown let b:AutoPairs = {"(": ")"}
 
   autocmd FileType php set ft=php.laravel " Snippets for laravel
+
+  "folding settings
+  "set foldmethod=syntax   "fold based on Ruby syntax
+  "let ruby_fold = 1
+  "set foldnestmax=10      "deepest fold is 10 levels
+  "set nofoldenable        "dont fold by default
+
   "============================================================
   "==  Mappings
   "============================================================
@@ -254,6 +261,10 @@ set relativenumber
   "&#39;
   imap sh! #!/bin/sh
   map <F12> :w<cr>
+  " save when you've forgotten to sudo before opening a file
+  " :sudow
+  " http://www.catonmat.net/blog/sudo-vim/
+  cnoremap sudow w !sudo tee % >/dev/null
 
   "============================================================
   "==  Leader Mappings
@@ -326,6 +337,8 @@ set relativenumber
   map <Leader>em :Emodel
   map <Leader>ec :Econtroller
   map <Leader>ev :Eview
+
+  nmap <leader>fw :FixWhitespace <cr>
 
   "============================================================
   "==  NERDTree
