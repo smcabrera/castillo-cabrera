@@ -75,6 +75,7 @@ Plugin 'tpope/vim-eunuch'
 ""Plugin 'vim-scripts/Vim-R-plugin' "Looks awesome. Don't use R now but when I do, I'll use this
 Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
+Plugin 'vim-scripts/SyntaxRange'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
