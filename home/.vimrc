@@ -45,8 +45,6 @@ Plugin 'majutsushi/tagbar' "Show tags in a sidebar
 Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
-"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
-"requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
 Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
@@ -69,7 +67,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'markwu/vim-laravel4-snippets'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-eunuch'
 ""Plugin 'vim-scripts/Vim-R-plugin' "Looks awesome. Don't use R now but when I do, I'll use this
@@ -77,20 +74,20 @@ Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automa
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 Plugin 'vim-scripts/SyntaxRange'
 
+" Bling Bundles
+"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
+"requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
+Plugin 'edkolev/tmuxline.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 runtime macros/matchit.vim
 
 "============================================================
-"==  Color Bundles
+"==  Bling
 "============================================================
 
-
-"============================================================
-"==  Colors
-"============================================================
-" To be commented and uncommented at my whim
 
 "Airline settings
 let g:airline_powerline_fonts = 1
@@ -225,6 +222,13 @@ set relativenumber
   au Filetype markdown let b:AutoPairs = {"(": ")"}
 
   autocmd FileType php set ft=php.laravel " Snippets for laravel
+
+  "folding settings
+  "set foldmethod=syntax   "fold based on Ruby syntax
+  "let ruby_fold = 1
+  "set foldnestmax=10      "deepest fold is 10 levels
+  "set nofoldenable        "dont fold by default
+
   "============================================================
   "==  Mappings
   "============================================================
@@ -334,6 +338,8 @@ set relativenumber
   map <Leader>em :Emodel
   map <Leader>ec :Econtroller
   map <Leader>ev :Eview
+
+  nmap <leader>fw :FixWhitespace <cr>
 
   "============================================================
   "==  NERDTree
