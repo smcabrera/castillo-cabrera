@@ -163,6 +163,7 @@ alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
 alias zshe='vim ~/.zshrc' # Edit this file
 alias zs='source ~/.zshrc' # ...and source it
+alias car='codecept run acceptance' # Run all acceptance tests with codeception
 
 # Some aliases for the super handy timetrap gem
 alias td='timetrap display'
@@ -205,4 +206,4 @@ export NODE_PATH="/lib"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-legendary
+#legendary
