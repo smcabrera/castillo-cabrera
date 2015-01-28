@@ -72,6 +72,7 @@ Plugin 'tpope/vim-eunuch'
 ""Plugin 'vim-scripts/Vim-R-plugin' "Looks awesome. Don't use R now but when I do, I'll use this
 Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
+Plugin 'vim-scripts/SyntaxRange'
 
 " Bling Bundles
 "Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
