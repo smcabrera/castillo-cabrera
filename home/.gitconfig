@@ -9,3 +9,5 @@
 	default = matching
 [alias]
 	undo-commit = reset --soft HEAD\n
+[github]
+	user = smcabrera

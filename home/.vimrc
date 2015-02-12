@@ -78,6 +78,8 @@ Plugin 'vim-scripts/SyntaxRange'
 "Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'edkolev/tmuxline.vim'
+Bundle 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
