@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell" # Default theme
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, ruby, rails)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,6 +120,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
+
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
 
 alias aliase='vim ~/.bash_aliases' # Edit this file...
@@ -150,7 +152,7 @@ alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amaz
 alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address instead of
 alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
-alias zshe='vim ~/.zshrc' # Edit this file
+alias zshe='vim $dotfiles/.zshrc' # Edit this file
 alias zs='source ~/.zshrc' # ...and source it
 alias car='codecept run acceptance' # Run all acceptance tests with codeception
 
