@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell" # Default theme
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, ruby, rails)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,16 +107,6 @@ export EDITOR=vim
 [ -z "$TMUX" ] && export TERM=xterm-256color
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# Preferred editor for local and remote sessions
- #if [[ -n $SSH_CONNECTION ]]; then
-   #export EDITOR='vim'
- #else
-   #export EDITOR='mvim'
- #fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -129,6 +119,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
 
@@ -155,13 +147,12 @@ alias st='git status'
 alias gac='git add . ; git commit -a' # git add all and commit
 
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
-alias ocean='ssh root@104.131.72.62' # Access my digital ocean vps
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 #alias phps='php artisan serve'
 alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address instead of
 alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
-alias zshe='vim ~/.zshrc' # Edit this file
+alias zshe='vim $dotfiles/.zshrc' # Edit this file
 alias zs='source ~/.zshrc' # ...and source it
 alias car='codecept run acceptance' # Run all acceptance tests with codeception
 
@@ -175,14 +166,19 @@ alias to='timetrap out ; timetrap week'
 # Stop timetrap and put on a screensaver
 alias pause='timetrap out ; timetrap week; cmatrix'
 
-
 # Restart the do box
 alias restart='sudo shutdown -r now'
 
-# tmux stuff
+##################################
+# TMUX STUFF
+##################################
+
 alias enterlafl='tmux attach -t lafl'
 alias enterbloc='tmux attach -t bloc'
 alias enterblog='tmux attach -t blog'
+
+# see my running tmux sessions
+alias tls="tmux ls"
 
 # Open up your task list for editing
 alias todoe="vim ~/Dropbox/GTD/todo.txt"
