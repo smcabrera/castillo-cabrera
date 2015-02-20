@@ -10,7 +10,6 @@ else
 fi
 
 echo "$g $USER!"
-
 #
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -203,3 +202,6 @@ export NODE_PATH="/lib"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #legendary
+echo "Syncing up your files with dropbox"
+dropbox start
+
