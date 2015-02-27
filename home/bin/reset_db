@@ -1,0 +1,26 @@
+#!/bin/sh
+
+packages='DELETE FROM `cms_peruforless`.`packages` WHERE 1;'
+
+sqlstatement () {
+  mysql -u root -p -e $1
+}
+
+
+#while true; do
+  #read -p "¿Estas seguro que quieres vaciar la tabla packages?" yn
+  #case $yn in
+    #[Yy]* ) mysql -u root -p -e 'DELETE FROM `cms_peruforless`.`packages` WHERE 1;' cms_peruforless; break;;
+    #[Nn]* ) break;;
+      #* ) echo "Please answer yes or no.";;
+  #esac
+#done
+
+password=YIlXZa9MaQ
+
+mysql -u root --password=$password -e 'DELETE FROM `cms_peruforless`.`packages` WHERE 1;'
+mysql -u root --password=$password -e 'DELETE FROM `cms_peruforless`.`categories_packages` WHERE 1;'
+
+
+
+
