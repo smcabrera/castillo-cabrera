@@ -10,6 +10,7 @@ then
   if ! cd $project_dir/$1
   then
     echo "Incorrect project directory."
+    echo "$project_dir/$1"
     echo "Edit the file located at"
     whereis $0
     echo "and include the location of your projects directory"

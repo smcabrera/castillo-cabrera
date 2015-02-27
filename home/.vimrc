@@ -220,7 +220,7 @@ set relativenumber
   " Allowing .md files to be treated as markdown
   au BufRead,BufNewFile *.md set filetype=markdown
 
-  " When the filetype is FILETYPE then make AutoPairs only match for parenthesis
+  " When the filetype is markdown then make AutoPairs only match for parenthesis
   au Filetype markdown let b:AutoPairs = {"(": ")"}
 
   autocmd FileType php set ft=php.laravel " Snippets for laravel
