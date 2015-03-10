@@ -80,6 +80,7 @@ Plugin 'vim-scripts/SyntaxRange'
 Plugin 'edkolev/tmuxline.vim'
 Bundle 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'vim-scripts/Specky'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -286,8 +287,10 @@ set relativenumber
   nnoremap <leader>h gT
 
   " automatically install or update vim plugins with vundle
-  nnoremap <leader>pi :PluginInstall<CR>
-  nnoremap <leader>pu :PluginUpdate<CR>
+  "nnoremap <leader>pi :PluginInstall<CR>
+  "nnoremap <leader>pu :PluginUpdate<CR>
+  " The above ended up just being a pain in the ass because I map ctrl-p to
+  " <leader> p
 
   " Run the current file in the ruby console
   map !s :! spec % <C-r>=line('.')<CR><CR>
