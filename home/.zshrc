@@ -148,7 +148,8 @@ alias gac='git add . ; git commit -a' # git add all and commit
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 #alias phps='php artisan serve'
-alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address instead of
+alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address
+alias phps2='php artisan serve --host 104.131.29.69 --port=8080' #passing my digital ocean host ip address and an alternative port
 alias phpt='php artisan tinker'
 alias vagaws='vagrant up --provider=aws'
 alias zshe='vim $dotfiles/.zshrc' # Edit this file
