@@ -156,6 +156,9 @@ alias zshe='vim $dotfiles/.zshrc' # Edit this file
 alias zs='source ~/.zshrc' # ...and source it
 alias car='codecept run acceptance' # Run all acceptance tests with codeception
 
+# Shortcut for guard
+alias g='bundle exec guard'
+
 # Some aliases for the super handy timetrap gem
 alias td='timetrap display'
 alias tw='timetrap week'
