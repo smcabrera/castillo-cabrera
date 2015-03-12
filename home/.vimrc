@@ -81,6 +81,7 @@ Plugin 'edkolev/tmuxline.vim'
 Bundle 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/Specky'
+Plugin 'ngmy/vim-rubocop'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
