@@ -350,7 +350,7 @@ set relativenumber
   "==  Custom Commands
   "============================================================
 
-  command! TIL tabe~/workspace/til
+  command! Til tabe~/workspace/til
 
   "============================================================
   "==  NERDTree
