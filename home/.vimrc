@@ -160,18 +160,24 @@ map <F6> :call SolarizedLight()<cr>
 "==  Settings
 "============================================================
 " Just temporary. It's annoying to get variables marked as errors when I don't use them immediately if I'm trying to develop iteratively.
-"let g:syntastic_mode_map = {"mode": "passive"}
+"let g:syntastic_mode_map = {"mode": 'passive'}
 
 " If a file is changed outside of vim, automatically reload it without asking
-set autoread
+  set autoread
 
-set nu
-set relativenumber
+  set nu
+  set relativenumber
 
-"My default lists line number of only the current line with other lines
-"numbered relative to the current line
-"Toggle turning on the absolute line number for other lines with these
-"mappings
+  "Some settings for the way undo works 
+  set undofile                    " Save undo's after file closes
+  set undodir=~/.vim/undo         " where to save undo histories
+  set undolevels=1000             " How many undos
+  set undoreload=10000            " number of lines to save for undo
+
+  "My default lists line number of only the current line with other lines
+  "numbered relative to the current line
+  "Toggle turning on the absolute line number for other lines with these
+  "mappings
   nmap <leader>abs :set norelativenumber <cr>
   nmap <leader>rel :set relativenumber <cr>
 
