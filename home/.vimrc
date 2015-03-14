@@ -59,7 +59,6 @@ Plugin 'scrooloose/nerdcommenter' "To make commenting faster
 " Plugin 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
 "Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
 Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
-
 "Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
 "Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
 "Plugin 'Shougo/unite.vim' " Unite and create user interfaces--among other things you can use as a ctrlp replacement
@@ -73,7 +72,6 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 Plugin 'vim-scripts/SyntaxRange'
-
 " Bling Bundles
 "Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
@@ -82,6 +80,7 @@ Bundle 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/Specky'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
