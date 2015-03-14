@@ -169,7 +169,7 @@ map <F6> :call SolarizedLight()<cr>
   set nu
   set relativenumber
 
-  "Some settings for the way undo works 
+  "Some settings for the way undo works
   set undofile                    " Save undo's after file closes
   set undodir=~/.vim/undo         " where to save undo histories
   set undolevels=1000             " How many undos
@@ -276,6 +276,10 @@ map <F6> :call SolarizedLight()<cr>
   " :sudow
   " http://www.catonmat.net/blog/sudo-vim/
   cnoremap sudow w !sudo tee % >/dev/null
+  " Visually select the text that was last edited/pasted
+   nnoremap gV `[v`]
+  " " selelct what you've just pasted
+   nnoremap gp `[v`]`]`"`]`
 
   "============================================================
   "==  Leader Mappings
