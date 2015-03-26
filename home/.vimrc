@@ -362,6 +362,7 @@ map <F6> :call SolarizedLight()<cr>
   "============================================================
 
   command! Til tabe~/workspace/til
+  command! Bloc tabe~/Dropbox/notes/bloc/
 
   "============================================================
   "==  NERDTree

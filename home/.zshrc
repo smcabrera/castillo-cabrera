@@ -165,6 +165,7 @@ alias tw='timetrap week'
 alias tl='timetrap list'
 alias tr='timetrap resume'
 alias to='timetrap out ; timetrap week'
+alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week'
 
 # Stop timetrap and put on a screensaver
 alias pause='timetrap out ; timetrap week; cmatrix'
@@ -175,10 +176,6 @@ alias restart='sudo shutdown -r now'
 ##################################
 # TMUX STUFF
 ##################################
-
-alias enterlafl='tmux attach -t lafl'
-alias enterbloc='tmux attach -t bloc'
-alias enterblog='tmux attach -t blog'
 
 # see my running tmux sessions
 alias tls="tmux ls"
