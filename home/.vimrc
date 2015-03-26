@@ -81,6 +81,7 @@ Plugin 'mattn/gist-vim'
 Plugin 'vim-scripts/Specky'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -361,6 +362,7 @@ map <F6> :call SolarizedLight()<cr>
   "============================================================
 
   command! Til tabe~/workspace/til
+  command! Bloc tabe~/Dropbox/notes/bloc/
 
   "============================================================
   "==  NERDTree

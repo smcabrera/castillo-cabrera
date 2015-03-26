@@ -8,6 +8,6 @@ default_formatter: text
 auto_sheet: dotfiles
 auto_sheet_search_paths:
 - "/home/stephen/Dropbox/.timetrap/auto_sheets"
-default_command:
+default_command: 
 auto_checkout: false
 require_note: false
