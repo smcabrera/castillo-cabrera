@@ -3,6 +3,25 @@ set nocompatible
 filetype off
 
 "============================================================
+"==  Startify
+"============================================================
+"
+    let g:startify_list_order = [
+            \ ['   My most recently', '   used files'],
+            \ 'files',
+            \ ['   My most recently used files in the current directory:'],
+            \ 'dir',
+            \ ['   These are my sessions:'],
+            \ 'sessions',
+            \ ['   These are my bookmarks:'],
+            \ 'bookmarks',
+            \ ]
+    let g:startify_custom_header = [
+            \ 'Hello world'
+            \ ]
+
+
+"============================================================
 "==  Plugins: Vundle
 "============================================================
 " set the runtime path to include Vundle and initialize
@@ -92,6 +111,8 @@ Plugin 'osyo-manga/vim-monster'
 " and vimproc.vim
 Plugin 'myusuf3/numbers.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
+Plugin 'dkprice/vim-easygrep'
 
 
 call vundle#end()            " required
