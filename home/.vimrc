@@ -3,6 +3,25 @@ set nocompatible
 filetype off
 
 "============================================================
+"==  Startify
+"============================================================
+"
+    let g:startify_list_order = [
+            \ ['   My most recently', '   used files'],
+            \ 'files',
+            \ ['   My most recently used files in the current directory:'],
+            \ 'dir',
+            \ ['   These are my sessions:'],
+            \ 'sessions',
+            \ ['   These are my bookmarks:'],
+            \ 'bookmarks',
+            \ ]
+    let g:startify_custom_header = [
+            \ 'Hello world'
+            \ ]
+
+
+"============================================================
 "==  Plugins: Vundle
 "============================================================
 " set the runtime path to include Vundle and initialize
@@ -82,6 +101,19 @@ Plugin 'vim-scripts/Specky'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'Shougo/vimproc.vim'
+"You need to build extensions for vimproc
+" cd ~/.vim/bundle/vimproc.vim
+" make
+Plugin 'osyo-manga/vim-monster'
+" The above requires
+" gem install rcodetools
+" and vimproc.vim
+Plugin 'myusuf3/numbers.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
+Plugin 'dkprice/vim-easygrep'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,7 +123,6 @@ runtime macros/matchit.vim
 "============================================================
 "==  Bling
 "============================================================
-
 
 "Airline settings
 let g:airline_powerline_fonts = 1
@@ -151,8 +182,6 @@ endfunction
 map <leader>[ :colorscheme molokai<cr>
 map <leader>] :colorscheme simpleandfriendly<cr>
 
-
-
 map <F4> :call MolokaiWithPowerline()<cr>
 map <F5> :call Molokai()<cr>
 map <F6> :call SolarizedLight()<cr>
@@ -166,21 +195,14 @@ map <F6> :call SolarizedLight()<cr>
 " If a file is changed outside of vim, automatically reload it without asking
   set autoread
 
-  set nu
-  set relativenumber
-
   "Some settings for the way undo works
   set undofile                    " Save undo's after file closes
   set undodir=~/.vim/undo         " where to save undo histories
   set undolevels=1000             " How many undos
   set undoreload=10000            " number of lines to save for undo
 
-  "My default lists line number of only the current line with other lines
-  "numbered relative to the current line
-  "Toggle turning on the absolute line number for other lines with these
-  "mappings
-  nmap <leader>abs :set norelativenumber <cr>
-  nmap <leader>rel :set relativenumber <cr>
+  set nu
+  set relativenumber
 
   " Make spaces when you press tab
   set expandtab
@@ -190,7 +212,7 @@ map <F6> :call SolarizedLight()<cr>
   set encoding=utf-8
   "I turned out not to like this very much...
   " I used to not like this one, but it looks decent with malokai
-  set cursorline
+  "set cursorline
   set noswapfile
   " Some useful search defaults
   set hlsearch    " highlight matches--Actually don't--not until I can figure out how to turn them off quickly
@@ -250,7 +272,7 @@ map <F6> :call SolarizedLight()<cr>
   "removes any search highlighting.
   nnoremap <F3> :set hlsearch!<CR>
   "Alternatively this mapping unsets the last search pattern register when you hit return
-  nnoremap <CR> :noh<CR><CR>
+  nnoremap <CR> :noh<CR>:FixWhitespace<CR>
   " Indent with tab in normal mode
   nmap <Tab> > <C>
   nmap <S-Tab> < <C>
@@ -316,6 +338,15 @@ map <F6> :call SolarizedLight()<cr>
   nnoremap <leader>gc :Gcommit <CR>
   nnoremap <leader>gx :Gread <CR>
 
+  " Mappings for Tabularize
+  nnoremap <Leader>al :Tabularize /=><cr>
+  nnoremap <Leader>a= :Tabularize /=<cr>
+  nnoremap <Leader>a: :Tabularize /:<cr>
+  nnoremap <Leader>a:: :Tabularize /:\zs<cr>
+  nnoremap <Leader>a, :Tabularize /,<cr>
+  nnoremap <Leader>a<Bar> :Tabularize /
+
+
   " vim-rspec mappings
   "map <leader>ts :call RunCurrentSpecFile() <CR>
   "map <leader>ss :call RunNearestSpec() <CR>
@@ -327,7 +358,6 @@ map <F6> :call SolarizedLight()<cr>
   nmap <leader>nn :tabedit ~/Dropbox/notes/<CR>
 
   " Slimux for sending commands to a tmux window
-  map <Leader>a :SlimuxShellLast<CR>
   map <Leader>k :SlimuxSendKeysLast<CR>
 
   map <Leader>vp :VimuxPromptCommand<CR>
@@ -343,9 +373,11 @@ map <F6> :call SolarizedLight()<cr>
   " ctrl p
   nmap <leader>p :CtrlP <cr>
 
-  "
-  " Rails.vim leader mappings
-  "
+  nmap <leader>fw :FixWhitespace <cr>
+
+  "============================================================
+  "==  Rails.vim leader mappings
+  "============================================================
 
   map <Leader>rc :Rails console<cr>
   map <Leader>rs :Rails server<cr>
@@ -355,14 +387,13 @@ map <F6> :call SolarizedLight()<cr>
   map <Leader>ec :Econtroller
   map <Leader>ev :Eview
 
-  nmap <leader>fw :FixWhitespace <cr>
-
   "============================================================
   "==  Custom Commands
   "============================================================
 
   command! Til tabe~/workspace/til
   command! Bloc tabe~/Dropbox/notes/bloc/
+  command! Question tabe~/Dropbox/notes/questions/
 
   "============================================================
   "==  NERDTree
