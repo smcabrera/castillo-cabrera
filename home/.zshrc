@@ -61,7 +61,7 @@ ZSH_THEME="robbyrussell" # Default theme
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, ruby, rails)
+plugins=(git, ruby, gem, wd, rails, zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,14 +132,8 @@ alias ll="ls -l --color"
 alias lla="ls -la --color"
 
 # Some common filepaths
-alias bloc0='cd ~/code/bloccit/'
-alias bloc='cd ~/code/blocitoff/'
-alias sandbox='cd ~/code/sandbox/'
-alias lafl='cd /var/www/html/pfladmin/'
 alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/blog/smcabrera.github.io'
-alias blogs='cd ~/Dropbox/journal/blog-seeds/'
-alias blogd='cd ~/code/smcabrera.github.io/_drafts'
 alias katas='cd ~/workspace/katas/'
 
 alias st='git status'
@@ -206,3 +200,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 echo "Syncing up your files with dropbox"
 dropbox start
 
+wd() {
+  . /home/stephen/bin/wd/wd.sh
+}

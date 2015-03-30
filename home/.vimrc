@@ -75,8 +75,9 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'scrooloose/nerdcommenter' "To make commenting faster
 " Plugin 'Floobits'
-" Plugin 'Valloric/YouCompleteMe' Failed to get this installed :( Too bad, it looks awesome
-"Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects
+"Plugin 'Valloric/YouCompleteMe' "Failed to get this installed. Couldn't
+"install cmake
+"Plugin 'nelstrom/vim-textobj-rubyblock' " Make it easier/faster to select ruby objects--not sure what's wrong with this plugin
 Plugin 'tpope/vim-abolish' " Stuff for dealing with parts of text
 "Plugin 'wookiehangover/jshint.vim' " Check for errors in your javascript code
 "Plugin 'Shougo/vimshell.vim' " Powerful shell implemented by vim
@@ -111,7 +112,7 @@ Plugin 'osyo-manga/vim-monster'
 " and vimproc.vim
 Plugin 'myusuf3/numbers.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mhinz/vim-startify'
+"Plugin 'mhinz/vim-startify' "Unfortunately this just struck me as ugly just using the defaults. Maybe I'll configure it at some point
 Plugin 'dkprice/vim-easygrep'
 
 
