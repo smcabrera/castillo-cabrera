@@ -193,6 +193,10 @@ map <F6> :call SolarizedLight()<cr>
 " Just temporary. It's annoying to get variables marked as errors when I don't use them immediately if I'm trying to develop iteratively.
 "let g:syntastic_mode_map = {"mode": 'passive'}
 
+" Automatically set vim's working directory to be the working directory of the
+" current file
+  set autochdir
+
 " If a file is changed outside of vim, automatically reload it without asking
   set autoread
 
