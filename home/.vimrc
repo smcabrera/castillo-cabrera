@@ -114,7 +114,8 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'mhinz/vim-startify' "Unfortunately this just struck me as ugly just using the defaults. Maybe I'll configure it at some point
 Plugin 'dkprice/vim-easygrep'
-
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tmux-plugins/vim-tmux'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
