@@ -353,12 +353,6 @@ map <F6> :call SolarizedLight()<cr>
   nnoremap <Leader>a<Bar> :Tabularize /
 
 
-  " vim-rspec mappings
-  "map <leader>ts :call RunCurrentSpecFile() <CR>
-  "map <leader>ss :call RunNearestSpec() <CR>
-  "map <leader>ls :call RunLastSpec() <CR>
-  "map <leader>as :call RunAllSpec() <CR>
-
   " Always let me open vimrc in a new tab whenever I want to
   nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
   nmap <leader>nn :tabedit ~/Dropbox/notes/<CR>
@@ -366,10 +360,10 @@ map <F6> :call SolarizedLight()<cr>
   " Slimux for sending commands to a tmux window
   map <Leader>k :SlimuxSendKeysLast<CR>
 
-  map <Leader>vp :VimuxPromptCommand<CR>
+  "map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
   "map <Leader>vl :VimuxRunLastCommand<CR>
-  map <Leader>t :VimuxRunLastCommand<CR>
+  "map <Leader>t :VimuxRunLastCommand<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
   " Send last visually selected text to configured pane
@@ -392,6 +386,18 @@ map <F6> :call SolarizedLight()<cr>
   map <Leader>em :Emodel
   map <Leader>ec :Econtroller
   map <Leader>ev :Eview
+
+  "============================================================
+  "==  rspec.vim settings/mappings
+  "============================================================
+
+  let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
+
+  " vim-rspec mappings
+  map <leader>ts :call RunCurrentSpecFile()<cr>
+  map <leader>ss :call RunNearestSpec()<cr>
+  map <leader>ls :call RunLastSpec()<cr>
+  map <leader>as :call RunAllSpecs()<cr>
 
   "============================================================
   "==  Custom Commands
@@ -418,13 +424,6 @@ map <F6> :call SolarizedLight()<cr>
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
   endfunc
-
-  "============================================================
-  "==  Rspec
-  "============================================================
-
-  "let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-  let g:rspec_command = "Dispatch rspec {spec}"
 
   "============================================================
   "==  Typos
