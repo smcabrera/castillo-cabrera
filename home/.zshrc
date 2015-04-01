@@ -138,9 +138,14 @@ alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/blog/smcabrera.github.io'
 alias katas='cd ~/workspace/katas/'
 
+# Git aliases
 alias st='git status'
+alias ga='git add .'
+alias gc='git commit -v'
 alias gac='git add . ; git commit -a' # git add all and commit
+alias gp='git push'
 
+alias bx="bundle exec "
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 #alias phps='php artisan serve'

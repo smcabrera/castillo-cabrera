@@ -114,7 +114,8 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'mhinz/vim-startify' "Unfortunately this just struck me as ugly just using the defaults. Maybe I'll configure it at some point
 Plugin 'dkprice/vim-easygrep'
-
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tmux-plugins/vim-tmux'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -192,6 +193,10 @@ map <F6> :call SolarizedLight()<cr>
 "============================================================
 " Just temporary. It's annoying to get variables marked as errors when I don't use them immediately if I'm trying to develop iteratively.
 "let g:syntastic_mode_map = {"mode": 'passive'}
+
+" Automatically set vim's working directory to be the working directory of the
+" current file
+  set autochdir
 
 " If a file is changed outside of vim, automatically reload it without asking
   set autoread
