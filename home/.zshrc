@@ -111,7 +111,6 @@ export EDITOR=vim
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -121,77 +120,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
-
-alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
-
-alias aliase='vim ~/.bash_aliases' # Edit this file...
-
-# making ls faster and adding color
-alias l="ls --color"
-alias la="ls -a --color"
-alias ll="ls -l --color"
-alias lla="ls -la --color"
-
-# Some common filepaths
-alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
-alias blog='cd ~/blog/smcabrera.github.io'
-alias katas='cd ~/workspace/katas/'
-
-# Git aliases
-alias st='git status'
-alias ga='git add .'
-alias gc='git commit -v'
-alias gac='git add . ; git commit -a' # git add all and commit
-alias gp='git push'
-
-alias bx="bundle exec "
-alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
-alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
-#alias phps='php artisan serve'
-alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address
-alias phps2='php artisan serve --host 104.131.29.69 --port=8080' #passing my digital ocean host ip address and an alternative port
-alias phpt='php artisan tinker'
-alias vagaws='vagrant up --provider=aws'
-alias zshe='vim $dotfiles/.zshrc' # Edit this file
-alias zs='source ~/.zshrc' # ...and source it
-alias car='codecept run acceptance' # Run all acceptance tests with codeception
-
-# Shortcut for guard
-alias g='bundle exec guard'
-
-# Some aliases for the super handy timetrap gem
-alias td='timetrap display'
-alias tw='timetrap week'
-alias tl='timetrap list'
-alias tr='timetrap resume'
-alias to='timetrap out ; timetrap week'
-alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week'
-
-# Stop timetrap and put on a screensaver
-alias pause='timetrap out ; timetrap week; cmatrix'
-
-# Restart the do box
-alias restart='sudo shutdown -r now'
-
-##################################
-# TMUX STUFF
-##################################
-
-# see my running tmux sessions
-alias tls="tmux ls"
-
-# Open up your task list for editing
-alias todoe="vim ~/Dropbox/GTD/todo.txt"
-
-# Aliases for running tests
-alias cr='codecept run'
-
-# Aliases for some of my shell scripts
-alias cc='clear_cache'
-alias dr='delete_removed'
-
-alias nest='unset TMUX'
+# To add new aliases or view current ones, go where they live--in the custom folder:
+alias zalias='vim ~/.oh-my-zsh-custom/aliases.zsh'
 
 if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
