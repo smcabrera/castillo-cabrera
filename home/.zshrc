@@ -141,6 +141,7 @@ alias st='git status'
 alias ga='git add .'
 alias gc='git commit -v'
 alias gac='git add . ; git commit -a' # git add all and commit
+alias gp='git push'
 
 alias bx="bundle exec "
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
