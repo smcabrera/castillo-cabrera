@@ -28,6 +28,7 @@ alias ga='git add .'
 alias gc='git commit -v'
 alias gac='git add . ; git commit -a' # git add all and commit
 alias gp='git push'
+alias co='git checkout'
 
 ##################################
 # VPS
