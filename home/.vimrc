@@ -3,25 +3,6 @@ set nocompatible
 filetype off
 
 "============================================================
-"==  Startify
-"============================================================
-"
-    let g:startify_list_order = [
-            \ ['   My most recently', '   used files'],
-            \ 'files',
-            \ ['   My most recently used files in the current directory:'],
-            \ 'dir',
-            \ ['   These are my sessions:'],
-            \ 'sessions',
-            \ ['   These are my bookmarks:'],
-            \ 'bookmarks',
-            \ ]
-    let g:startify_custom_header = [
-            \ 'Hello world'
-            \ ]
-
-
-"============================================================
 "==  Plugins: Vundle
 "============================================================
 " set the runtime path to include Vundle and initialize
@@ -236,15 +217,15 @@ map <F6> :call SolarizedLight()<cr>
 
   " move through lines on the screen instead of line numbers
   " Actually want this behavior when the file extension is .md
-  "nnoremap j gj
-  "nnoremap k gk
-  "vnoremap j gj
-  "vnoremap k gk
+  au Filetype markdown let b:AutoPairs = {"(": ")"}
+  au Filetype markdown nnoremap j gj
+  au Filetype markdown nnoremap k gk
 
   " Work with long lines properly
-  "set textwidth=79
+  set textwidth=79
   set formatoptions=qrn1
-  "Nice feature but too ugly...set colorcolumn=85
+  "Nice feature but too ugly...
+  "set colorcolumn=85
 
   " Auto change the directory to the current file I'm working on
   "autocmd BufEnter * lcd %:p:h
@@ -257,8 +238,6 @@ map <F6> :call SolarizedLight()<cr>
   au BufRead,BufNewFile *.md set filetype=markdown
 
   " When the filetype is markdown then make AutoPairs only match for parenthesis
-  au Filetype markdown let b:AutoPairs = {"(": ")"}
-
   autocmd FileType php set ft=php.laravel " Snippets for laravel
 
   "folding settings
