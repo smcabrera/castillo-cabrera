@@ -177,7 +177,8 @@ map <F6> :call SolarizedLight()<cr>
 
 " Automatically set vim's working directory to be the working directory of the
 " current file
-  set autochdir
+" This is actually horrible when working with tmux
+  "set autochdir
 
 " If a file is changed outside of vim, automatically reload it without asking
   set autoread
@@ -222,7 +223,7 @@ map <F6> :call SolarizedLight()<cr>
   au Filetype markdown nnoremap k gk
 
   " Work with long lines properly
-  set textwidth=79
+  "set textwidth=79
   set formatoptions=qrn1
   "Nice feature but too ugly...
   "set colorcolumn=85
@@ -339,10 +340,10 @@ map <F6> :call SolarizedLight()<cr>
   " Slimux for sending commands to a tmux window
   map <Leader>k :SlimuxSendKeysLast<CR>
 
-  "map <Leader>vp :VimuxPromptCommand<CR>
+  map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
-  "map <Leader>vl :VimuxRunLastCommand<CR>
-  "map <Leader>t :VimuxRunLastCommand<CR>
+  map <Leader>vl :VimuxRunLastCommand<CR>
+  map <Leader>t :VimuxRunLastCommand<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
   " Send last visually selected text to configured pane
