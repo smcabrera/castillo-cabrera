@@ -97,6 +97,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tmux-plugins/vim-tmux'
+"Plugin 'kshenoy/vim-signature'
+"Plugin 'jeetsukumaran/vim-markology'
+Plugin 'thoughtbot/pick.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
