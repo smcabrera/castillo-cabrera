@@ -100,6 +100,7 @@ Plugin 'tmux-plugins/vim-tmux'
 "Plugin 'kshenoy/vim-signature'
 "Plugin 'jeetsukumaran/vim-markology'
 Plugin 'thoughtbot/pick.vim'
+Plugin 'othree/html5.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
