@@ -4,6 +4,8 @@ Other than these dotfiles your development laptop should include a few other thi
 
 There's a script you can find on github called thoughtbot/laptop--this has all the software you'll need to get up and running. Run the script, wait 15 minutes and your rails dev environment is all set to go.
 
+Forget the above. For one it doesn't support linux anymore. Any for another we're already putting together an ansible playbook that will set up our dev environment. It's not completely done yet, but when it is it should basically be a quick bootstrap new dev setup script, laid out in a sensible way through the use of ansible configuration.
+
 - laptop.local
 
 Besides these defaults, I've defined some gems and programs that I like in laptop.local, which should all be installed right afterward

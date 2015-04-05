@@ -87,4 +87,4 @@ alias phpt='php artisan tinker'
 ##################################
 # Aliases that we've added recently and haven't organized here somehow
 
-
+alias cdp='cd $(find . -type d | pick)' # cd with pick--open source command line fuzzy select: https://robots.thoughtbot.com/announcing-pick
