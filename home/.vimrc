@@ -101,6 +101,8 @@ Plugin 'tmux-plugins/vim-tmux'
 "Plugin 'jeetsukumaran/vim-markology'
 Plugin 'thoughtbot/pick.vim'
 Plugin 'othree/html5.vim'
+Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -288,10 +290,6 @@ map <F6> :call SolarizedLight()<cr>
   " :sudow
   " http://www.catonmat.net/blog/sudo-vim/
   cnoremap sudow w !sudo tee % >/dev/null
-  " Visually select the text that was last edited/pasted
-   nnoremap gV `[v`]
-  " " selelct what you've just pasted
-   nnoremap gp `[v`]`]`"`]`
 
   "============================================================
   "==  Leader Mappings
