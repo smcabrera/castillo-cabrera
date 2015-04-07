@@ -103,6 +103,7 @@ Plugin 'thoughtbot/pick.vim'
 Plugin 'othree/html5.vim'
 Plugin 'jelera/vim-javascript-syntax'
 "Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'PProvost/vim-markdown-jekyll'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -290,6 +291,8 @@ map <F6> :call SolarizedLight()<cr>
   " :sudow
   " http://www.catonmat.net/blog/sudo-vim/
   cnoremap sudow w !sudo tee % >/dev/null
+
+  map <c-f> :grep -F 'leader' %
 
   "============================================================
   "==  Leader Mappings
