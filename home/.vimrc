@@ -376,13 +376,15 @@ map <F6> :call SolarizedLight()<cr>
   "==  rspec.vim settings/mappings
   "============================================================
 
-  let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
+  "let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
 
   " vim-rspec mappings
-  map <leader>ts :call RunCurrentSpecFile()<cr>
-  map <leader>ss :call RunNearestSpec()<cr>
-  map <leader>ls :call RunLastSpec()<cr>
-  map <leader>as :call RunAllSpecs()<cr>
+  "map <leader>ts :call RunCurrentSpecFile()<cr>
+  "map <leader>ss :call RunNearestSpec()<cr>
+  "map <leader>ls :call RunLastSpec()<cr>
+  "map <leader>as :call RunAllSpecs()<cr>
+
+  "This didn't seem to work for me for some reason
 
   "============================================================
   "==  Custom Commands
