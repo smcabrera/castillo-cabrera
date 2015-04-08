@@ -202,7 +202,8 @@ map <F6> :call SolarizedLight()<cr>
   set undoreload=10000            " number of lines to save for undo
 
   set nu
-  set relativenumber
+  "set relativenumber
+  set norelativenumber
 
   " Make spaces when you press tab
   set expandtab
@@ -232,6 +233,7 @@ map <F6> :call SolarizedLight()<cr>
   " Actually want this behavior when the file extension is .md
   au Filetype markdown let b:AutoPairs = {"(": ")"}
   au Filetype markdown nnoremap j gj
+  au Filetype markdown nnoremap k gk
   au Filetype markdown nnoremap k gk
 
   " Work with long lines properly
@@ -265,6 +267,7 @@ map <F6> :call SolarizedLight()<cr>
   " of terms aren't dictionary words
   let g:markdown_enable_spell_checking = 0
 
+    nnoremap <F3> :NumbersToggle<CR>
   "============================================================
   "==  Mappings
   "============================================================
