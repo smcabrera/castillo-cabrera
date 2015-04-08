@@ -42,7 +42,7 @@ Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with r
 Plugin 'tomasr/molokai' "Colors available by bundle to be cycled through later
 Plugin 'fishman/ctags' "ctags
 Plugin 'majutsushi/tagbar' "Show tags in a sidebar
-Plugin 'hallison/vim-markdown' "Markdown highlighting
+"Plugin 'hallison/vim-markdown' "Markdown highlighting
 Plugin 'godlygeek/csapprox' "Make gvim-only colorschemes work transparently in terminal vim
 Plugin 'vim-scripts/hexHighlight.vim' "Allows you to toggle seeing the color of hex values when in graphical vim
 Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
@@ -104,6 +104,11 @@ Plugin 'othree/html5.vim'
 Plugin 'jelera/vim-javascript-syntax'
 "Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'PProvost/vim-markdown-jekyll'
+Plugin 'csexton/jekyll.vim'
+" Still some configuration to be done for the above, a plugin meant to help
+" speed up developing a jekyll blog with vim. Check this link:
+" https://github.com/csexton/jekyll.vim
+Plugin 'gabrielelana/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
