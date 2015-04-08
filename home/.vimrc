@@ -259,6 +259,12 @@ map <F6> :call SolarizedLight()<cr>
   "set foldnestmax=10      "deepest fold is 10 levels
   "set nofoldenable        "dont fold by default
 
+  " Disable the spell checking from this plugin
+  " https://github.com/gabrielelana/vim-markdown
+  " It's actually really annoying when writing about programming where a ton
+  " of terms aren't dictionary words
+  let g:markdown_enable_spell_checking = 0
+
   "============================================================
   "==  Mappings
   "============================================================
