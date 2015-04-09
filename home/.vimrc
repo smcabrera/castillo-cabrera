@@ -109,6 +109,9 @@ Plugin 'csexton/jekyll.vim'
 " speed up developing a jekyll blog with vim. Check this link:
 " https://github.com/csexton/jekyll.vim
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'tpope/vim-haml'
+Plugin 'justincampbell/vim-eighties'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -407,6 +410,8 @@ map <F6> :call SolarizedLight()<cr>
   command! Til tabe~/workspace/til
   command! Bloc tabe~/Dropbox/notes/bloc/
   command! Question tabe~/Dropbox/notes/questions/
+  command! Draft ! cp % ~/workspace/smcabrera.github.io/_drafts/
+  command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publis %
 
   "============================================================
   "==  NERDTree
