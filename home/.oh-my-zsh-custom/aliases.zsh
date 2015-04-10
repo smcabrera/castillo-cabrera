@@ -2,7 +2,8 @@ alias foo="echo 'You are a FOO foo!'"
 
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
-alias zshe='vim $dotfiles/.zshrc' # Edit zshrc file
+alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
+alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
 
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
