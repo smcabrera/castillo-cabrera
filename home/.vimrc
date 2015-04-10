@@ -365,7 +365,7 @@ map <F6> :call SolarizedLight()<cr>
   map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
   map <Leader>vl :VimuxRunLastCommand<CR>
-  map <Leader>t :VimuxRunLastCommand<CR>
+  "map <Leader>t :VimuxRunLastCommand<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
   " Send last visually selected text to configured pane
@@ -376,6 +376,7 @@ map <F6> :call SolarizedLight()<cr>
   nmap <leader>p :CtrlP <cr>
 
   nmap <leader>fw :FixWhitespace <cr>
+
 
   "============================================================
   "==  Rails.vim leader mappings
@@ -410,6 +411,7 @@ map <F6> :call SolarizedLight()<cr>
   command! Til tabe~/workspace/til
   command! Bloc tabe~/Dropbox/notes/bloc/
   command! Question tabe~/Dropbox/notes/questions/
+  command! Blog tabe~/workspace/smcabrera.github.io
   command! Draft ! cp % ~/workspace/smcabrera.github.io/_drafts/
   command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publis %
 
