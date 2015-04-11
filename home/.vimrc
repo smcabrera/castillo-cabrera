@@ -112,6 +112,7 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-haml'
 Plugin 'justincampbell/vim-eighties'
+Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it'll
 
 call vundle#end()            " required
 filetype plugin indent on    " required
