@@ -25,9 +25,3 @@ then
     echo "No tmux session exists for $current_dir. Creating now..."
     tmux new -s $current_dir
 fi
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0067768e9d963ed6a9812847b23fd5ddf09f5c8c
