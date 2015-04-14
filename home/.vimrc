@@ -112,7 +112,11 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-haml'
 Plugin 'justincampbell/vim-eighties'
-Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it'll
+Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
+Plugin 'skalnik/vim-vroom'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -265,19 +269,29 @@ map <F6> :call SolarizedLight()<cr>
   "set foldnestmax=10      "deepest fold is 10 levels
   "set nofoldenable        "dont fold by default
 
+  "============================================================
+  "==  Global variables
+  "============================================================
+
   " Disable the spell checking from this plugin
   " https://github.com/gabrielelana/vim-markdown
   " It's actually really annoying when writing about programming where a ton
   " of terms aren't dictionary words
   let g:markdown_enable_spell_checking = 0
 
-    nnoremap <F3> :NumbersToggle<CR>
+  " Settings for vim-notes
+  let g:notes_directories = [ '~/Dropbox/notes', '~/Documents/notes' ]
+  let g:vroom_use_spring = 1
+
   "============================================================
   "==  Mappings
   "============================================================
 
   " Make escape easier:
   imap jk <ESC>
+
+  nnoremap <F3> :NumbersToggle<CR>
+
   " Make fixing whitespace faster
   nmap :fw :FixWhitespace <CR>
   "removes any search highlighting.
@@ -308,7 +322,7 @@ map <F6> :call SolarizedLight()<cr>
   " save when you've forgotten to sudo before opening a file
   " :sudow
   " http://www.catonmat.net/blog/sudo-vim/
-  cnoremap sudow w !sudo tee % >/dev/null
+  cmap w!! w !sudo tee % >/dev/null
 
   map <c-f> :grep -F 'leader' %
 
@@ -327,12 +341,6 @@ map <F6> :call SolarizedLight()<cr>
   nnoremap <leader>q :q <cr>
   nnoremap <leader>l gt
   nnoremap <leader>h gT
-
-  " automatically install or update vim plugins with vundle
-  "nnoremap <leader>pi :PluginInstall<CR>
-  "nnoremap <leader>pu :PluginUpdate<CR>
-  " The above ended up just being a pain in the ass because I map ctrl-p to
-  " <leader> p
 
   " Run the current file in the ruby console
   map !s :! spec % <C-r>=line('.')<CR><CR>
@@ -373,7 +381,7 @@ map <F6> :call SolarizedLight()<cr>
   vmap <Leader>s :SlimuxREPLSendSelection<CR>
   " Prompt pane configuration for current buffer
   vmap <Leader>sc :SlimuxREPLConfigure<CR>
-  " ctrl p
+  " ctrl p. Fuzzy finder. This is huge
   nmap <leader>p :CtrlP <cr>
 
   nmap <leader>fw :FixWhitespace <cr>
@@ -410,11 +418,11 @@ map <F6> :call SolarizedLight()<cr>
   "============================================================
 
   command! Til tabe~/workspace/til
-  command! Bloc tabe~/Dropbox/notes/bloc/
-  command! Question tabe~/Dropbox/notes/questions/
+  command! Bloc tabe~/Dropbox/bloc/
+  command! Question tabe~/Dropbox/questions/
   command! Blog tabe~/workspace/smcabrera.github.io
   command! Draft ! cp % ~/workspace/smcabrera.github.io/_drafts/
-  command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publis %
+  command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publish %
 
   "============================================================
   "==  NERDTree
