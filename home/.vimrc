@@ -113,10 +113,11 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-haml'
 Plugin 'justincampbell/vim-eighties'
 Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'skalnik/vim-vroom'
+Plugin 'tpope/gem-ctags'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -213,11 +214,9 @@ map <F6> :call SolarizedLight()<cr>
   "set relativenumber
   set norelativenumber
 
+
   " Make spaces when you press tab
-  set expandtab
-  " For Ruby, could make this language dependent if I start writing more python
-  set shiftwidth=2
-  set tabstop=2
+  set softtabstop=2 shiftwidth=2 expandtab
   set encoding=utf-8
   "I turned out not to like this very much...
   " I used to not like this one, but it looks decent with malokai
@@ -281,7 +280,15 @@ map <F6> :call SolarizedLight()<cr>
 
   " Settings for vim-notes
   let g:notes_directories = [ '~/Dropbox/notes', '~/Documents/notes' ]
-  let g:vroom_use_spring = 1
+  "let g:vroom_use_spring = 1
+  let g:vroom_map_keys = 1
+  "map <leader>r :VroomRunTestFile
+  "map <leader>R :VroomRunNearestTest
+  "map <leader>lt :VroomRunNearestLastTest
+
+  " disable 'assigned but unused variable' warnings
+  " (they're just annoying and never actually useful)
+  let g:syntastic_quiet_messages = { "regex": 'assigned but unused'  }
 
   "============================================================
   "==  Mappings
@@ -295,7 +302,8 @@ map <F6> :call SolarizedLight()<cr>
   " Make fixing whitespace faster
   nmap :fw :FixWhitespace <CR>
   "removes any search highlighting.
-  nnoremap <F3> :set hlsearch!<CR>
+  snoremap <F3> :set hlsearch!<CR>
+
   "Alternatively this mapping unsets the last search pattern register when you hit return
   nnoremap <CR> :noh<CR>:FixWhitespace<CR>
   " Indent with tab in normal mode
@@ -303,6 +311,7 @@ map <F6> :call SolarizedLight()<cr>
   nmap <S-Tab> < <C>
   " Pretty sweet mapping that I learned about from Destroy all Software
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
+  cnoremap %%% <C-R>=expand('%')<cr>
   map <leader>y "*y
   " Move around splits with <c-hjkl>
   nnoremap <c-j> <c-w>j
@@ -325,6 +334,9 @@ map <F6> :call SolarizedLight()<cr>
   cmap w!! w !sudo tee % >/dev/null
 
   map <c-f> :grep -F 'leader' %
+
+  cmap test bundle exec rspec %%
+
 
   "============================================================
   "==  Leader Mappings
@@ -447,8 +459,8 @@ map <F6> :call SolarizedLight()<cr>
   "============================================================
   nmap :W :w
   nmap :Q :q
+  nmap :Vs :vs
 
-  "============================================================
   "==  Editing vimrc on the fly
   "============================================================
   " ht: episode 24 of vimcasts
