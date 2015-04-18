@@ -202,6 +202,9 @@ map <F6> :call SolarizedLight()<cr>
   "set autochdir
 
 " If a file is changed outside of vim, automatically reload it without asking
+" Turn off beeps
+  set vb
+
   set autoread
 
   "Some settings for the way undo works
@@ -335,8 +338,9 @@ map <F6> :call SolarizedLight()<cr>
 
   map <c-f> :grep -F 'leader' %
 
-  cmap test bundle exec rspec %%
-
+  cmap rtest :! bundle exec rspec %%%
+  "cmap test :! bundle exec rspec %%% :execute ""<cr>
+  "execute ":map "<leader>"t :! bundle exec rspec"%%%" <cr>"
 
   "============================================================
   "==  Leader Mappings

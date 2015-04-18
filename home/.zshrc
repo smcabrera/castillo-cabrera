@@ -63,6 +63,11 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git, ruby, gem, wd, rails, zsh-syntax-highlighting)
 
+# Beeps are annoying
+setopt NO_BEEP
+
+setopt VI
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
