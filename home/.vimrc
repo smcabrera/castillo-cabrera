@@ -313,6 +313,7 @@ map <F6> :call SolarizedLight()<cr>
   nmap <Tab> > <C>
   nmap <S-Tab> < <C>
   " Pretty sweet mapping that I learned about from Destroy all Software
+  cnoremap %. <C-R>=('%')<cr>
   cnoremap %% <C-R>=expand('%:h').'/'<cr>
   cnoremap %%% <C-R>=expand('%')<cr>
   map <leader>y "*y
@@ -439,6 +440,7 @@ map <F6> :call SolarizedLight()<cr>
   command! Blog tabe~/workspace/smcabrera.github.io
   command! Draft ! cp % ~/workspace/smcabrera.github.io/_drafts/
   command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publish %
+  command! Wlocal write ~/Downloads/% 
 
   "============================================================
   "==  NERDTree
