@@ -54,16 +54,10 @@ fi
 setopt NO_BEEP
 
 # ###################################
-# Bindings
+# Right Hand Prompt
 # ###################################
 
-setopt VI
-
-export EDITOR=vim
-[ -z "$TMUX" ] && export TERM=xterm-256color
-
-# 10ms for key sequences
-KEYTIMEOUT=1
+# With a few commented out because I'm not willing to throw them away
 
 #function zle-line-init zle-keymap-select {
   #VIM_NORMAL="%{$fg_bold[green]%} %{$bg[yellow]%} [% NORMAL]% %{$reset_color%}"
@@ -96,18 +90,35 @@ function zle-line-init zle-keymap-select {
     #zle reset-prompt
 #}
 
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-#source $ZSH/oh-my-zsh.sh
+# ###################################
+# Key Bindings
+# ###################################
 
 # Bindings for the command line
 
-#bindkey "^[OD]" backward-word
-#bindkey "^[OC]" forward-word
-bindkey -M viins 'jj' vi-cmd-mode
+# As always...use vim!
 
-# ################################
+setopt VI
+export EDITOR=vim
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+# 10ms for key sequences
+KEYTIMEOUT=4.0
+
+
+# Use jk to exit insert mode
+bindkey -M viins 'jk' vi-cmd-mode
+
+bindkey -M viins '^J' history-search-forward
+bindkey -M viins '^K' history-search-backward
+
+# leave menu selection and accept entire command line after '^M'
+# default behaviour only leaves menuselect; doesn't execute command line
+#zmodload zsh/complist
+#bindkey -M menuselect '^M' .accept-line
+
+
+ ################################
 # PATH
 # ################################
 
