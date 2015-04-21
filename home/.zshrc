@@ -10,69 +10,61 @@ else
 fi
 
 echo "$g $USER!"
-#
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+####################################
+# Plugins
+####################################
 
-ZSH_THEME="robbyrussell" # Default theme
-#ZSH_THEME="powerline"
-#ZSH_THEME="agnoster"
+#source ~/.zsh/antigen/antigen.zsh
+source "${HOME}/.zsh/zgen/zgen.zsh"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+saved=false
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+if ! zgen saved; then
+  echo "Creating a zgen save"
+  zgen oh-my-zsh
+  zgen load rhysd/zsh-bundle-exec
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/ruby
+  zgen oh-my-zsh plugins/heroku
+  zgen oh-my-zsh plugins/command-not-found
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+  # Theme
+  zgen oh-my-zsh themes/fox
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+  zgen load zsh-users/zsh-syntax-highlighting
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+  # nicoulaj's moar completion files for zsh
+  zgen load zsh-users/zsh-completions src
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+  # ZSH port of Fish shell's history search feature.
+  zgen load zsh-users/zsh-history-substring-search
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+  # Syntax highlighting bundle.
+  zgen load zsh-users/zsh-syntax-highlighting
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+  zgen save
+fi
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.oh-my-zsh-custom
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git, ruby, gem, wd, rails, zsh-syntax-highlighting)
+####################################
+# END Plugins
+####################################
 
 # Beeps are annoying
 setopt NO_BEEP
 
 setopt VI
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# ################################
+# PATH
+# ################################
 
 export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games::$HOME/bin"
+
+export PATH="$HOME/.bin:$PATH"
+export NODE_PATH="/lib"
 
 # If using composer to manage php dependencies, add it to the path
 if [ -d "$HOME/.composer" ]; then
@@ -114,24 +106,18 @@ export EDITOR=vim
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
 
 # To add new aliases or view current ones, go where they live--in the custom folder:
-alias zalias='vim ~/.oh-my-zsh-custom/aliases.zsh'
+alias zalias='vim ~/.zsh/aliases.zsh'
 
+[ -e "${HOME}/.zsh/aliases.zsh"  ] && source "${HOME}/.zsh/aliases.zsh"
+
+# Start rbenv
 if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
-export PATH="$HOME/.bin:$PATH"
-export NODE_PATH="/lib"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -140,6 +126,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 echo "Syncing up your files with dropbox"
 dropbox start
 
-wd() {
-  . /home/stephen/bin/wd/wd.sh
-}
+#wd() {
+  #. /home/stephen/bin/wd/wd.sh
+#}
