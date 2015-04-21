@@ -73,6 +73,9 @@ function zle-line-init zle-keymap-select {
   zle reset-prompt
 }
 
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 #Note: Bold text does not necessarily use the same colors as normal text. For example, $fg['yellow'] looks brown or a very dark yellow, while $fg_no_bold['yellow'] looks like bright or regular yellow.
 
 
@@ -102,9 +105,8 @@ setopt VI
 export EDITOR=vim
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
-# 10ms for key sequences
+# timeout for key sequences
 KEYTIMEOUT=4.0
-
 
 # Use jk to exit insert mode
 bindkey -M viins 'jk' vi-cmd-mode
