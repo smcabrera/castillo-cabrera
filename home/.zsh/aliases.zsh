@@ -48,8 +48,8 @@ alias restart='sudo shutdown -r now' # Restart the do box
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
-alias rt='bundle exec rspec'
-alias rtf='bundle exec rspec spec/features'
+alias tests='bundle exec rspec'
+alias ftests='bundle exec rspec spec/features'
 
 ##################################
 # Timetrap

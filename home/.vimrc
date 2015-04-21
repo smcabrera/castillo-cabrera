@@ -441,6 +441,7 @@ map <F6> :call SolarizedLight()<cr>
   command! Draft ! cp % ~/workspace/smcabrera.github.io/_drafts/
   command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publish %
   command! Wlocal write ~/Downloads/% 
+  command! Gist ! cp % ~/Downloads/ ; gist %
 
   "============================================================
   "==  NERDTree

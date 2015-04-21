@@ -53,9 +53,59 @@ fi
 # Beeps are annoying
 setopt NO_BEEP
 
+# ###################################
+# Bindings
+# ###################################
+
 setopt VI
 
+export EDITOR=vim
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+# 10ms for key sequences
+KEYTIMEOUT=1
+
+#function zle-line-init zle-keymap-select {
+  #VIM_NORMAL="%{$fg_bold[green]%} %{$bg[yellow]%} [% NORMAL]% %{$reset_color%}"
+  #VIM_INSERT="%{$fg_bold[blue]%} [% INSERT]% %{$reset_color%}"
+  #RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+  #zle reset-prompt
+#}
+
+function zle-line-init zle-keymap-select {
+  VIM_NORMAL="%{$fg_bold[white]%} %{$bg[yellow]%} NORMAL %{$reset_color%}"
+  VIM_INSERT="%{$fg_bold[white]%} %{$bg[cyan]%} INSERT %{$reset_color%}"
+  RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+  zle reset-prompt
+}
+
+#Note: Bold text does not necessarily use the same colors as normal text. For example, $fg['yellow'] looks brown or a very dark yellow, while $fg_no_bold['yellow'] looks like bright or regular yellow.
+
+
+#PROMPT="%{$bg[cyan]%}%{$fg[red]%}%n%{$reset_color%}%{$bg[cyan]%}@%{$fg[red]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%{$bg[cyan]%}%% "
+
+#function zle-line-init zle-keymap-select {
+  #VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+  #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
+  #zle reset-prompt
+#}
+
+#function zle-line-init zle-keymap-select {
+    #RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    #RPS2=$RPS1
+    #zle reset-prompt
+#}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 #source $ZSH/oh-my-zsh.sh
+
+# Bindings for the command line
+
+#bindkey "^[OD]" backward-word
+#bindkey "^[OC]" forward-word
+bindkey -M viins 'jj' vi-cmd-mode
 
 # ################################
 # PATH
@@ -99,8 +149,6 @@ export PATH="$PATH:$HOME/.tim/"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR=vim
-[ -z "$TMUX" ] && export TERM=xterm-256color
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # ssh
