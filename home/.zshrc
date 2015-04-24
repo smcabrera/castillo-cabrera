@@ -67,8 +67,9 @@ setopt NO_BEEP
 #}
 
 function zle-line-init zle-keymap-select {
-  VIM_NORMAL="%{$fg_bold[white]%} %{$bg[yellow]%} NORMAL %{$reset_color%}"
-  VIM_INSERT="%{$fg_bold[white]%} %{$bg[cyan]%} INSERT %{$reset_color%}"
+  #VIM_NORMAL="%{$fg_bold[white]%} %{$bg[yellow]%} NORMAL %{$reset_color%}"
+  VIM_NORMAL="%{$fg_bold[yellow]%}-- NORMAL --"
+  VIM_INSERT="%{$fg_bold[cyan]%}-- INSERT -- %{$reset_color%}"
   RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
   zle reset-prompt
 }
@@ -106,7 +107,7 @@ export EDITOR=vim
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # timeout for key sequences
-KEYTIMEOUT=4.0
+KEYTIMEOUT=40.0
 
 # Use jk to exit insert mode
 bindkey -M viins 'jk' vi-cmd-mode
@@ -183,10 +184,13 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#legendary
 echo "Syncing up your files with dropbox"
 dropbox start
 
 #wd() {
   #. /home/stephen/bin/wd/wd.sh
 #}
+
+# For rmagick
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+
