@@ -49,7 +49,7 @@ Plugin 'thoughtbot/vim-rspec' "Use rspec within vim
 " Two different options for using Rspec in vim
 Plugin 'jgdavey/tslime.vim' "Use Rspec in vim #1 Send commands to a new tmux window
 Plugin 'benmills/vimux' "Use Rspec in vim #2 Send commands to a new tmux window
-Plugin 'epeli/slimux' " Same idea as above, different plugin
+Plugin 'smcabrera/slimux' " Same idea as above, different plugin
 Plugin 'tpope/vim-dispatch' " This install failed for some reason
 Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
 Plugin 'tpope/vim-bundler'
@@ -87,7 +87,7 @@ Plugin 'Shougo/vimproc.vim'
 "You need to build extensions for vimproc
 " cd ~/.vim/bundle/vimproc.vim
 " make
-Plugin 'osyo-manga/vim-monster'
+"Plugin 'osyo-manga/vim-monster'
 " The above requires
 " gem install rcodetools
 " and vimproc.vim
