@@ -60,11 +60,75 @@ fi
 # Beeps are annoying
 setopt NO_BEEP
 
+# ###################################
+# Right Hand Prompt
+# ###################################
+
+# With a few commented out because I'm not willing to throw them away
+
+#function zle-line-init zle-keymap-select {
+  #VIM_NORMAL="%{$fg_bold[green]%} %{$bg[yellow]%} [% NORMAL]% %{$reset_color%}"
+  #VIM_INSERT="%{$fg_bold[blue]%} [% INSERT]% %{$reset_color%}"
+  #RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+  #zle reset-prompt
+#}
+
+function zle-line-init zle-keymap-select {
+  #VIM_NORMAL="%{$fg_bold[white]%} %{$bg[yellow]%} NORMAL %{$reset_color%}"
+  VIM_NORMAL="%{$fg_bold[yellow]%}-- NORMAL --"
+  VIM_INSERT="%{$fg_bold[cyan]%}-- INSERT -- %{$reset_color%}"
+  RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+#Note: Bold text does not necessarily use the same colors as normal text. For example, $fg['yellow'] looks brown or a very dark yellow, while $fg_no_bold['yellow'] looks like bright or regular yellow.
+
+
+#PROMPT="%{$bg[cyan]%}%{$fg[red]%}%n%{$reset_color%}%{$bg[cyan]%}@%{$fg[red]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%{$bg[cyan]%}%% "
+
+#function zle-line-init zle-keymap-select {
+  #VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
+  #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(git_custom_status) $EPS1"
+  #zle reset-prompt
+#}
+
+#function zle-line-init zle-keymap-select {
+    #RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    #RPS2=$RPS1
+    #zle reset-prompt
+#}
+
+# ###################################
+# Key Bindings
+# ###################################
+
+# Bindings for the command line
+
+# As always...use vim!
+
 setopt VI
+export EDITOR=vim
+[ -z "$TMUX" ] && export TERM=xterm-256color
 
-#source $ZSH/oh-my-zsh.sh
+# timeout for key sequences
+KEYTIMEOUT=40.0
 
-# ################################
+# Use jk to exit insert mode
+bindkey -M viins 'jk' vi-cmd-mode
+
+bindkey -M viins '^J' history-search-forward
+bindkey -M viins '^K' history-search-backward
+
+# leave menu selection and accept entire command line after '^M'
+# default behaviour only leaves menuselect; doesn't execute command line
+#zmodload zsh/complist
+#bindkey -M menuselect '^M' .accept-line
+
+
+ ################################
 # PATH
 # ################################
 
@@ -128,10 +192,13 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#legendary
 echo "Syncing up your files with dropbox"
 dropbox start
 
 #wd() {
   #. /home/stephen/bin/wd/wd.sh
 #}
+
+# For rmagick
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+
