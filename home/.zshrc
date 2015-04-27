@@ -29,6 +29,13 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/heroku
   zgen oh-my-zsh plugins/command-not-found
 
+  zgen load djui/alias-tips
+  zgen load StackExchange/blackbox
+  zgen load ascii-soup/zsh-url-highlighter
+  zgen load Tarrasch/zsh-colors
+  zgen load tarruda/zsh-autosuggestions
+  zgen load djui/alias-tips
+
   # Theme
   zgen oh-my-zsh themes/fox
 
@@ -101,7 +108,6 @@ export PATH="$PATH:$HOME/.tim/"
 
 export EDITOR=vim
 [ -z "$TMUX" ] && export TERM=xterm-256color
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
