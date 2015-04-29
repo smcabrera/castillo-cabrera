@@ -18,8 +18,6 @@ echo "$g $USER!"
 #source ~/.zsh/antigen/antigen.zsh
 source "${HOME}/.zsh/zgen/zgen.zsh"
 
-saved=false
-
 if ! zgen saved; then
   echo "Creating a zgen save"
   zgen oh-my-zsh
@@ -38,6 +36,9 @@ if ! zgen saved; then
 
   # Theme
   zgen oh-my-zsh themes/fox
+  #zgen oh-my-zsh themes/gnzh
+  #zgen oh-my-zsh themes/Soliah
+  #zgen oh-my-zsh themes/duellj
 
   zgen load zsh-users/zsh-syntax-highlighting
 
