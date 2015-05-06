@@ -32,7 +32,6 @@ if ! zgen saved; then
   zgen load ascii-soup/zsh-url-highlighter
   zgen load Tarrasch/zsh-colors
   zgen load tarruda/zsh-autosuggestions
-  zgen load djui/alias-tips
 
   # Theme
   zgen oh-my-zsh themes/fox
