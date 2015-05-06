@@ -1,5 +1,3 @@
-alias foo="echo 'You are a FOO foo!'"
-
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
@@ -19,6 +17,12 @@ alias lla="ls -la --color"
 alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/blog/smcabrera.github.io'
 alias katas='cd ~/workspace/katas/'
+alias music='/media/removable/USB\ Drive/Music/'
+#
+# This is a really cool program to access youtube via the console
+# But I'm never gonna remember what it's called
+alias youtube='mpsyt'
+#alias yt='mpsyt'
 
 ##################################
 # Git

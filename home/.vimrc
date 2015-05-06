@@ -118,6 +118,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tpope/gem-ctags'
+Plugin 'osyo-manga/vim-hopping'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -402,6 +404,7 @@ map <F6> :call SolarizedLight()<cr>
   nmap <leader>p :CtrlP <cr>
 
   nmap <leader>fw :FixWhitespace <cr>
+  nmap <leader>/ :HoppingStart <cr>
 
 
   "============================================================
@@ -442,6 +445,7 @@ map <F6> :call SolarizedLight()<cr>
   command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publish %
   command! Wlocal write ~/Downloads/%
   command! Gist ! cp % ~/Downloads/ ; gist %
+  command! Hamlize ! html2haml % > % . 'haml'
 
   "============================================================
   "==  NERDTree
