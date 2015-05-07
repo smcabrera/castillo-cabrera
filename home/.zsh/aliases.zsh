@@ -8,6 +8,12 @@ alias go='gem build get_freaky.gemspec ; gem install get_freaky-0.1.0.pre.gem'
 
 # I'm working on a gem so for the time being I'd like to run its exectuable whose name is cumbersome while it's still local
 alias gf='bin/get_freaky'
+# For opening up a console for my gem
+alias bc='bin/console'
+
+##################################
+# General Stuff
+##################################
 
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
 alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
