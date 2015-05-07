@@ -48,6 +48,7 @@ alias ga='git add .'
 alias gc='git commit -v'
 alias gac='git add . ; git commit -v' # git add all and commit
 alias gp='git push'
+alias gpa='git push origin master; git push heroku master'
 alias co='git checkout'
 alias gb='git branch -v'
 
