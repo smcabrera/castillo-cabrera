@@ -1,5 +1,8 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
-#
+
+##################################
+# Project-specific aliases
+##################################
 # I'm working on a gem and getting tired of building and installing again to make sure everything is working
 alias go='gem build get_freaky.gemspec ; gem install get_freaky-0.1.0.pre.gem'
 
@@ -37,7 +40,7 @@ alias youtube='mpsyt'
 alias st='git status'
 alias ga='git add .'
 alias gc='git commit -v'
-alias gac='git add . ; git commit -a' # git add all and commit
+alias gac='git add . ; git commit -v' # git add all and commit
 alias gp='git push'
 alias co='git checkout'
 alias gb='git branch -v'
