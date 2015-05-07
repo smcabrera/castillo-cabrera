@@ -1,4 +1,10 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
+#
+# I'm working on a gem and getting tired of building and installing again to make sure everything is working
+alias go='gem build get_freaky.gemspec ; gem install get_freaky-0.1.0.pre.gem'
+
+# I'm working on a gem so for the time being I'd like to run its exectuable whose name is cumbersome while it's still local
+alias gf='bin/get_freaky'
 
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
 alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
