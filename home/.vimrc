@@ -119,6 +119,8 @@ Plugin 'xolox/vim-notes'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tpope/gem-ctags'
 Plugin 'osyo-manga/vim-hopping'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
 
 
 call vundle#end()            " required

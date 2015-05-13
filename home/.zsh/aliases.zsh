@@ -30,7 +30,7 @@ alias lla="ls -la --color"
 
 # Some common filepaths
 alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
-alias blog='cd ~/blog/smcabrera.github.io'
+alias blog='cd ~/workspace/smcabrera.github.io/tmux; new -s blog'
 alias katas='cd ~/workspace/katas/'
 alias music='/media/removable/USB\ Drive/Music/'
 #
