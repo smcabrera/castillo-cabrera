@@ -74,7 +74,7 @@ Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automa
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 Plugin 'vim-scripts/SyntaxRange'
 " Bling Bundles
-"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
+Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'edkolev/tmuxline.vim'
 Bundle 'mattn/webapi-vim'
@@ -112,7 +112,7 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-haml'
 Plugin 'justincampbell/vim-eighties'
-Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
+"Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
 "Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
@@ -121,6 +121,7 @@ Plugin 'tpope/gem-ctags'
 Plugin 'osyo-manga/vim-hopping'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'burnettk/vim-angular'
+Plugin 'etaoins/vim-volt-syntax'
 
 
 call vundle#end()            " required
@@ -138,9 +139,14 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 " For tmux. What? Yes.
-"let g:tmuxline_preset = 'full'
-"let g:tmuxline_preset = 'tmux'
+let g:tmuxline_preset = 'full'
+let g:tmuxline_preset = 'tmux'
 "let g:tmuxline_preset = 'solarized'
+
+"colorscheme molokai
+"let g:molokai_original = 1
+"let g:rehash256 = 1
+"AirlineTheme powerlineish
 
 "AirlineTheme simple
 "AirlineTheme dark
@@ -155,9 +161,8 @@ set background=dark
 "colorscheme solarized
 "call SolarizedDark()
 "colorscheme desert
-:color grb256"
+":color grb256"
 
-colorscheme molokai
 "let g:molokai_original = 1 " Bring the terminal version to the default
 "let g:rehash256 = 1
 "let g:solarized_termcolors=256
@@ -193,6 +198,10 @@ map <leader>] :colorscheme simpleandfriendly<cr>
 map <F4> :call MolokaiWithPowerline()<cr>
 map <F5> :call Molokai()<cr>
 map <F6> :call SolarizedLight()<cr>
+
+" Apparently the autocommand is supposed to fire a function on a particular event
+" Here I'm using vim starting as the event and firing my desired colorscheme function
+autocmd VimEnter * :call MolokaiWithPowerline()
 
 "============================================================
 "==  Settings

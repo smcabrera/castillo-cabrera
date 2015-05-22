@@ -34,7 +34,8 @@ if ! zgen saved; then
   zgen load tarruda/zsh-autosuggestions
 
   # Theme
-  zgen oh-my-zsh themes/fox
+  #zgen oh-my-zsh themes/fox
+  zgen oh-my-zsh themes/agnoster
   #zgen oh-my-zsh themes/gnzh
   #zgen oh-my-zsh themes/Soliah
   #zgen oh-my-zsh themes/duellj
@@ -73,16 +74,16 @@ setopt NO_BEEP
   #zle reset-prompt
 #}
 
-function zle-line-init zle-keymap-select {
+#function zle-line-init zle-keymap-select {
   #VIM_NORMAL="%{$fg_bold[white]%} %{$bg[yellow]%} NORMAL %{$reset_color%}"
-  VIM_NORMAL="%{$fg_bold[yellow]%}-- NORMAL --"
-  VIM_INSERT="%{$fg_bold[cyan]%}-- INSERT -- %{$reset_color%}"
-  RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
-  zle reset-prompt
-}
+  #VIM_NORMAL="%{$fg_bold[yellow]%}-- NORMAL --"
+  #VIM_INSERT="%{$fg_bold[cyan]%}-- INSERT -- %{$reset_color%}"
+  #RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}"
+  #zle reset-prompt
+#}
 
-zle -N zle-line-init
-zle -N zle-keymap-select
+#zle -N zle-line-init
+#zle -N zle-keymap-select
 
 #Note: Bold text does not necessarily use the same colors as normal text. For example, $fg['yellow'] looks brown or a very dark yellow, while $fg_no_bold['yellow'] looks like bright or regular yellow.
 
@@ -192,8 +193,9 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-echo "Syncing up your files with dropbox"
-dropbox start
+# This isn't supported in osx
+#echo "Syncing up your files with dropbox"
+#dropbox start
 
 #wd() {
   #. /home/stephen/bin/wd/wd.sh
@@ -202,3 +204,4 @@ dropbox start
 # For rmagick
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
+source /Users/stephen/.config/powerline/powerline/bindings/zsh/powerline.zsh
