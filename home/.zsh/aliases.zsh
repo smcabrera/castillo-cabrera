@@ -1,4 +1,5 @@
-dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
+dotfiles='~/.homesick/repos/castillo-cabrera/home'
+alias music="/Users/stephen/Music/iTunes/iTunes Media/Music"
 
 ##################################
 # Project-specific aliases

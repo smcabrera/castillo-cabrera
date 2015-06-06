@@ -181,6 +181,14 @@ function! MolokaiWithPowerline()
   AirlineTheme powerlineish
 endfunction
 
+function! FindNote()
+  tabedit
+  cd ~/Dropbox/notes
+  "command! Findnote cd ~/Dropbox/notes/
+  CtrlP
+  "nmap <leader>ng :!cd ~/Dropbox/notes/ ; ag <CR>
+endfunction
+
 "syntax enable
 "set background=light
 "colorscheme solarized
@@ -398,13 +406,16 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   nmap <leader>v :tabedit ~/.homesick/repos/castillo-cabrera/home/.vimrc<CR>
   nmap <leader>nn :tabedit ~/Dropbox/notes/<CR>
 
+  "nmap <leader>np :cd ~/Dropbox/notes/ <cr> ; :CtrlP <CR>
+  "nmap <leader>ng :!cd ~/Dropbox/notes/ ; ag <CR>
+
   " Slimux for sending commands to a tmux window
   map <Leader>k :SlimuxSendKeysLast<CR>
 
   map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
   map <Leader>vl :VimuxRunLastCommand<CR>
-  "map <Leader>t :VimuxRunLastCommand<CR>
+  map <Leader>t :VimuxRunLastCommand<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
   " Send last visually selected text to configured pane
@@ -416,6 +427,7 @@ autocmd VimEnter * :call MolokaiWithPowerline()
 
   nmap <leader>fw :FixWhitespace <cr>
   nmap <leader>/ :HoppingStart <cr>
+
 
 
   "============================================================
@@ -457,6 +469,7 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   command! Wlocal write ~/Downloads/%
   command! Gist ! cp % ~/Downloads/ ; gist %
   command! Hamlize ! html2haml % > % . 'haml'
+ 
 
   "============================================================
   "==  NERDTree
