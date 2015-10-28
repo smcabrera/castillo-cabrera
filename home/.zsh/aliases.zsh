@@ -2,25 +2,37 @@ dotfiles='~/.homesick/repos/castillo-cabrera/home'
 alias music="/Users/stephen/Music/iTunes/iTunes Media/Music"
 
 ##################################
+# Just for mac
+##################################
+alias f="say finished"
+alias bi="bundle install ; say bundle complete"
+
+##################################
 # Project-specific aliases
 ##################################
 # I'm working on a gem and getting tired of building and installing again to make sure everything is working
-alias go='gem build get_freaky.gemspec ; gem install get_freaky-0.1.2.pre.gem'
+#alias go='gem build get_freaky.gemspec ; gem install get_freaky-0.1.2.pre.gem'
 
 # I'm working on a gem so for the time being I'd like to run its exectuable whose name is cumbersome while it's still local
 alias gf='bin/get_freaky'
 # For opening up a console for my gem
 alias bc='bin/console'
 
+# Groupize
+alias tmodels='rake db:test:prepare ; rspec spec/prm/models/ ; say tests complete'
+alias tall='rspec spec ; say tests complete'
+
 ##################################
 # General Stuff
 ##################################
+alias ocean="ssh 104.236.110.233"
+alias deploy='git push origin master; git push heroku master ; say deploy complete'
 
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
 alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
 
-alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
+#alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
 alias todoe="vim ~/Dropbox/GTD/todo.txt" # Open up your task list for editing
 
 # making ls faster and adding color
@@ -60,6 +72,7 @@ alias gdh='git diff HEAD'
 
 alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
 alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
+alias enterstephen='ssh stephen@104.236.110.233' # Instant the 'stephen' digital ocean box
 #alias phps='php artisan serve'
 alias restart='sudo shutdown -r now' # Restart the do box
 
@@ -67,10 +80,13 @@ alias restart='sudo shutdown -r now' # Restart the do box
 # Ruby on Rails
 ##################################
 
+alias rdm="rake db:migrate ; say rake finished"
+alias rdr="rake db:rollback ; say rake finished"
+
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
-alias tests='bundle exec rspec'
+alias tests='bundle exec rspec; say tests complete'
 alias ftests='bundle exec rspec spec/features'
 
 ##################################
@@ -78,16 +94,16 @@ alias ftests='bundle exec rspec spec/features'
 ##################################
 # Some aliases for the super handy timetrap gem
 
-alias td='timetrap display'
-alias tw='timetrap week'
-alias tl='timetrap list'
-alias tr='timetrap resume'
-alias to='timetrap out ; timetrap week'
-alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week' # For when I'm interrupted and don't get the chance to note why
-alias wt='watch timetrap today'
+#alias td='timetrap display'
+#alias tw='timetrap week'
+#alias tl='timetrap list'
+#alias tr='timetrap resume'
+#alias to='timetrap out ; timetrap week'
+#alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week' # For when I'm interrupted and don't get the chance to note why
+#alias wt='watch timetrap today'
 
 # Stop timetrap and put on a screensaver
-alias pause='timetrap out ; timetrap week; cmatrix'
+#alias pause='timetrap out ; timetrap week; cmatrix'
 
 ##################################
 # Tmux

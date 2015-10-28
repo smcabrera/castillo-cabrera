@@ -166,6 +166,7 @@ fi
 
 export PATH="$PATH:$HOME/.tim/"
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -205,3 +206,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 source /Users/stephen/.config/powerline/powerline/bindings/zsh/powerline.zsh
+$(boot2docker shellinit 2> /dev/null)
+

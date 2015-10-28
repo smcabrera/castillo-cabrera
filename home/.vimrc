@@ -115,14 +115,18 @@ Plugin 'justincampbell/vim-eighties'
 "Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
 "Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
+"Plugin 'xolox/vim-notes'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tpope/gem-ctags'
 Plugin 'osyo-manga/vim-hopping'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'burnettk/vim-angular'
 Plugin 'etaoins/vim-volt-syntax'
-
+Plugin 'mxw/vim-jsx'
+Plugin 'jaxbot/syntastic-react'
+Plugin 'justinj/vim-react-snippets'
+Plugin 'aklt/vim-line_length'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -287,10 +291,10 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   autocmd FileType php set ft=php.laravel " Snippets for laravel
 
   "folding settings
-  "set foldmethod=syntax   "fold based on Ruby syntax
-  "let ruby_fold = 1
-  "set foldnestmax=10      "deepest fold is 10 levels
-  "set nofoldenable        "dont fold by default
+  set foldmethod=indent   "fold based on Ruby syntax
+  let ruby_fold = 1
+  set foldnestmax=10      "deepest fold is 10 levels
+  set nofoldenable        "dont fold by default
 
   "============================================================
   "==  Global variables
@@ -313,6 +317,10 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   " disable 'assigned but unused variable' warnings
   " (they're just annoying and never actually useful)
   let g:syntastic_quiet_messages = { "regex": 'assigned but unused'  }
+  let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+  let g:syntastic_javascript_checkers = ['eslint']
+  let g:syntastic_javascript_checkers = ['eslint']
+
 
   "============================================================
   "==  Mappings
@@ -364,6 +372,7 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   "cmap test :! bundle exec rspec %%% :execute ""<cr>
   "execute ":map "<leader>"t :! bundle exec rspec"%%%" <cr>"
 
+  nmap R :LineLength <cr>
   "============================================================
   "==  Leader Mappings
   "============================================================
@@ -415,7 +424,8 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   map <Leader>vp :VimuxPromptCommand<CR>
   " Run last command executed by VimuxRunCommand
   map <Leader>vl :VimuxRunLastCommand<CR>
-  map <Leader>t :VimuxRunLastCommand<CR>
+  "map <Leader>t :VimuxRunLastCommand<CR>
+  map <Leader>t :! bundle exec rspec spec<CR>
   " Send current line to configured pane
   map <Leader>s :SlimuxREPLSendLine<CR>
   " Send last visually selected text to configured pane
@@ -468,8 +478,8 @@ autocmd VimEnter * :call MolokaiWithPowerline()
   command! Publish ! cd ~/workspace/smcabrera.github.io ; bundle exec octopress publish %
   command! Wlocal write ~/Downloads/%
   command! Gist ! cp % ~/Downloads/ ; gist %
-  command! Hamlize ! html2haml % > % . 'haml'
- 
+  command! Hamlize ! html2haml % > ./newfile.html.haml
+
 
   "============================================================
   "==  NERDTree

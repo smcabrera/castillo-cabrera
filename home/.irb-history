@@ -1,17 +1,41 @@
 todos = Todo.find.all
 todos = Todo.find(:all)
-User.all
 u.name = 'Stephen'
 u.save
 u.save!
 current_user?
-User.first
 u = User.first
 u.todos
-arr = [1,2,3]
 arr.each do |elem|
 puts elem
 end
 arr.include?('things')
 puts 'hello world'
+User.all
+User
+User.count
+User.create
+User.create(name: "stephen", email: "stpehen.m.cabrera@gmail.com")
+User.create(email: "stpehen.m.cabrera@gmail.com")
+User.create(email: "stpehen.m.cabrera@gmail.com", first_name: "Stephen", last_name: "Cabrera", is_active: true, role: "user", lead_email_preference: "All")
+InstantBookRuleset.take
+arr = [1,2,3]
+_
+User.first
+User.first.email
+User.find_by_email "catherine@groupize.com"
+User.find_by_email "testing@groupize.com"
+User.take
+l
+RoomBlock.take
+r = _
+r.room_
+r = RoomBlock.take
+r.room_types
+rom = ROM.env
+rom.class
+Time.new(2015)
+Time.new(2015, 27, 10)
+Time.new(2015, 10, 27)
+Date.new(2015, 10, 27)
 exit
