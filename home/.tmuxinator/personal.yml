@@ -1,9 +1,0 @@
-# ~/.tmuxinator/personal.yml
-
-name: personal
-root: ~/
-
-windows:
-  - journal: vim ~/Dropbox/journal/
-  - time-tracking: t display
-

@@ -1,7 +1,7 @@
-# ~/.tmuxinator/rails.yml
+# ~/.tmuxinator/prm.yml
 
-name: play
-root: ~/code/
+name: prm
+root: ~/workspace/prm
 
 # Optional tmux socket
 # socket_name: foo
@@ -18,8 +18,17 @@ root: ~/code/
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t prm
+
 windows:
   - editor: vim
-  - notes: vim ~/Dropbox/journal
-  - time: t d
-  - shell:
+  - server: bundle exec rails server
+  - console: bundle exec rails console
+  - logs: tail -f log/development.log

@@ -31,7 +31,6 @@ alias lla="ls -la --color"
 # Some common filepaths
 alias castle='cd $HOME/.homesick/repos/castillo-cabrera/'
 alias blog='cd ~/workspace/smcabrera.github.io; tmux new -s blog'
-alias katas='cd ~/workspace/katas/'
 alias music='/media/removable/USB\ Drive/Music/'
 #
 # This is a really cool program to access youtube via the console
@@ -69,7 +68,7 @@ alias restart='sudo shutdown -r now' # Restart the do box
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
-alias tests='bundle exec rspec'
+alias tests='bundle exec rspec spec ; say tests finished'
 alias ftests='bundle exec rspec spec/features'
 
 ##################################
@@ -80,7 +79,7 @@ alias ftests='bundle exec rspec spec/features'
 alias td='timetrap display'
 alias tw='timetrap week'
 alias tl='timetrap list'
-alias tr='timetrap resume'
+#alias tr='timetrap resume'
 alias to='timetrap out ; timetrap week'
 alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week' # For when I'm interrupted and don't get the chance to note why
 alias wt='watch timetrap today'

@@ -115,13 +115,14 @@ Plugin 'justincampbell/vim-eighties'
 Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
 "Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
+"Plugin 'xolox/vim-notes'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tpope/gem-ctags'
 Plugin 'osyo-manga/vim-hopping'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'burnettk/vim-angular'
-
+Plugin 'sheerun/vim-polyglot'
+Plugin 'lambdatoast/elm.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -133,9 +134,9 @@ runtime macros/matchit.vim
 "============================================================
 
 "Airline settings
-let g:airline_powerline_fonts = 1
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+"set laststatus=2
+"let g:airline#extensions#tabline#enabled = 1
 
 " For tmux. What? Yes.
 "let g:tmuxline_preset = 'full'
@@ -144,7 +145,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "AirlineTheme simple
 "AirlineTheme dark
-"AirlineTheme powerlineish
+"AirlineThemepowerlineish
 
 function! SolarizedDark()
   AirlineTheme solarized
@@ -155,7 +156,7 @@ set background=dark
 "colorscheme solarized
 "call SolarizedDark()
 "colorscheme desert
-:color grb256"
+:color grb256
 
 colorscheme molokai
 "let g:molokai_original = 1 " Bring the terminal version to the default
@@ -176,6 +177,8 @@ function! MolokaiWithPowerline()
   AirlineTheme powerlineish
 endfunction
 
+
+"MolokaiWithPowerline
 "syntax enable
 "set background=light
 "colorscheme solarized
@@ -335,6 +338,9 @@ map <F6> :call SolarizedLight()<cr>
   " I'd like to figure out a good way to insert these escape characters automatically so I don't have to remember the damn things
   "&#39;
   imap sh! #!/bin/sh
+  imap p.s page.save_and_open_screenshot
+  imap b.p binding.pry
+
   map <F12> :w<cr>
   " save when you've forgotten to sudo before opening a file
   " :sudow
@@ -404,7 +410,6 @@ map <F6> :call SolarizedLight()<cr>
   vmap <Leader>sc :SlimuxREPLConfigure<CR>
   " ctrl p. Fuzzy finder. This is huge
   nmap <leader>p :CtrlP <cr>
-
   nmap <leader>fw :FixWhitespace <cr>
   nmap <leader>/ :HoppingStart <cr>
 

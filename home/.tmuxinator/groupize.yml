@@ -1,7 +1,7 @@
-# ~/.tmuxinator/rails.yml
+# ~/.tmuxinator/groupize.yml
 
-name: rails
-root: ~/smcabrera/first-bloc/
+name: groupize
+root: ~/workspace/groupize
 
 # Optional tmux socket
 # socket_name: foo
@@ -18,10 +18,19 @@ root: ~/smcabrera/first-bloc/
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t groupize
+
 windows:
   - editor: vim
-  - server: bundle exec rails s
+      layout: main-vertical
+  - server: bundle exec rails server --port 4000
+  - console: bundle exec rails console
+  - shell:
   - logs: tail -f log/development.log
-  - git: git-sh
-  - notes: vim ~/Dropbox/journal/bloc-notes
-  - time-tracking: t sheet study
