@@ -15,6 +15,7 @@ alias bc='bin/console'
 # General Stuff
 ##################################
 
+alias startwork='tmuxinator start groupize && tmuxinator start prm && tmuxinator start groupize-travelport'
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
 alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
@@ -43,13 +44,14 @@ alias youtube='mpsyt'
 ##################################
 
 alias st='git status'
+alias gl='git log'
 alias ga='git add .'
 alias gc='git commit -v'
 alias gac='git add . ; git commit -v' # git add all and commit
 alias gp='git push'
-alias gpa='git push origin master; git push heroku master'
 alias co='git checkout'
 alias gb='git branch -v'
+alias gr='git remote -v'
 alias gdh='git diff HEAD'
 
 ##################################
@@ -65,6 +67,7 @@ alias restart='sudo shutdown -r now' # Restart the do box
 # Ruby on Rails
 ##################################
 
+alias rdm="rake db:migrate ; rake db:test:prepare ; say rake finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port

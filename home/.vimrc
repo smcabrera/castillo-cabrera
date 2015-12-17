@@ -123,6 +123,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'burnettk/vim-angular'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
