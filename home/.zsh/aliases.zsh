@@ -1,6 +1,12 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
 ##################################
+# Show/Hide hidden files
+##################################
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+##################################
 # Project-specific aliases
 ##################################
 # I'm working on a gem and getting tired of building and installing again to make sure everything is working
@@ -67,12 +73,14 @@ alias restart='sudo shutdown -r now' # Restart the do box
 # Ruby on Rails
 ##################################
 
+alias bi="bundle install ; say bundle complete"
 alias rdm="rake db:migrate ; rake db:test:prepare ; say rake finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
 alias tests='bundle exec rspec spec ; say tests finished'
 alias ftests='bundle exec rspec spec/features'
+alias tt='rake white_label:import:galileo_mapping; say task finished'
 
 ##################################
 # Timetrap
@@ -96,19 +104,6 @@ alias pause='timetrap out ; timetrap week; cmatrix'
 
 alias tls="tmux ls" # see my running tmux sessions
 alias nest='unset TMUX'
-
-
-# Codeception
-alias cr='codecept run'
-alias car='codecept run acceptance' # Run all acceptance tests with codeception
-
-##################################
-# Laravel
-##################################
-
-alias phps='php artisan serve --host 104.131.29.69' #passing my digital ocean host ip address
-alias phps2='php artisan serve --host 104.131.29.69 --port=8080' #passing my digital ocean host ip address and an alternative port
-alias phpt='php artisan tinker'
 
 ##################################
 # New

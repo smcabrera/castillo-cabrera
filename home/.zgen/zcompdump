@@ -1,4 +1,4 @@
-#files: 736	version: 5.0.8
+#files: 737	version: 5.0.8
 
 _comps=(
 '-' '_precommand'
@@ -1233,6 +1233,7 @@ _comps=(
 'xzcat' '_xz'
 'yast' '_yast'
 'yast2' '_yast'
+'youtube-dl' '_youtube-dl'
 'ypbind' '_yp'
 'ypcat' '_yp'
 'ypmatch' '_yp'
@@ -1536,13 +1537,13 @@ autoload -Uz _SUSEconfig _a2ps _a2utils _aap _acpi \
             _xloadimage _xmlsoft _xmms2 _xmodmap _xournal \
             _xpdf _xrandr _xscreensaver _xset _xt_arguments \
             _xt_session_id _xterm _xv _xwit _xxd \
-            _xz _yast _yodl _yp _yum \
-            _zargs _zattr _zcalc _zcalc_line _zcat \
-            _zcompile _zdump _zed _zfs _zfs_dataset \
-            _zfs_keysource_props _zfs_pool _zftp _zgen _zip \
-            _zle _zlogin _zmodload _zmv _zoneadm \
-            _zones _zpool _zpty _zsh-mime-handler _zstyle \
-            _ztodo _zypper
+            _xz _yast _yodl _youtube-dl _yp \
+            _yum _zargs _zattr _zcalc _zcalc_line \
+            _zcat _zcompile _zdump _zed _zfs \
+            _zfs_dataset _zfs_keysource_props _zfs_pool _zftp _zgen \
+            _zip _zle _zlogin _zmodload _zmv \
+            _zoneadm _zones _zpool _zpty _zsh-mime-handler \
+            _zstyle _ztodo _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

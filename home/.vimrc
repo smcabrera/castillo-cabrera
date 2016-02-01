@@ -215,6 +215,8 @@ map <F6> :call SolarizedLight()<cr>
 
   set autoread
 
+  set backspace   =indent,eol,start  " Make backspace work as you would expect."
+
   "Some settings for the way undo works
   set undofile                    " Save undo's after file closes
   set undodir=~/.vim/undo         " where to save undo histories
