@@ -64,8 +64,8 @@ alias gdh='git diff HEAD'
 # VPS
 ##################################
 
-alias nitrous='ssh action@sae1.nitrousbox.com -p 22374' # Access my nitrous box instantly
-alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
+alias nitrous='/Applications/Nitrous.app/Contents/Resources/bin/osx/nitrous-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o PreferredAuthentications=publickey -o LogLevel=FATAL -p 32770 -i "/Users/stephen/Library/Application Support/Nitrous/Users/smcabrera/id_rsa" nitrous@54.201.222.68 && exit
+'alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 #alias phps='php artisan serve'
 alias restart='sudo shutdown -r now' # Restart the do box
 
