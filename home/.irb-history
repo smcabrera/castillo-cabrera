@@ -14,4 +14,7 @@ puts elem
 end
 arr.include?('things')
 puts 'hello world'
+require 'factory_girl'
+ls
+.ls
 exit

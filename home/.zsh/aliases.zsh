@@ -1,5 +1,6 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
+alias ems='~/ngrok http -subdomain=wl-local 4000'
 ##################################
 # Show/Hide hidden files
 ##################################
@@ -64,8 +65,8 @@ alias gdh='git diff HEAD'
 # VPS
 ##################################
 
-alias nitrous='/Applications/Nitrous.app/Contents/Resources/bin/osx/nitrous-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o PreferredAuthentications=publickey -o LogLevel=FATAL -p 32770 -i "/Users/stephen/Library/Application Support/Nitrous/Users/smcabrera/id_rsa" nitrous@54.201.222.68 && exit
-'alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
+alias nitrous='/Applications/Nitrous.app/Contents/Resources/bin/osx/nitrous-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o PreferredAuthentications=publickey -o LogLevel=FATAL -p 32788 -i "/Users/stephen/Library/Application Support/Nitrous/Users/smcabrera/id_rsa" nitrous@54.201.222.68 && exit'
+alias ec2='ssh -i ~/.ssh/USB.pem ubuntu@ec2-54-94-151-143.sa-east-1.compute.amazonaws.com -p 22' # Instantly access my AWS EC2 instance
 #alias phps='php artisan serve'
 alias restart='sudo shutdown -r now' # Restart the do box
 
@@ -81,6 +82,9 @@ alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
 alias tests='bundle exec rspec spec ; say tests finished'
 alias ftests='bundle exec rspec spec/features'
 alias tt='rake white_label:import:galileo_mapping; say task finished'
+alias rsg='rails s --port 4000'
+alias rsgt='rails s --port 5000'
+alias rsp='rails s'
 
 ##################################
 # Timetrap

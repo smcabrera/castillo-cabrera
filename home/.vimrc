@@ -124,6 +124,7 @@ Plugin 'burnettk/vim-angular'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'christoomey/vim-rfactory'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -415,7 +416,8 @@ map <F6> :call SolarizedLight()<cr>
   nmap <leader>p :CtrlP <cr>
   nmap <leader>fw :FixWhitespace <cr>
   nmap <leader>/ :HoppingStart <cr>
-
+  "map <leader>wl Omodule WhiteLabelj0VG>Goendgg
+  map <leader>wl ggddGddVgg<<esc>:w<cr>
 
   "============================================================
   "==  Rails.vim leader mappings

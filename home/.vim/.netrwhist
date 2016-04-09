@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/stephen/.ssh'
+let g:netrw_dirhist_2='/Users/stephen/workspace/groupize-travelport/apps/white_label/app/views/white_label/conversation_mailer'
+let g:netrw_dirhist_3='/Users/stephen/workspace/FPConcepts/foo/test'
+let g:netrw_dirhist_4='/Users/stephen/workspace/groupize.wiki'
+let g:netrw_dirhist_5='/Users/stephen/workspace/reading'
+let g:netrw_dirhist_6='/Users/stephen/workspace/vim-rfactory'
