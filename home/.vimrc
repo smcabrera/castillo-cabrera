@@ -242,6 +242,9 @@ map <F6> :call SolarizedLight()<cr>
   set ignorecase  " searches are case insensitive...
   set smartcase   " ... unless they contain at least one capital letter
 
+  " Make pasting not suck
+  set paste
+
   " Making things easier for writing
   " not to break on words
   :set wrap

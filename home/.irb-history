@@ -8,7 +8,6 @@ current_user?
 User.first
 u = User.first
 u.todos
-arr = [1,2,3]
 arr.each do |elem|
 puts elem
 end
@@ -17,4 +16,8 @@ puts 'hello world'
 require 'factory_girl'
 ls
 .ls
+Scraper.new
+x = _
+x.create_agents(page(1))
+arr = [1,2,3]
 exit

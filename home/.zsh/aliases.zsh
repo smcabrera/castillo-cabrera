@@ -22,7 +22,7 @@ alias bc='bin/console'
 # General Stuff
 ##################################
 
-alias startwork='tmuxinator start groupize && tmuxinator start prm && tmuxinator start groupize-travelport'
+alias startwork='tmuxinator start groupize && tmuxinator start prm'
 alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
 alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
