@@ -75,7 +75,7 @@ alias restart='sudo shutdown -r now' # Restart the do box
 ##################################
 
 alias bi="bundle install ; say bundle complete"
-alias rdm="rake db:migrate ; rake db:test:prepare ; say rake finished"
+alias rdm="rake db:migrate ; say rake finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port

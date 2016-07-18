@@ -155,12 +155,12 @@ endfunction
 
 :set t_Co=256 " 256 colors
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 "call SolarizedDark()
 "colorscheme desert
 :color grb256
 
-colorscheme molokai
+"colorscheme molokai
 "let g:molokai_original = 1 " Bring the terminal version to the default
 "let g:rehash256 = 1
 "let g:solarized_termcolors=256
