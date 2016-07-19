@@ -74,7 +74,7 @@ Plugin 'jiangmiao/auto-pairs' "One of two decent-looking alternatives for automa
 "Plugin 'Raimondi/delimitMate' "One of two decent-looking alternatives for automatically closing brackes, quotes, etc.
 Plugin 'vim-scripts/SyntaxRange'
 " Bling Bundles
-"Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
+Plugin 'bling/vim-airline' "Making vim look prettier when the fonts work...not so great otherwise
 "requires fonts to work: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 Plugin 'edkolev/tmuxline.vim'
 Bundle 'mattn/webapi-vim'
@@ -112,7 +112,7 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-haml'
 Plugin 'justincampbell/vim-eighties'
-Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
+"Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
 "Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-notes'
@@ -136,7 +136,7 @@ runtime macros/matchit.vim
 "============================================================
 
 "Airline settings
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 "set laststatus=2
 "let g:airline#extensions#tabline#enabled = 1
 
@@ -147,7 +147,8 @@ runtime macros/matchit.vim
 
 "AirlineTheme simple
 "AirlineTheme dark
-"AirlineThemepowerlineish
+AirlineTheme powerlineish
+colorscheme molokai
 
 function! SolarizedDark()
   AirlineTheme solarized
@@ -155,7 +156,7 @@ endfunction
 
 :set t_Co=256 " 256 colors
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "call SolarizedDark()
 "colorscheme desert
 :color grb256
@@ -549,5 +550,3 @@ map <F6> :call SolarizedLight()<cr>
 
   " Use 256 colours (Use this setting only if your terminal supports 256 colours)
   set t_Co=256
-
-
