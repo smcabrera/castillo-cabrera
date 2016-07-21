@@ -29,6 +29,7 @@ root: ~/workspace/ssa
 
 windows:
   - editor: vim
+  - tests: guard
   - server: bundle exec rails server --port 3000
   - console: bundle exec rails console
   - shell:

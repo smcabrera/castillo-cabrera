@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/stephen/workspace/groupize/vendor'
 let g:netrw_dirhist_2='/Users/stephen/workspace/groupize/.bundle'
 let g:netrw_dirhist_3='/Users/stephen/.ngrok2'
+let g:netrw_dirhist_4='/Users/stephen/.tmuxinator'
