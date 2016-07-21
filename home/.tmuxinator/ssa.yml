@@ -1,7 +1,7 @@
 # ~/.tmuxinator/groupize.yml
 
-name: groupize
-root: ~/workspace/groupize
+name: ssa
+root: ~/workspace/ssa
 
 # Optional tmux socket
 # socket_name: foo
@@ -29,7 +29,6 @@ root: ~/workspace/groupize
 
 windows:
   - editor: vim
-  - server: bundle exec rails server --port 4000
+  - server: bundle exec rails server --port 3000
   - console: bundle exec rails console
   - shell:
-  - logs: tail -f log/development.log
