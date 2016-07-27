@@ -50,16 +50,16 @@ alias youtube='mpsyt'
 # Git
 ##################################
 
-alias st='git status'
-alias gl='git log'
-alias ga='git add .'
-alias gc='git commit -v'
-alias gac='git add . ; git commit -v' # git add all and commit
-alias gp='git push'
-alias co='git checkout'
-alias gb='git branch -v'
-alias gr='git remote -v'
-alias gdh='git diff HEAD'
+alias st='hub status'
+alias gl='hub log'
+alias ga='hub add .'
+alias gc='hub commit -v'
+alias gac='hub add . ; hub commit -v' # hub add all and commit
+alias gp='hub push'
+alias co='hub checkout'
+alias gb='hub branch -v'
+alias gr='hub remote -v'
+alias gdh='hub diff HEAD'
 
 ##################################
 # VPS
