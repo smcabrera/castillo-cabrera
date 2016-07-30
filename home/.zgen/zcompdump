@@ -1,4 +1,4 @@
-#files: 738	version: 5.0.8
+#files: 739	version: 5.0.8
 
 _comps=(
 '-' '_precommand'
@@ -1398,7 +1398,68 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _SUSEconfig _a2ps _a2utils _aap _acpi \
+autoload -Uz _SUSEconfig __function_on_stack __function_unset __list_remote_all __list_remote_for \
+            __list_remote_for_index __list_remote_for_local __list_remote_for_s3 __rvm_add_once __rvm_add_to_path \
+            __rvm_after_cd __rvm_ant __rvm_array_add_or_update __rvm_array_contains __rvm_array_prepend_or_ignore \
+            __rvm_ask_for __rvm_ask_to_trust __rvm_automake __rvm_autoreconf __rvm_awk \
+            __rvm_become __rvm_calculate_remote_file __rvm_calculate_space_free __rvm_calculate_space_used __rvm_call_with_restored_umask \
+            __rvm_cd __rvm_cd_functions_set __rvm_check_pipestatus __rvm_check_rvmrc_trustworthiness __rvm_checksum_all \
+            __rvm_checksum_any __rvm_checksum_calculate_file __rvm_checksum_for_contents __rvm_checksum_none __rvm_checksum_read \
+            __rvm_checksum_validate_file __rvm_checksum_write __rvm_cleanse_variables __rvm_cleanup_tmp __rvm_cli_autoreload \
+            __rvm_cli_autoupdate __rvm_cli_autoupdate_execute __rvm_cli_autoupdate_version_old __rvm_cli_autoupdate_warning __rvm_cli_get_and_execute_installer \
+            __rvm_cli_get_and_verify_pgp __rvm_cli_get_installer_cleanup __rvm_cli_install_ruby __rvm_cli_load_rvmrc __rvm_cli_posix_check \
+            __rvm_cli_rubies_not_installed __rvm_cli_rubies_select __rvm_cli_rvm_get __rvm_cli_rvm_reload __rvm_cli_version_check \
+            __rvm_conditionally_add_bin_path __rvm_conditionally_do_with_env __rvm_cp __rvm_curl __rvm_curl_output_control \
+            __rvm_current_gemset __rvm_custom_separated_array __rvm_date __rvm_db __rvm_db_ \
+            __rvm_db_add __rvm_db_get __rvm_db_remove __rvm_db_system __rvm_debug_command \
+            __rvm_detect_system __rvm_detect_system_override __rvm_detect_xcode_version __rvm_detect_xcode_version_at_least __rvm_display_rvmrc \
+            __rvm_do_with_env __rvm_do_with_env_after __rvm_do_with_env_before __rvm_dotted __rvm_ensure_has_environment_files \
+            __rvm_ensure_is_a_function __rvm_env_print __rvm_env_string __rvm_expand_ruby_string __rvm_export \
+            __rvm_find __rvm_find_first_file __rvm_fix_group_permissions __rvm_fix_path_from_gem_path __rvm_fix_selected_ruby \
+            __rvm_fold __rvm_gemset_clear __rvm_gemset_handle_default __rvm_gemset_pristine __rvm_gemset_select \
+            __rvm_gemset_select_cli __rvm_gemset_select_cli_validation __rvm_gemset_select_only __rvm_gemset_select_validation __rvm_gemset_use \
+            __rvm_gemset_use_ensure __rvm_get_user_shell __rvm_grep __rvm_has_opt __rvm_initial_gemsets_create \
+            __rvm_initial_gemsets_create_without_rubygems __rvm_initialize __rvm_join_array __rvm_libtoolize __rvm_lines_with_gems \
+            __rvm_lines_without_comments __rvm_lines_without_gems __rvm_list_gems __rvm_list_gemset_strings __rvm_list_known_strings \
+            __rvm_list_strings __rvm_load_environment __rvm_load_project_config __rvm_load_rvmrc __rvm_log_command \
+            __rvm_log_command_caclulate_log_file_name __rvm_log_command_caclulate_log_filesystem __rvm_log_command_caclulate_log_namelen __rvm_log_command_caclulate_log_timestamp __rvm_log_command_debug \
+            __rvm_log_command_internal __rvm_log_command_simple __rvm_log_dotted __rvm_make __rvm_md5_calculate \
+            __rvm_md5_for_contents __rvm_meta __rvm_mount __rvm_nuke_rvm_variables __rvm_package_create \
+            __rvm_package_extract __rvm_package_extract_run __rvm_package_list __rvm_pager_or_cat_v __rvm_parse_args \
+            __rvm_parse_args_error_finding_project_file __rvm_parse_args_find_known_flags __rvm_parse_gems_args __rvm_patch __rvm_path_match_gem_home_check \
+            __rvm_path_match_gem_home_check_warning __rvm_path_match_gem_home_check_warning_missing __rvm_project_dir_check __rvm_project_ruby_env_check_unload __rvm_project_ruby_env_load \
+            __rvm_project_ruby_env_load_parse_file __rvm_project_ruby_env_load_set_env __rvm_project_rvmrc __rvm_read_lines __rvm_readlink \
+            __rvm_readlink_deep __rvm_record_install __rvm_record_ruby_configs __rvm_recorded_install_command __rvm_remote_extension \
+            __rvm_remote_server_path __rvm_remote_server_path_single __rvm_remote_version __rvm_remove_broken_symlinks __rvm_remove_from_array \
+            __rvm_remove_from_path __rvm_remove_install_record __rvm_remove_rvm_from_path __rvm_remove_without_gems __rvm_reset_rvmrc_trust \
+            __rvm_rm_rf __rvm_rm_rf_verbose __rvm_ruby_config_get __rvm_ruby_config_save __rvm_ruby_config_save_generic \
+            __rvm_ruby_config_save_mruby __rvm_ruby_package_file __rvm_ruby_string __rvm_ruby_string_autodetect __rvm_ruby_string_find \
+            __rvm_ruby_string_fuzzy __rvm_ruby_string_fuzzy_remote __rvm_ruby_string_installed __rvm_ruby_string_latest __rvm_ruby_string_parse \
+            __rvm_ruby_string_parse_ __rvm_ruby_string_paths_under __rvm_ruby_string_remotely_available __rvm_ruby_strings_exist __rvm_rubygems_create_link \
+            __rvm_run_wrapper __rvm_rvmrc_key __rvm_rvmrc_match_all __rvm_rvmrc_stored_trust __rvm_rvmrc_stored_trust_check \
+            __rvm_rvmrc_to __rvm_rvmrc_to_ruby_version __rvm_rvmrc_tools __rvm_rvmrc_tools_read_ruby __rvm_rvmrc_tools_try_to_read_ruby \
+            __rvm_save_variables __rvm_sed __rvm_sed_i __rvm_select __rvm_select_after_parse \
+            __rvm_select_default_variables __rvm_select_detect_ruby_string __rvm_select_interpreter_common __rvm_select_interpreter_current __rvm_select_interpreter_default \
+            __rvm_select_interpreter_ext __rvm_select_interpreter_goruby __rvm_select_interpreter_ironruby __rvm_select_interpreter_jruby __rvm_select_interpreter_macruby \
+            __rvm_select_interpreter_maglev __rvm_select_interpreter_missing __rvm_select_interpreter_mruby __rvm_select_interpreter_opal __rvm_select_interpreter_rbx \
+            __rvm_select_interpreter_ree __rvm_select_interpreter_rubinius __rvm_select_interpreter_ruby __rvm_select_interpreter_system __rvm_select_interpreter_topaz \
+            __rvm_select_interpreter_user __rvm_select_interpreter_variables __rvm_select_late __rvm_select_late_rbx __rvm_select_late_rbx_partial \
+            __rvm_select_macruby_nightly __rvm_select_macruby_nightly_detect __rvm_select_macruby_nightly_selected __rvm_select_rbx_compatibility_branch __rvm_select_rbx_nightly \
+            __rvm_select_set_variable_defaults __rvm_select_version_variables __rvm_set_color __rvm_set_color_single __rvm_set_executable \
+            __rvm_set_ruby_version __rvm_set_rvmrc __rvm_set_versions_conf __rvm_setup __rvm_setup_statf_function \
+            __rvm_setup_sudo_function __rvm_setup_sudo_function_Other __rvm_setup_sudo_function_PCLinuxOS __rvm_setup_sudo_function_Solaris __rvm_setup_utils_functions \
+            __rvm_setup_utils_functions_OSX __rvm_setup_utils_functions_Other __rvm_setup_utils_functions_Solaris __rvm_setup_utils_functions_common __rvm_sha256_for_contents \
+            __rvm_sha__calculate __rvm_stat __rvm_statf __rvm_string_includes __rvm_string_match \
+            __rvm_strings __rvm_strip __rvm_sudo __rvm_switch __rvm_system_path \
+            __rvm_table __rvm_table_br __rvm_table_wrap_text __rvm_tail __rvm_take_n \
+            __rvm_tar __rvm_teardown __rvm_teardown_final __rvm_teardown_if_broken __rvm_trust_rvmrc \
+            __rvm_try_sudo __rvm_unload __rvm_unload_action __rvm_unset_exports __rvm_unset_ruby_variables \
+            __rvm_untrust_rvmrc __rvm_use __rvm_use_ __rvm_use_common __rvm_use_ruby_warnings \
+            __rvm_use_system __rvm_using_gemset_globalcache __rvm_version __rvm_version_compare __rvm_version_sort \
+            __rvm_wait_anykey __rvm_which __rvm_with __rvm_xargs __rvmrc_full_path_to_file \
+            __rvmrc_warning __rvmrc_warning_check __rvmrc_warning_check_quiet __rvmrc_warning_display_for_Gemfile __rvmrc_warning_display_for_rvmrc \
+            __rvmrc_warning_ignore __rvmrc_warning_list __rvmrc_warning_reset __setup_lang_fallback __variables_definition \
+            __zsh_like_cd _a2ps _a2utils _aap _acpi \
             _acpitool _acroread _adb _add-zsh-hook _alias \
             _aliases _all_labels _all_matches _alternative _analyseplugin \
             _ant _antiword _apachectl _apm _approximate \
@@ -1465,22 +1526,23 @@ autoload -Uz _SUSEconfig _a2ps _a2utils _aap _acpi \
             _locales _locate _logical_volumes _look _losetup \
             _lp _ls _lscfg _lsdev _lslv \
             _lsof _lspv _lsusb _lsvg _lynx \
-            _lzop _mac_applications _mac_files_for_application _madison _mail \
-            _mailboxes _main_complete _make _make-kpkg _man \
-            _match _math _math_params _matlab _md5sum \
-            _mdadm _members _mencal _menu _mere \
-            _mergechanges _message _metaflac _mh _mii-tool \
-            _mime_types _mixerctl _mkdir _mkshortcut _mkzsh \
-            _module _module-assistant _module_math_func _modutils _mondo \
-            _monotone _moosic _mosh _most_recent_file _mount \
-            _mozilla _mpc _mplayer _mt _mtools \
-            _mtr _multi_parts _mutt _my_accounts _mysql_utils \
-            _mysqldiff _nautilus _ncftp _nedit _net_interfaces \
-            _netcat _netscape _netstat _newsgroups _next_label \
-            _next_tags _nice _nkf _nl _nm \
-            _nmap _nmcli _normal _nothing _notmuch \
-            _npm _nslookup _object_classes _od _okular \
-            _oldlist _open _options _options_set _options_unset \
+            _lzop _mac_applications _mac_files_for_application _madison _maglev_gemstone \
+            _mail _mailboxes _main_complete _make _make-kpkg \
+            _man _match _math _math_params _matlab \
+            _md5sum _mdadm _members _mencal _menu \
+            _mere _mergechanges _message _metaflac _mh \
+            _mii-tool _mime_types _mixerctl _mkdir _mkshortcut \
+            _mkzsh _module _module-assistant _module_math_func _modutils \
+            _mondo _monotone _moosic _mosh _most_recent_file \
+            _mount _mozilla _mpc _mplayer _mt \
+            _mtools _mtr _multi_parts _mutt _my_accounts \
+            _mysql_utils _mysqldiff _nautilus _ncftp _nedit \
+            _net_interfaces _netcat _netscape _netstat _newsgroups \
+            _next_label _next_tags _nice _nkf _nl \
+            _nm _nmap _nmcli _normal _nothing \
+            _notmuch _npm _nslookup _object_classes _od \
+            _okular _oldlist _omz_diag_dump_check_core_commands _omz_diag_dump_echo_file_w_header _omz_diag_dump_one_big_text \
+            _omz_diag_dump_os_specific_version _open _options _options_set _options_unset \
             _osc _other_accounts _pack _parameter _parameters \
             _patch _path_commands _path_files _pax _pbm \
             _pbuilder _pdf _pdftk _perforce _perl \
@@ -1495,56 +1557,57 @@ autoload -Uz _SUSEconfig _a2ps _a2utils _aap _acpi \
             _ps1234 _pscp _pspdf _psutils _ptree \
             _pump _putclip _pydoc _python _python_modules \
             _qdbus _qemu _qiv _qtplay _quilt \
-            _raggle _rake _ranlib _rar _rcs \
-            _rdesktop _read _read_comp _readelf _readshortcut \
-            _rebootin _redirect _regex_arguments _regex_words _remote_files \
-            _renice _reprepro _requested _retrieve_cache _retrieve_mac_apps \
-            _ri _rlogin _rm _rpm _rpmbuild \
-            _rrdtool _rsync _rubber _ruby _run-help \
-            _runit _sablotron _samba _savecore _sccs \
-            _sched _schedtool _schroot _screen _sed \
-            _sep_parts _sequence _service _services _set \
-            _set_command _setfacl _setopt _setup _sh \
-            _showmount _signals _sisu _slrn _smit \
-            _snoop _socket _sockstat _softwareupdate _sort \
-            _source _spamassassin _sqlite _sqsh _ss \
-            _ssh _sshfs _stat _stgit _store_cache \
-            _strace _strip _stty _su _sub_commands \
-            _subscript _subversion _sudo _suffix_alias_files _surfraw \
-            _svcadm _svccfg _svcprop _svcs _svcs_fmri \
-            _svn-buildpackage _sysctl _sysstat _system_profiler _systemd \
-            _tags _tar _tar_archive _tardy _tcpdump \
-            _tcpsys _tcptraceroute _telnet _terminals _tex \
-            _texi _texinfo _tidy _tiff _tilde \
-            _tilde_files _time_zone _tin _tla _tmux \
-            _todo.sh _toilet _toolchain-source _topgit _totd \
-            _tpb _tpconfig _tracepath _trap _tree \
-            _ttyctl _tune2fs _twidge _twisted _typeset \
-            _ulimit _uml _unace _uname _unexpand \
-            _unhash _uniq _unison _units _update-alternatives \
-            _update-rc.d _urls _urpmi _urxvt _uscan \
-            _user_admin _user_at_host _user_expand _user_math_func _users \
-            _users_on _uzbl _valgrind _value _values \
-            _vared _vars _vcsh _vim _vim-addons \
-            _vnc _volume_groups _vorbis _vorbiscomment _vserver \
-            _vux _w3m _wait _wajig _wakeup_capable_devices \
-            _wanna-build _wanted _wc _webbrowser _wget \
-            _whereis _which _whois _wiggle _wpa_cli \
-            _x_arguments _x_borderwidth _x_color _x_colormapid _x_cursor \
-            _x_display _x_extension _x_font _x_geometry _x_keysym \
-            _x_locale _x_modifier _x_name _x_resource _x_selection_timeout \
-            _x_title _x_utils _x_visual _x_window _xargs \
-            _xauth _xautolock _xclip _xdvi _xfig \
-            _xft_fonts _xloadimage _xmlsoft _xmms2 _xmodmap \
-            _xournal _xpdf _xrandr _xscreensaver _xset \
-            _xt_arguments _xt_session_id _xterm _xv _xwit \
-            _xxd _xz _yast _yodl _youtube-dl \
-            _yp _yum _zargs _zattr _zcalc \
-            _zcalc_line _zcat _zcompile _zdump _zed \
-            _zfs _zfs_dataset _zfs_keysource_props _zfs_pool _zftp \
-            _zgen _zip _zle _zlogin _zmodload \
-            _zmv _zoneadm _zones _zpool _zpty \
-            _zsh-mime-handler _zstyle _ztodo _zypper
+            _raggle _rake _ranlib _rar _rbenv \
+            _rcs _rdesktop _read _read_comp _readelf \
+            _readshortcut _rebootin _redirect _regex_arguments _regex_words \
+            _remote_files _renice _reprepro _requested _retrieve_cache \
+            _retrieve_mac_apps _ri _rlogin _rm _rpm \
+            _rpmbuild _rrdtool _rsync _rubber _ruby \
+            _run-help _runit _sablotron _samba _savecore \
+            _sccs _sched _schedtool _schroot _screen \
+            _sed _sep_parts _sequence _service _services \
+            _set _set_command _setfacl _setopt _setup \
+            _sh _showmount _signals _sisu _slrn \
+            _smit _snoop _socket _sockstat _softwareupdate \
+            _sort _source _spamassassin _sqlite _sqsh \
+            _ss _ssh _sshfs _stat _stgit \
+            _store_cache _strace _strip _stty _su \
+            _sub_commands _subscript _subversion _sudo _suffix_alias_files \
+            _surfraw _svcadm _svccfg _svcprop _svcs \
+            _svcs_fmri _svn-buildpackage _sysctl _sysstat _system_profiler \
+            _systemd _tags _tar _tar_archive _tardy \
+            _tcpdump _tcpsys _tcptraceroute _telnet _terminals \
+            _tex _texi _texinfo _tidy _tiff \
+            _tilde _tilde_files _time_zone _tin _tla \
+            _tmux _todo.sh _toilet _toolchain-source _topgit \
+            _totd _tpb _tpconfig _tracepath _trap \
+            _tree _ttyctl _tune2fs _twidge _twisted \
+            _typeset _ulimit _uml _unace _uname \
+            _unexpand _unhash _uniq _unison _units \
+            _update-alternatives _update-rc.d _urls _urpmi _urxvt \
+            _uscan _user_admin _user_at_host _user_expand _user_math_func \
+            _users _users_on _uzbl _valgrind _value \
+            _values _vared _vars _vcsh _vim \
+            _vim-addons _vim_files _vnc _volume_groups _vorbis \
+            _vorbiscomment _vserver _vux _w3m _wait \
+            _wajig _wakeup_capable_devices _wanna-build _wanted _wc \
+            _webbrowser _wget _whereis _which _whois \
+            _wiggle _wpa_cli _x_arguments _x_borderwidth _x_color \
+            _x_colormapid _x_cursor _x_display _x_extension _x_font \
+            _x_geometry _x_keysym _x_locale _x_modifier _x_name \
+            _x_resource _x_selection_timeout _x_title _x_utils _x_visual \
+            _x_window _xargs _xauth _xautolock _xclip \
+            _xdvi _xfig _xft_fonts _xloadimage _xmlsoft \
+            _xmms2 _xmodmap _xournal _xpdf _xrandr \
+            _xscreensaver _xset _xt_arguments _xt_session_id _xterm \
+            _xv _xwit _xxd _xz _yast \
+            _yodl _youtube-dl _yp _yum _zargs \
+            _zattr _zcalc _zcalc_line _zcat _zcompile \
+            _zdump _zed _zfs _zfs_dataset _zfs_keysource_props \
+            _zfs_pool _zftp _zgen _zip _zle \
+            _zlogin _zmodload _zmv _zoneadm _zones \
+            _zpool _zpty _zsh-mime-handler _zstyle _ztodo \
+            _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
