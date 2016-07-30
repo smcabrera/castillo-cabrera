@@ -1,4 +1,4 @@
-#files: 739	version: 5.0.8
+#files: 740	version: 5.0.8
 
 _comps=(
 '-' '_precommand'
@@ -1588,26 +1588,25 @@ autoload -Uz _SUSEconfig __function_on_stack __function_unset __list_remote_all 
             _uscan _user_admin _user_at_host _user_expand _user_math_func \
             _users _users_on _uzbl _valgrind _value \
             _values _vared _vars _vcsh _vim \
-            _vim-addons _vim_files _vnc _volume_groups _vorbis \
-            _vorbiscomment _vserver _vux _w3m _wait \
-            _wajig _wakeup_capable_devices _wanna-build _wanted _wc \
-            _webbrowser _wget _whereis _which _whois \
-            _wiggle _wpa_cli _x_arguments _x_borderwidth _x_color \
-            _x_colormapid _x_cursor _x_display _x_extension _x_font \
-            _x_geometry _x_keysym _x_locale _x_modifier _x_name \
-            _x_resource _x_selection_timeout _x_title _x_utils _x_visual \
-            _x_window _xargs _xauth _xautolock _xclip \
-            _xdvi _xfig _xft_fonts _xloadimage _xmlsoft \
-            _xmms2 _xmodmap _xournal _xpdf _xrandr \
-            _xscreensaver _xset _xt_arguments _xt_session_id _xterm \
-            _xv _xwit _xxd _xz _yast \
-            _yodl _youtube-dl _yp _yum _zargs \
-            _zattr _zcalc _zcalc_line _zcat _zcompile \
-            _zdump _zed _zfs _zfs_dataset _zfs_keysource_props \
-            _zfs_pool _zftp _zgen _zip _zle \
-            _zlogin _zmodload _zmv _zoneadm _zones \
-            _zpool _zpty _zsh-mime-handler _zstyle _ztodo \
-            _zypper
+            _vim-addons _vnc _volume_groups _vorbis _vorbiscomment \
+            _vserver _vux _w3m _wait _wajig \
+            _wakeup_capable_devices _wanna-build _wanted _wc _webbrowser \
+            _wget _whereis _which _whois _wiggle \
+            _wpa_cli _x_arguments _x_borderwidth _x_color _x_colormapid \
+            _x_cursor _x_display _x_extension _x_font _x_geometry \
+            _x_keysym _x_locale _x_modifier _x_name _x_resource \
+            _x_selection_timeout _x_title _x_utils _x_visual _x_window \
+            _xargs _xauth _xautolock _xclip _xdvi \
+            _xfig _xft_fonts _xloadimage _xmlsoft _xmms2 \
+            _xmodmap _xournal _xpdf _xrandr _xscreensaver \
+            _xset _xt_arguments _xt_session_id _xterm _xv \
+            _xwit _xxd _xz _yast _yodl \
+            _youtube-dl _yp _yum _zargs _zattr \
+            _zcalc _zcalc_line _zcat _zcompile _zdump \
+            _zed _zfs _zfs_dataset _zfs_keysource_props _zfs_pool \
+            _zftp _zgen _zip _zle _zlogin \
+            _zmodload _zmv _zoneadm _zones _zpool \
+            _zpty _zsh-mime-handler _zstyle _ztodo _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

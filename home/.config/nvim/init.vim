@@ -1,4 +1,6 @@
-
+"============================================================
+"==  Plugins with Vundle: https://github.com/VundleVim/Vundle.vim
+"============================================================
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -10,7 +12,17 @@ Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
 Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
 
 " Sensible defaults above, optional below
+Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
+Plugin 'tomtom/tlib_vim' " For snippets
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
+Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-haml'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
 Plugin 'mhartington/oceanic-next' "Colorscheme 
 Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
 Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
@@ -85,6 +97,9 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " Switch to editing this file
 nmap <leader>v :edit ~/.config/nvim/init.vim<CR>
 nmap <leader>1 :source ~/.config/nvim/init.vim<CR>
+
+" ctrl p. Fuzzy finder. This is huge
+nmap <leader>p :CtrlP <cr>
 
 " Indent with tab in normal mode
 nmap <Tab> > <C>
