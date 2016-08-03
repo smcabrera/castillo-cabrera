@@ -20,4 +20,7 @@ Scraper.new
 x = _
 x.create_agents(page(1))
 arr = [1,2,3]
+SmsLog.create
+reload!
+FactoryGirl.create(:sms_log)
 exit

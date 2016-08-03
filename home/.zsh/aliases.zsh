@@ -88,22 +88,6 @@ alias rsgt='rails s --port 5000'
 alias rsp='rails s'
 
 ##################################
-# Timetrap
-##################################
-# Some aliases for the super handy timetrap gem
-
-alias td='timetrap display'
-alias tw='timetrap week'
-alias tl='timetrap list'
-#alias tr='timetrap resume'
-alias to='timetrap out ; timetrap week'
-alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week' # For when I'm interrupted and don't get the chance to note why
-alias wt='watch timetrap today'
-
-# Stop timetrap and put on a screensaver
-alias pause='timetrap out ; timetrap week; cmatrix'
-
-##################################
 # Tmux
 ##################################
 
