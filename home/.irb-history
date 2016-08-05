@@ -1,26 +1,100 @@
-todos = Todo.find.all
-todos = Todo.find(:all)
-User.all
-u.name = 'Stephen'
-u.save
-u.save!
-current_user?
+Student.all.map(&:full_name)
+Student.last.full_name
+user.items
+user.replacement_value
+user.replacement_value.count
+user.replacement_value.to_i
 User.first
-u = User.first
-u.todos
-arr.each do |elem|
-puts elem
-end
-arr.include?('things')
-puts 'hello world'
-require 'factory_girl'
-ls
-.ls
-Scraper.new
-x = _
-x.create_agents(page(1))
-arr = [1,2,3]
-SmsLog.create
+u = _
+u.account_value
+s = Student.last
+s.student_id
+s.first_name = 'Stephen'
+s.last_name = 'Cabrera'
+Student.create
+Student.create.errors
+
+user
+user.accepted_claims.reduce(:+) { |claim| claim.amount_of_loss }
+cd Array
+? reduce
+(1..5).reduce(1, :+)
+cd ..
+whereami
+user.accepted_claims.reduce(0, :+) { |claim| claim.amount_of_loss }
+user.accepted_claims.reduce(0, :+) { |claim| claim.amount_of_loss || 0 }
+user.accepted_claims.map { |claim| claim.amount_of_loss }.reduce(0, :+) { |claim| claim.amount_of_loss || 0 }
+user.accepted_claims
+ac = _
+ac.map { |ac| ac.amount_of_loss }
+[1,2,3].sum
+user.total_losses
+user.loss_amount
+user.total_loss_amount
+user.loss_amounts
+Student.find_by_email('student@velocis.us')
+Student.find_by(email: 'student@velocis.us')
+Student.find_by(user_account_attributes: {email: 'student@velocis.us'} )
+Student.find_by_first_name('James')
+Student.last.email
+Student.last.user_account
+Student.last.user_account.email
+Student.find_by(user_account: {email: 'student@velocis.us'} )
+UserAccount.where(email: 'student@velocis.us').first
+MentorsMailer.student_gains_a_strike(3682).delivery_method`
+MentorsMailer.student_gains_a_strike(1).delivery_method
+Student.last.id
+default_url_options[:host] = 'localhost'
+MentorsMailer.student_gains_a_strike(3682).delivery_method
+UserAccount.where(email: 'student@velocis.us')
+attribute
+student.attribute
+student.birthday
+student.valid?
+student.attributec
+5       PointMonth.find_each { |point_month| point_month.update_column(:adoption_id, point_month.try(:student).try(:adoption).id) }
+PointMonth.find_each { |point_month| point_month.update_column(:adoption_id, point_month.try(:student).try(:adoption).id }
+PointMonth.find_each { |point_month| point_month.update_column(:adoption_id, point_month.try(:student).try(:adoption).id) }
+Student.last
+Student.count
+PointMonth.last
+PointMonth.last.adoption
+PointMonth.last.adoption_id
+pm = PointMonth.last
+cl = _
+cl.sid
+CallLog.last.sid
+CallLog
+CallLog.first
+CallLog.create
+post :sms, 'To' => TwilioNumber.agency.number, 'From' => '+12141234567', 'Body' => 'This should fail'
+CallLog.last
+SmsLog.last
+SmsLog.count
+Interaction.count
+student_id
+mentor_id
+self
+mentor.adoption
 reload!
+student.nil? 
+mentor.nil?
+student.nil? ; mentor.nil?
+mentor.adoptions.find_by(student_id: student.id)
+student
+mentor
+adoption
+student.adoption
+mentor.adoptions
+CallLog.count
+PointMonth
+PointMonth.count
 FactoryGirl.create(:sms_log)
+sms = _
+sms.errors
+sms.valid>
+sms.valid?
+FactoryGirl.create(:call_log)
+_.errors
+__.valid?
 exit

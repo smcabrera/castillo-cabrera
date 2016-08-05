@@ -140,7 +140,7 @@ bindkey -M viins '^K' history-search-backward
 # ################################
 
 # To add new aliases or view current ones, go where they live--in the custom folder:
-alias zalias='vim ~/.zsh/aliases.zsh'
+alias zalias='nvim ~/.zsh/aliases.zsh'
 
  ################################
 # PATH

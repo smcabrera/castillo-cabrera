@@ -22,9 +22,9 @@ alias bc='bin/console'
 # General Stuff
 ##################################
 
-alias startwork='tmuxinator start ssa'
-alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
-alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
+alias startwork='tmuxinator start ssa ; tmuxinator start RiskPool'
+alias vimrc='nvim $dotfiles/.vimrc' # Edit vimrc
+alias zshe='nvim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
 
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
@@ -80,7 +80,7 @@ alias rdr="rake db:rollback ; say rollback finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
-alias tests='bundle exec rspec spec ; say tests finished'
+alias tests='rspec spec > test-failures; say tests finished'
 alias ftests='bundle exec rspec spec/features'
 alias tt='rake white_label:import:galileo_mapping; say task finished'
 alias rsg='rails s --port 4000'
