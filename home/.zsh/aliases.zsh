@@ -1,6 +1,16 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
+##################################
+# Velocis
+##################################
+# For starting a localtunnel to send emails to 
+alias lts='lt --port 3000 --subdomain ssadev'
+
+##################################
+# Groupize
+##################################
 alias ems='~/ngrok http -subdomain=wl-local 4000'
+
 ##################################
 # Show/Hide hidden files
 ##################################
@@ -76,6 +86,7 @@ alias restart='sudo shutdown -r now' # Restart the do box
 
 alias bi="bundle install ; say bundle complete"
 alias rdm="rake db:migrate ; say migration finished"
+alias rds="rake db:seed ; say seed finished"
 alias rdr="rake db:rollback ; say rollback finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "

@@ -1,9 +1,14 @@
 "============================================================
-"==  Plugins with Vundle: https://github.com/VundleVim/Vundle.vim
+"==  Vundle Plugin Manager
 "============================================================
+"found here: https://github.com/VundleVim/Vundle.vim
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+
+"============================================================
+"==  Plugins: Sensible Defaults
+"============================================================
 "Plugin 'ryanoasis/vim-devicons' " Icons 
 Plugin 'flazz/vim-colorschemes' " Colorschemes
 Plugin 'itchyny/lightline.vim' " This doesn't look quite as good as airline but it works without powerline fonts which is nice for chromebook
@@ -16,25 +21,35 @@ Plugin 'tpope/vim-surround' "Surround texts with tags or quotes
 Plugin 'kien/ctrlp.vim' "Fuzzy search (command t is another option)
 Plugin 'tpope/vim-repeat' "Repeat plugins like surround
 
+"============================================================
+"==  Plugins: Customized
+"============================================================
 " Sensible defaults above, optional below
-Plugin 'smcabrera/slimux' " Same idea as above, different plugin
-Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
-Plugin 'tomtom/tlib_vim' " For snippets
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
-Plugin 'honza/vim-snippets'
-Plugin 'godlygeek/tabular'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-haml'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
-Plugin 'mhartington/oceanic-next' "Colorscheme 
-Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
-Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
-Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
-Plugin 'mattn/gist-vim'
+Bundle 'gabrielelana/vim-markdown'
 Bundle 'mattn/webapi-vim'
+Bundle 'metakirby5/codi.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils' "Gives you useful code snippets from tab
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ervandew/supertab' "Autocompletes stuff in insert mode with tab
+Plugin 'garbas/vim-snipmate'
+Plugin 'godlygeek/tabular'
+Plugin 'honza/vim-snippets'
+Plugin 'mattn/gist-vim'
+Plugin 'mhartington/oceanic-next' "Colorscheme 
+Plugin 'mru.vim'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'scrooloose/syntastic' "Shows you syntax errors when you save
+Plugin 'shougo/deoplete.nvim'
+Plugin 'slim-template/vim-slim'
+Plugin 'smcabrera/slimux' " Same idea as above, different plugin
+Plugin 'tomtom/tlib_vim' " For snippets
+Plugin 'tpope/vim-endwise' "Ends certain structures automatically--like 'end' in ruby
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails' "Rails.vim: incredibly useful plugin for working with rails code
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-ruby/vim-ruby' "Among other things, these bundles add files to the load path so that you can use gf for jumping between files
+Plugin 'elixir-lang/vim-elixir'
+
 
 call vundle#end()            " required
 
@@ -126,6 +141,8 @@ nmap <leader>v :edit ~/.config/nvim/init.vim<CR>
 nmap <leader>1 :source ~/.config/nvim/init.vim<CR>
 nmap <leader>2 :PluginInstall<CR>
 
+nmap <leader>r :edit! %<CR>
+
 " ctrl p. Fuzzy finder. This is huge
 nmap <leader>p :CtrlP <cr>
 
@@ -136,6 +153,10 @@ vmap <Leader>s :SlimuxREPLSendSelection<CR>
 
 " Prompt pane configuration for current buffer
 vmap <Leader>sc :SlimuxREPLConfigure<CR>
+
+map <leader>m :MRU <cr>
+" Copy the current File path to the clipboard: " http://vim.wikia.com/wiki/Copy_filename_to_clipboard
+ nnor <leader>f :let @*=expand("%")<CR>    
 
 "============================================================
 "==  Customized Mappings
@@ -148,3 +169,35 @@ nmap <Tab> > <C>
 nmap <S-Tab> < <C>
 
 imap <c-l> <space>=><space>
+
+" Correcting some common typos
+iabbrev adn and 
+iabbrev waht what 
+iabbrev tehn then 
+
+nmap :W :w
+nmap :Q :q
+nmap :Vs :vs
+
+"============================================================
+"==  Plugin Configurations
+"============================================================
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+"============================================================
+"==  Terminal Mappings
+"============================================================
+
+"Search neovim terminal
+
+:tnoremap <Esc> <C-\><C-n>
+:tnoremap <A-h> <C-\><C-n><C-w>h
+:tnoremap <A-j> <C-\><C-n><C-w>j
+:tnoremap <A-k> <C-\><C-n><C-w>k
+:tnoremap <A-l> <C-\><C-n><C-w>l
+
+:nnoremap <A-h> <C-w>h
+:nnoremap <A-j> <C-w>j
+:nnoremap <A-k> <C-w>k
+:nnoremap <A-l> <C-w>l

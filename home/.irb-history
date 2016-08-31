@@ -1,6 +1,3 @@
-Student.all.map(&:full_name)
-Student.last.full_name
-user.items
 user.replacement_value
 user.replacement_value.count
 user.replacement_value.to_i
@@ -89,7 +86,6 @@ mentor.adoptions
 CallLog.count
 PointMonth
 PointMonth.count
-FactoryGirl.create(:sms_log)
 sms = _
 sms.errors
 sms.valid>
@@ -97,4 +93,8 @@ sms.valid?
 FactoryGirl.create(:call_log)
 _.errors
 __.valid?
+FactoryGirl.create(:sms_log)
 exit
+foo = "bar"
+puts foo
+puts 1 + 2

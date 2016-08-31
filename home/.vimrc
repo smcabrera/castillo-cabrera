@@ -147,7 +147,7 @@ let g:airline_powerline_fonts = 1
 
 "AirlineTheme simple
 "AirlineTheme dark
-AirlineTheme powerlineish
+"AirlineTheme powerlineish
 colorscheme molokai
 
 function! SolarizedDark()
