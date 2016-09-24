@@ -28,7 +28,7 @@ root: ~/workspace/ssa
 # post: tmux -CC attach -t groupize
 
 windows:
-  - editor: vim
+  - editor: nvim
   - tests: guard
   - server: bundle exec rails server --port 3000
   - console: bundle exec rails console

@@ -1,0 +1,114 @@
+{
+	"settings": {
+		"volume": 1,
+		"coverflow": false,
+		"layout": "list",
+		"backgroundNotify": true,
+		"repeat": true,
+		"shuffle": false,
+		"lastfm": {
+			"active": false
+		},
+		"spotify": {
+			"active": true,
+			"refresh_token": "AQCrT6_H7ykvj0l1BYwUEfKGHRIaIx-w8nJSSRUPZW-AFkxIkE-YLw_5_ee2rdSK0Mv6GZe_zcorxMOSfEZZACbZRiP-VofIa-ejbGbqsOyq9KvbFdTm7DCZ7p1M_1XYMBE",
+			"error": false
+		},
+		"soundcloud": {
+			"active": false
+		},
+		"googlepm": {
+			"user": "",
+			"passwd": "",
+			"active": false
+		},
+		"local": {
+			"paths": [],
+			"active": false
+		},
+		"activeTab": "spotifyPlaylistFavs"
+	},
+	"data": {
+		"spotifyPlaylistFavs": [],
+		"spotifyPlaylists": [
+			{
+				"title": "Umphrey's McGee – Hall of Fame: Class of 2014",
+				"id": "0ZcOLqBCaeiHXtWE7dtyJY",
+				"image": "https://i.scdn.co/image/9361921184e34b5d7ecc2625418ff53ce7974c57"
+			},
+			{
+				"title": "Groove Sample",
+				"id": "5NXa5A36WogG2Sr7QPD9FV",
+				"image": "https://mosaic.scdn.co/640/9fc5ce3d023bc64159b454374fc48442990364946a2936aeb5fe09f84e0cdbda2fdf4f0a062f15cadc9d3c0fbd0d60d98e9500551e1e788d8b6857cfc76a5436241cff597c5a36c5a6763e5a80ccad62"
+			},
+			{
+				"title": "Chicha",
+				"id": "3eu6kiP0Wp0LFSSGpsbmVS",
+				"image": "https://mosaic.scdn.co/640/aeb20c7e4843e2eac5e1d05838ff2d3e0aaebb823e741b7e7f67d4c78df4e3e7fc7c0eed6347e9d25863f4574de62a8047bec7eca84ce1611d1f172134da36ec09a23fe414069bc307e8ebf9b8774d94"
+			},
+			{
+				"title": "Instrumental Rock",
+				"id": "0Lvo8iW7EwedXeR3BygLqk",
+				"image": "https://mosaic.scdn.co/640/290173e2828ffcb0e534243ee064196bc43554f841caa78a3d0f70b2c631867076d0f9989a20418d7cd3d3000342279f6f5435123046fbbe5482f5d8c63b1ae207d03f8966b891471d3d5612ffe0ab5c"
+			},
+			{
+				"title": "Ska Favorites",
+				"id": "6GQy7Qpyf6KvnfYgY3e8eL",
+				"image": "https://mosaic.scdn.co/640/3e0f10a9450b2a988132c00f50b96e1f605c9f4a722a4463f49047bb3a4485d3f93f701d33a89935206118eb37d0ecbecfbe73141173b15fbf67602bca88d25041d94377ff4c9fac72db7ec16ff0bec4"
+			},
+			{
+				"title": "Work",
+				"id": "2QhmgjBXN5FTxltFZeMfIB",
+				"image": "https://mosaic.scdn.co/640/24a511a670163455ed17da275f0cc54ddf1f6f0e3ea6a5f96e8f246e30292ae2ace38fdd565260d335378a43a9cce7ef67e17dacac8dd53ae36e04aa6c80fc77dc30775c5fbc22a9669c1898fe018a4f"
+			},
+			{
+				"title": "Rock",
+				"id": "2SaqaQIbs6JGny0n9MlQUP",
+				"image": "https://mosaic.scdn.co/640/b1019b0edf9370a5d68697112baf377a9c887f555470d09a9e68ce0e4fb7060a7c91dd8dd14ad7820a11bb546557b3b02f02903476fe13f52a052ad135e72a90de5b5cfc6a2c9b98bb218ed22c7a264f"
+			},
+			{
+				"title": "Dance/Pop",
+				"id": "6bNIWI1HpbQ8yWFdBTAn71",
+				"image": "https://mosaic.scdn.co/640/460fe4532ae54cac910c69a9b46a03e17a54d025466405d07f3428fbd6075024dc532267269a21d88dfa9a51870d3851e43f1b3dbee994967ab298ef0bd0f3a2fdf032314a1a5745fae4c902bf72aa66"
+			},
+			{
+				"title": "Fiesta de los Feos",
+				"id": "52rbJABw66XTSbNkKykxvB",
+				"image": "https://mosaic.scdn.co/640/ae1c7879fb45d88c79f2c63622507a573cd865cf28b4f139eec839e01a6589f9b298d43702d71ed9b5731176333ab798bf17f540d70fb52e7c930bed9bb3b4beffe31b1a40286a79c7e9293c7ddfb723"
+			},
+			{
+				"title": "Pop Latino",
+				"id": "608TwyT0WVhoNVcatj47JQ",
+				"image": "https://mosaic.scdn.co/640/8aaab4321a175453dc3b87f033c23d6988191d715265603431487632effc8952963a1c8af1c796901c7e2da95a310715f1d22b03fe676af3c7154d4adbdeccf2f30cd2613e1100cfae26fe3623098e57"
+			},
+			{
+				"title": "my secret country list",
+				"id": "0TkX7Hzn4xpOIFxp2ynBW3",
+				"image": "https://mosaic.scdn.co/640/c76e9dffbe846d05cddca6928f2aa0330b4f30f825983e2d6e25b5db61b3f773c8d3e1f63bfdc52e91ea4ca36aa8b36fa09ddea81888c6a1f2c9896415704b38134ae96ec2ec743c8d8ec7b5babefe2b"
+			},
+			{
+				"title": "bad sappy songs for steeb",
+				"id": "2jga5KM3eUfcQPc0EYlHLq",
+				"image": "https://mosaic.scdn.co/640/57c6c8525616e54029c6af3465bf3a85475e6740bd4ecb50299fc41427c781deeb13d12a18d8e4a78d6dc29e0599e38244819b8448afd12e1481263310819d6b1e4e1b534da9ec226c9ad64f746a678c"
+			},
+			{
+				"title": "Trabajo",
+				"id": "3KB8w5VnEQAVocUiYf2IEp",
+				"image": "https://mosaic.scdn.co/640/3058184a25a8e606350613e2d3c4c3b6f0bcd2ca7148d27452a3d616df7f944cf9aa8e60186aaec14f016f8425cd923893d607c04a1cffe8fcd21abd9c75af8193037af71c7bdf03366d2e85b3e82cce"
+			}
+		],
+		"spotifyPlaylist0ZcOLqBCaeiHXtWE7dtyJY": [],
+		"spotifyPlaylist5NXa5A36WogG2Sr7QPD9FV": [],
+		"spotifyPlaylist3eu6kiP0Wp0LFSSGpsbmVS": [],
+		"spotifyPlaylist0Lvo8iW7EwedXeR3BygLqk": [],
+		"spotifyPlaylist6GQy7Qpyf6KvnfYgY3e8eL": [],
+		"spotifyPlaylist2QhmgjBXN5FTxltFZeMfIB": [],
+		"spotifyPlaylist2SaqaQIbs6JGny0n9MlQUP": [],
+		"spotifyPlaylist6bNIWI1HpbQ8yWFdBTAn71": [],
+		"spotifyPlaylist52rbJABw66XTSbNkKykxvB": [],
+		"spotifyPlaylist608TwyT0WVhoNVcatj47JQ": [],
+		"spotifyPlaylist0TkX7Hzn4xpOIFxp2ynBW3": [],
+		"spotifyPlaylist2jga5KM3eUfcQPc0EYlHLq": [],
+		"spotifyPlaylist3KB8w5VnEQAVocUiYf2IEp": []
+	}
+}

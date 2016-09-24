@@ -118,7 +118,7 @@ zle -N zle-keymap-select
 # As always...use vim!
 
 setopt VI
-export EDITOR=vim
+export EDITOR=nvim
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # timeout for key sequences
@@ -140,7 +140,7 @@ bindkey -M viins '^K' history-search-backward
 # ################################
 
 # To add new aliases or view current ones, go where they live--in the custom folder:
-alias zalias='vim ~/.zsh/aliases.zsh'
+alias zalias='nvim ~/.zsh/aliases.zsh'
 
  ################################
 # PATH
@@ -194,3 +194,19 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti
+
+# Codi
+# Usage: codi [filetype] [filename]
+codi() {
+  vim $2 -c \
+    "let g:startify_disable_at_vimenter = 1 |\
+    set bt=nofile ls=0 noru nonu nornu |\
+    hi ColorColumn ctermbg=NONE |\
+    hi VertSplit ctermbg=NONE |\
+    hi NonText ctermfg=0 |\
+    Codi ${1:-python}"
+}

@@ -1,6 +1,16 @@
 dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 
+##################################
+# Velocis
+##################################
+# For starting a localtunnel to send emails to 
+alias lts='lt --port 3000 --subdomain ssadev'
+
+##################################
+# Groupize
+##################################
 alias ems='~/ngrok http -subdomain=wl-local 4000'
+
 ##################################
 # Show/Hide hidden files
 ##################################
@@ -22,9 +32,14 @@ alias bc='bin/console'
 # General Stuff
 ##################################
 
-alias startwork='tmuxinator start ssa'
-alias vimrc='vim $dotfiles/.vimrc' # Edit vimrc
-alias zshe='vim $dotfiles/.zshrc' # Edit zshrc
+#alias vi='nvim'
+alias vim="nvim"
+alias vimdiff="nvim -d"
+
+alias en='enter'
+alias startwork='tmuxinator start ssa ; tmuxinator start RiskPool'
+alias vimrc='nvim $dotfiles/.vimrc' # Edit vimrc
+alias zshe='nvim $dotfiles/.zshrc' # Edit zshrc
 alias zs='source ~/.zshrc' # ...and source it
 
 alias todo='/home/$USER/Dropbox/GTD/todo.sh -d /home/$USER/Dropbox/GTD/todo.cfg'
@@ -76,32 +91,17 @@ alias restart='sudo shutdown -r now' # Restart the do box
 
 alias bi="bundle install ; say bundle complete"
 alias rdm="rake db:migrate ; say migration finished"
+alias rds="rake db:seed ; say seed finished"
 alias rdr="rake db:rollback ; say rollback finished"
 alias g='bundle exec guard'
 alias bx="bundle exec "
 alias rs2='Rails serve -p 8080' # Serve local rails app on an alternative port
-alias tests='bundle exec rspec spec ; say tests finished'
+alias tests='rspec spec > test-failures; say tests finished'
 alias ftests='bundle exec rspec spec/features'
 alias tt='rake white_label:import:galileo_mapping; say task finished'
 alias rsg='rails s --port 4000'
 alias rsgt='rails s --port 5000'
 alias rsp='rails s'
-
-##################################
-# Timetrap
-##################################
-# Some aliases for the super handy timetrap gem
-
-alias td='timetrap display'
-alias tw='timetrap week'
-alias tl='timetrap list'
-#alias tr='timetrap resume'
-alias to='timetrap out ; timetrap week'
-alias tint='timetrap out ; timetrap sheet interruptions ; timetrap in ; watch timetrap week' # For when I'm interrupted and don't get the chance to note why
-alias wt='watch timetrap today'
-
-# Stop timetrap and put on a screensaver
-alias pause='timetrap out ; timetrap week; cmatrix'
 
 ##################################
 # Tmux
@@ -116,3 +116,5 @@ alias nest='unset TMUX'
 # Aliases that we've added recently and haven't organized here somehow
 
 alias cdp='cd $(find . -type d | pick)' # cd with pick--open source command line fuzzy select: https://robots.thoughtbot.com/announcing-pick
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti

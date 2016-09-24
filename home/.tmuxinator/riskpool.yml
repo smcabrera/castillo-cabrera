@@ -28,7 +28,7 @@ root: ~/workspace/RiskPool
 # post: tmux -CC attach -t groupize
 
 windows:
-  - editor: vim
+  - editor: nvim
   - tests:
   - server: bundle exec rails server --port 4000
   - console: bundle exec rails console
