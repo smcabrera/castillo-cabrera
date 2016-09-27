@@ -3,7 +3,7 @@ dotfiles='/home/stephen/.homesick/repos/castillo-cabrera/home'
 ##################################
 # Velocis
 ##################################
-# For starting a localtunnel to send emails to 
+# For starting a localtunnel to send emails to
 alias lts='lt --port 3000 --subdomain ssadev'
 
 ##################################
@@ -33,8 +33,8 @@ alias bc='bin/console'
 ##################################
 
 #alias vi='nvim'
-alias vim="nvim"
-alias vimdiff="nvim -d"
+#alias vim="nvim"
+#alias vimdiff="nvim -d"
 
 alias en='enter'
 alias startwork='tmuxinator start ssa ; tmuxinator start RiskPool'
